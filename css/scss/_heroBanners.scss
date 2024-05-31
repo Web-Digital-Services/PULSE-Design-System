@@ -1,0 +1,67 @@
+/* ============================================================
+    HERO BANNERS
+============================================================ */
+
+.hero {
+    &.img-fill {
+    overflow: initial;
+
+    &.overlay {
+        background-color: rgba(255, 255, 255, 0.77);
+        overflow: clip;
+
+    }
+}
+
+    & .callout {
+        align-self: auto;
+        background: transparent;
+
+        &.white {
+            background: rgba(241, 245, 247, 0.85);
+            color: $off-black !important;
+        }
+
+        &.transparent {
+            background: transparent;
+            color: $off-white !important;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            padding-top: rem-calc(10px);
+        }
+    }
+
+    //========== Gradient hero
+
+    @media screen and (min-width:$small-screen) {
+
+        &.gradient {
+
+                &.left {
+                    background: $white-gradient-left;
+                }
+
+                &.right {
+                    background: $white-gradient-right;
+                }
+
+            .callout {
+                background: transparent;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$small-screen) {
+    .img-fill {
+
+        &:not(.overlay) {
+
+            img,
+            video {
+                position: relative;
+            }
+        }
+    }
+}

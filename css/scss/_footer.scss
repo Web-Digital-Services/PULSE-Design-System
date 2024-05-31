@@ -1,0 +1,207 @@
+footer {
+    color: $off-white;
+    background-color: $dark-grey;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    position: relative;
+    margin-top: rem-calc(60px);
+
+    //---------for mobile footer responsive nav
+    div {
+        .title-bar {
+            @media screen and (max-width:$small-screen) {
+                color: $off-black;
+                background-color: $pure-white;
+                display: flex;
+                top: 0;
+                padding: rem-calc(15px 12px);
+
+                .menu-icon {
+                    color: $orange;
+                    font-weight: 900;
+                    width: unset;
+                }
+
+                .menu-icon::after {
+                    font-family: "Font Awesome 5 Free";
+                    margin-left: rem-calc(300px);
+                    content: attr(data-content) "\f067";
+                }
+
+                .menu-icon.on-click::after {
+                    content: attr(data-content) "\f068";
+                }
+
+            .menu-icon::before {
+                content: unset;
+            }
+            }
+        }
+    }
+
+    h2 {
+        font-size: rem-calc(30px);
+        font-weight: 800;
+    }
+
+    h3 {
+        font-size: rem-calc(22px);
+        margin-top: rem-calc(-25px);
+        margin-bottom: rem-calc(40px);
+        font-weight: 500;
+        font-family: $sans-serif-font;
+    }
+
+    p {
+        margin-bottom: rem-calc(12px);
+
+        &.large-text {
+            font-family: $serif-font;
+            font-size: rem-calc(20px);
+        }
+    }
+
+    a {
+        color: $grey-link;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $grey-link;
+        }
+
+        &.arrow::after {
+            color: $grey-link;
+        }
+
+        &.arrow:hover:after {
+            color: $grey-link;
+        }
+    }
+
+    p>a {
+        color: $grey-link !important;
+
+        &:hover {
+            background-color: $grey-link;
+            color: $grey-90 !important;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+
+        li {
+            margin-bottom: 0.625rem;
+        }
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        margin-bottom: rem-calc(30px);
+
+        .fa-stack {
+            margin-right: rem-calc(10px);
+
+            a:hover {
+                color: $off-white !important;
+            }
+        }
+    }
+
+    .status {
+        display: flex;
+        align-items: center;
+
+        i {
+            font-size: 36px;
+            color: $grey-30;
+            margin-right: rem-calc(10px);
+        }
+    }
+
+    .bleed {
+        background-color: $grey-90;
+        color: $off-white;
+    }
+
+    &.standard {
+        background-color: $pure-white;
+        color: $off-black;
+        margin-top: rem-calc(-45px);
+
+        & hr {
+            margin: rem-calc(60px 0);
+            max-width: none;
+            border-bottom: 2px solid $grey;
+        }
+
+        a {
+            color: $orange;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $dark-orange;
+            }
+
+            &.arrow::after {
+                color: $orange;
+            }
+
+            &.arrow:hover:after {
+                color: $dark-orange;
+            }
+        }
+
+        .social {
+            li {
+                a {
+                    color: $orange;
+
+                    &:hover {
+
+                        color: $dark-orange;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:$small-screen) {
+        h2 {
+            font-size: 1.25rem;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.1875rem;
+            text-align: center;
+            margin-top: rem-calc(-20px);
+        }
+
+        .social {
+            text-align: center;
+            margin-top: rem-calc(45px);
+            margin-bottom: rem-calc(34px);
+
+            li {
+                margin-right: rem-calc(14px);
+            }
+        }
+
+        ul {
+            li {
+                margin-bottom: rem-calc(20px);
+                margin-left: rem-calc(15px);
+            }
+        }
+
+        .subnav-title {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}

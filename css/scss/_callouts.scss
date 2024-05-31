@@ -1,0 +1,137 @@
+/* ============================================================
+    STATIC CALLOUTS
+============================================================ */
+
+.callout {
+    color: $off-black;
+    background-color: $light-beige;
+    padding: rem-calc(30px);
+    //display: block;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    border: none;
+
+    &.roomy {
+        padding: rem-calc(60px);
+    }
+
+    &.spotlight {
+        padding: 120px 120px 120px 160px;
+        margin: -120px 0px -120px -132px;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width: $medium-screen) {
+            padding: 30px 30px 30px 30px;
+            margin: 0px;
+            z-index: 0;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            padding: 30px 30px 30px 30px;
+            margin: 0px;
+            margin-left: 0;
+            z-index: 0;
+        }
+    }
+
+    &.beige {
+        background-color: $beige;
+    }
+
+    &.dark-beige {
+        background-color: $dark-beige;
+    }
+
+    &.light-grey {
+        background-color: $light-grey;
+    }
+
+    &.white {
+        background-color: $pure-white;
+    }
+
+    hr {
+        margin: 0 auto 1.11111rem auto;
+    }
+}
+
+//---------White callouts on .color bleeds default
+.bleed {
+    &.color .callout {
+        background-color: $pure-white !important;
+        color: $off-black !important;
+
+        .fa-circle {
+            color: $grey-50;
+        }
+
+        &:hover {
+            .fa-circle {
+                color: $dark-grey;
+            }
+        }
+
+        p,
+        figcaption,
+        blockquote {
+            color: $off-black !important;
+        }
+
+        p.color {
+            color: $blue !important;
+        }
+    }
+}
+
+
+
+/* ============================================================
+    INTERACTIVE CALLOUTS
+============================================================ */
+
+a.callout {
+    position: relative;
+    display: block;
+    background-color: $pure-white;
+    transition: background-color 0.5s ease-in-out;
+    color: $off-black;
+    border-radius: rem-calc(1px) !important;
+    border: 3px solid $sky-blue;
+    @extend %jump-base;
+
+    h2,
+    h3,
+    h4 {
+        margin-right: 0rem;
+    }
+
+    p {
+        margin-bottom: 4rem;
+        padding-bottom: rem-calc(120px);
+    }
+
+    &:after {
+        position: absolute;
+        display: block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        font-size: rem-calc(32px);
+        content: "\f061";
+        margin-right: .5rem;
+        margin-bottom: .5rem;
+        right: 0;
+        bottom: 0;
+        color: $orange;
+    }
+}
+
+a.callout:hover {
+    background-color: $pure-white;
+    border: 3px solid $navy-blue;
+    @extend %jump-hover;
+
+    &:after {
+        color: $dark-orange;
+    }
+}

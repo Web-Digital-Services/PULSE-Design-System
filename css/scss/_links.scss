@@ -1,0 +1,307 @@
+// ======= Links
+
+a {
+    color: $orange;
+    text-decoration: none;
+    transition: .5s ease-out;
+
+    &:hover,
+    &:focus {
+        color: $dark-orange;
+        text-decoration: none;
+    }
+
+    &:focus-visible {
+        outline-color: $blue;
+        outline-width: rem-calc(8px);
+        outline-offset: rem-calc(10px);
+    }
+
+}
+
+// ======= apply link styles to paragraph text
+p {
+    >a:not(.button) {
+        color: $orange;
+        position: relative;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+        color: $dark-orange;
+        text-decoration: none;
+        }
+    }
+}
+
+//Add arrow to end of link
+a.arrow-right {
+    &:after {
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        text-indent: 0.175rem;
+        content: "\f061";
+        color: $orange;
+        margin-left: .3rem;
+        transition: .5s ease-out;
+    }
+
+    &:hover:after {
+        color: $dark-orange;
+        transform: translatex(.2rem);
+    }
+}
+
+
+//Add an icon to indicate external link
+a.external {
+    &:after {
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f35d";
+        margin-left: .3rem;
+        transition: .5s ease-out;
+        //transform: rotate(-45deg);
+    }
+
+    &:hover:after {
+        transform: translate(.1rem, -.1rem);
+    }
+}
+
+//Add an icon to indicate file download
+a.file {
+    &:after {
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f56d";
+        margin-left: .3rem;
+        transition: .5s ease-out;
+    }
+
+    &:hover:after {
+        transform: translate(.1rem, -.1rem);
+    }
+}
+
+//Highlighter Links
+a.highlight {
+    background-color: $orange;
+    color: $off-white;
+    background-image: linear-gradient(transparent, transparent), linear-gradient($dark-orange, $dark-orange) !important;
+
+    &:hover {
+        color: $dark-orange;
+        background-color: inherit;
+    }
+}
+
+// ======= apply links to paragraph text on colored backgrounds
+.color {
+
+    //Default link styles on colored backgrounds.Left basic to not interfere with interactive element styles
+    a {
+        color: $off-white;
+
+
+        &:hover,
+        &:focus {
+            color: $light-grey;
+            text-decoration: none;
+        }
+
+        &:focus-visible {
+            outline-color: $off-white;
+            outline-width: rem-calc(8px);
+            outline-offset: rem-calc(10px);
+        }
+    }
+
+    //Link styles for paragraph text
+    p>a:not(.button) {
+        color: $blue-link;
+
+        &:hover {
+            color: $blue-90;
+        }
+
+        //Styles commented out. Should inherit color from link style
+        /*&.arrow,
+        &.external {
+            &:after {
+                color: $blue-link;
+            }
+
+            &:hover:after {
+                color: $blue-90;
+            }
+        }*/
+
+        &.highlight {
+            background-color: $blue-10;
+            color: $blue-90;
+            background-image: linear-gradient(transparent, transparent), linear-gradient($blue-link, $blue-link);
+
+            &:hover {
+                color: $blue-link;
+                background-color: inherit;
+            }
+        }
+    }
+
+    &.orange,
+    &.darken {
+        p>a:not(.button) {
+            background-image: linear-gradient($orange-link, $orange-link);
+            color: $orange-link;
+
+            &:hover {
+                background-color: $light-beige;
+                color: $orange-90;
+            }
+
+            /*&.arrow,
+            &.external {
+                &:after {
+                    color: $orange-link;
+                }
+
+                &:hover:after {
+                    color: $orange-90;
+                }
+            }*/
+
+            &.highlight {
+                background-color: $light-beige;
+                color: $dark-orange !important;
+                background-image: linear-gradient(transparent, transparent), linear-gradient($orange-link, $orange-link) !important;
+
+                &:hover {
+                    color: $orange-link !important;
+                    background-color: inherit;
+                }
+            }
+        }
+
+        cite>a {
+            color: $orange-link;
+
+            &:hover {
+                color: $light-beige;
+            }
+
+        }
+    }
+
+    &.grey,
+    &.dark-grey {
+        p>a:not(.button) {
+                color: $grey-link;
+                font-weight: 900 !important;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $grey-link;
+                }
+        
+                &.arrow::after {
+                    color: $grey-link;
+                }
+        
+                &.arrow:hover:after {
+                    color: $grey-link;
+                }
+            }
+        }
+
+        cite>a {
+            color: $grey-link;
+
+            &:hover {
+                color: $off-white;
+            }
+
+        }
+    }
+
+    //If link is in a white card/callout, use default link style
+    .card,
+    .callout {
+        a:not(.button) {
+            color: $orange;
+
+            &:hover {
+                color: $dark-orange;
+            }
+
+        }
+    }
+
+//Links on an image background
+.img-fill {
+    p>a:not(.button) {
+        background-image: linear-gradient($grey-link, $grey-link);
+        color: $grey-link;
+
+        &:hover {
+            background-color: $grey-link;
+            color: $grey-90;
+        }
+
+        &.highlight {
+            background-color: $grey-link;
+            color: $grey-90 !important;
+            background-image: linear-gradient(transparent, transparent), linear-gradient($grey-link, $grey-link) !important;
+
+            &:hover {
+                color: $grey-link !important;
+                background-color: transparent !important;
+            }
+        }
+    }
+}
+
+.color .white,
+.img-fill .white {
+
+    //Use default link styles on white backgrounds like callouts or cards
+    p {
+        >a:not(.button) {
+            position: relative;
+            text-decoration: none;
+            font-weight: $black-font-weight;
+            font-size: 18.7px;
+
+            &:hover {
+                background-color: unset;
+            }
+        }
+
+        a.no-underline {
+            background-image: none;
+        }
+
+        //Highlighter Links
+        &.highlight {
+            background-color: $orange;
+            color: $off-white;
+            background-image: linear-gradient(transparent, transparent), linear-gradient($dark-orange, $dark-orange) !important;
+
+            &:hover {
+                color: $dark-orange;
+                background-color: inherit;
+            }
+        }
+    }
+
+
+}
+
+
+/*ul:not(.accordion, .menu) a {
+    font-weight: 600;
+}*/

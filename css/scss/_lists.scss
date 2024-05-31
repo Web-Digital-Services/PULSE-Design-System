@@ -1,0 +1,224 @@
+/* ============================================================
+    LISTS
+============================================================ */
+
+div.arrow-right ul
+    {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    line-height: 3rem;
+}
+
+div.arrow-right ul li
+    {
+    text-indent: -0.875rem;
+    padding-left: 1em;
+}
+
+div.arrow-right ul li:after {
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    text-indent: 0.175rem;
+    content: "\f061";
+    color: $orange;
+    margin-left: .3rem;
+    transition: .5s ease-out;
+}
+
+div.arrow-right ul li:hover:after {
+    color: $dark-orange;
+    transform: translatex(.2rem);
+}
+
+ul li a,
+ol li a {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+div.lines {
+
+    ul,
+    ol {
+        list-style-type: none;
+    }
+
+    ul:not(.tags) {
+        >li {
+            padding: 0.938em 0;
+            border-bottom: solid rem-calc(1px) #667075;
+        }
+    }
+
+    ul.tags {
+        padding-bottom: 0;
+    }
+
+    & a {
+        display: block;
+    }
+}
+
+div.indent-list {
+    margin-left: 2.5rem;
+}
+
+div.loose-list {
+    li {
+        margin-bottom: 0.625rem;
+    }
+}
+
+ul.inline,
+ol.inline {
+    li {
+        list-style-type: none;
+        display: inline-block;
+    }
+}
+
+ul,
+ol {
+    margin: 0 1.25rem 1.25rem 1.25rem;
+}
+
+div.decoration {
+    li>a {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-color: $orange;
+        text-decoration-thickness: rem-calc(1px);
+
+
+        &:hover {
+            text-decoration-line: underline;
+            text-decoration-color: $dark-orange;
+        }
+    }
+}
+
+//General styles on colored elements and blue styles
+.color {
+    div.decoration {
+        ul, ol {
+            li>a {
+                text-decoration-color: $off-white;
+                //transition: opacity .3s;
+
+                &:hover {
+                    text-decoration-color: $off-white;
+                }
+            }
+        }
+    }
+
+    div.lines {
+
+        ul:not(.tags) {
+            >li {
+                border-bottom: solid rem-calc(1px) #b5c8d3;
+            }
+        }
+    }
+
+    //arrow list on color backgrounds use white arrows
+
+    div.arrow li:before {
+        color: $off-white;
+    }
+
+    //cards and callouts change back to default orange
+    .card,
+    .callout {
+        div.arrow li:before {
+            color: $orange;
+
+        }
+
+        ul li a,
+        ol li a {
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    ul li a,
+    ol li a {
+        font-weight: 900;
+        color: $blue-link;
+        padding-left: .5% !important;
+        padding-right: .5% !important;
+
+
+        &:hover {
+            background-color: $blue-link;
+            color: $blue-90;
+        }
+    }
+}
+
+.color.grey,
+.color.dark-grey {
+
+    ul li a,
+    ol li a {
+        //background-image: linear-gradient($blue-link, $blue-link);
+        color: $grey-link;
+        padding-left: .5% !important;
+        padding-right: .5% !important;
+
+
+        &:hover {
+            background-color: $grey-link;
+            color: $grey-90;
+        }
+    }
+
+}
+
+.color.orange,
+.color.darken {
+
+    ul li a,
+    ol li a {
+        //background-image: linear-gradient($blue-link, $blue-link);
+        color: $orange-link;
+        padding-left: .5% !important;
+        padding-right: .5% !important;
+
+
+        &:hover {
+            background-color: $light-beige;
+            color: $orange-90;
+        }
+    }
+
+}
+
+
+ul.underline {
+    @extend %link-underline;
+
+    &:hover {
+        @extend %link-underline-hover;
+    }
+}
+
+// ======= News Byline
+
+ul.byline {
+    margin-bottom: rem-calc(27px);
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+        font-weight: 300;
+        margin-top: 0;
+        list-style: none;
+    }
+}
