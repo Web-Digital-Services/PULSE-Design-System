@@ -218,27 +218,26 @@
 
 @media screen and (max-width:$small-screen) {
 
-    .title-bar>button.menu-icon {
+    .menu-icon {
 
         color: $off-black;
         font-weight: 900;
         width: unset;
+    }
 
-        &:before {
-            font-family: "Font Awesome 5 Free";
-            margin-right: rem-calc(7px);
-            content: attr(data-content) "\f0c9";
+    .menu-icon::before {
+        font-family: "Font Awesome 5 Free";
+        margin-right: rem-calc(7px);
+        content: attr(data-content) "\f0c9";
 
-        }
+    }
 
-        /*&.menu-open:before {
-            content: attr(data-content) "\f00d";
-        }*/
+    .menu-icon.menu-open::before {
+        content: attr(data-content) "\f00d";
+    }
 
-        &:after {
-            content: unset;
-        }
-
+    .menu-icon::after {
+        content: unset;
     }
 
     .breadcrumbs {

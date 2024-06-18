@@ -28,7 +28,7 @@ footer {
                     content: attr(data-content) "\f067";
                 }
 
-                .menu-icon.on-click::after {
+                .menu-icon.menu-open::after {
                     content: attr(data-content) "\f068";
                 }
 

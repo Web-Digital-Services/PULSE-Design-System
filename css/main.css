@@ -919,22 +919,22 @@ ul.no-bullet, ol.no-bullet {
     display: table-cell !important;
   }
   a,
-a:visited {
+  a:visited {
     text-decoration: underline;
   }
   a[href]:after {
     content: " (" attr(href) ")";
   }
   .ir a:after,
-a[href^="javascript:"]:after,
-a[href^="#"]:after {
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: "";
   }
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
   pre,
-blockquote {
+  blockquote {
     border: 1px solid #8a8a8a;
     page-break-inside: avoid;
   }
@@ -942,7 +942,7 @@ blockquote {
     display: table-header-group;
   }
   tr,
-img {
+  img {
     page-break-inside: avoid;
   }
   img {
@@ -952,13 +952,13 @@ img {
     margin: 0.5cm;
   }
   p,
-h2,
-h3 {
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
   h2,
-h3 {
+  h3 {
     page-break-after: avoid;
   }
   .print-break-inside {
@@ -3823,8 +3823,8 @@ table.unstriped tbody tr {
     display: none;
   }
   table.stack tr,
-table.stack th,
-table.stack td {
+  table.stack th,
+  table.stack td {
     display: block;
   }
   table.stack td {
@@ -5879,7 +5879,7 @@ html.is-reveal-open body {
     flex-wrap: wrap;
   }
   .top-bar.stacked-for-medium .top-bar-left,
-.top-bar.stacked-for-medium .top-bar-right {
+  .top-bar.stacked-for-medium .top-bar-right {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -5889,7 +5889,7 @@ html.is-reveal-open body {
     flex-wrap: wrap;
   }
   .top-bar.stacked-for-large .top-bar-left,
-.top-bar.stacked-for-large .top-bar-right {
+  .top-bar.stacked-for-large .top-bar-right {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -6246,13 +6246,13 @@ html.is-reveal-open body {
 }
 @media screen and (orientation: landscape) {
   .show-for-landscape,
-.hide-for-portrait {
+  .hide-for-portrait {
     display: block !important;
   }
 }
 @media screen and (orientation: portrait) {
   .show-for-landscape,
-.hide-for-portrait {
+  .hide-for-portrait {
     display: none !important;
   }
 }
@@ -6263,13 +6263,13 @@ html.is-reveal-open body {
 }
 @media screen and (orientation: landscape) {
   .hide-for-landscape,
-.show-for-portrait {
+  .show-for-portrait {
     display: none !important;
   }
 }
 @media screen and (orientation: portrait) {
   .hide-for-landscape,
-.show-for-portrait {
+  .show-for-portrait {
     display: block !important;
   }
 }
@@ -13575,13 +13575,13 @@ h1,
 }
 @media screen and (max-width: 1024px) {
   h1,
-.h1 {
+  .h1 {
     font-size: 43px;
   }
 }
 @media screen and (max-width: 639px) {
   h1,
-.h1 {
+  .h1 {
     font-size: 32px;
   }
 }
@@ -13594,13 +13594,13 @@ h2,
 }
 @media screen and (max-width: 1024px) {
   h2,
-.h2 {
+  .h2 {
     font-size: 34px;
   }
 }
 @media screen and (max-width: 639px) {
   h2,
-.h2 {
+  .h2 {
     font-size: 28px;
   }
 }
@@ -13613,13 +13613,13 @@ h3,
 }
 @media screen and (max-width: 1024px) {
   h3,
-.h3 {
+  .h3 {
     font-size: 30px;
   }
 }
 @media screen and (max-width: 639px) {
   h3,
-.h3 {
+  .h3 {
     font-size: 24px;
   }
 }
@@ -13632,13 +13632,13 @@ h4,
 }
 @media screen and (max-width: 1024px) {
   h4,
-.h4 {
+  .h4 {
     font-size: 25px;
   }
 }
 @media screen and (max-width: 639px) {
   h4,
-.h4 {
+  .h4 {
     font-size: 23px;
   }
 }
@@ -13651,13 +13651,13 @@ h5,
 }
 @media screen and (max-width: 1024px) {
   h5,
-.h5 {
+  .h5 {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 639px) {
   h5,
-.h5 {
+  .h5 {
     font-size: 20px;
   }
 }
@@ -13793,19 +13793,19 @@ h1 + .subheader + .subheader + .subheader + .subheader + .subheader.small {
 }
 @media screen and (max-width: 569px) {
   h1 + .subheader.small,
-h1 + .subheader + .subheader.small,
-h1 + .subheader + .subheader + .subheader.small,
-h1 + .subheader + .subheader + .subheader + .subheader.small,
-h1 + .subheader + .subheader + .subheader + .subheader + .subheader.small {
+  h1 + .subheader + .subheader.small,
+  h1 + .subheader + .subheader + .subheader.small,
+  h1 + .subheader + .subheader + .subheader + .subheader.small,
+  h1 + .subheader + .subheader + .subheader + .subheader + .subheader.small {
     font-size: 1.375rem;
   }
 }
 @media screen and (max-width: 569px) {
   h1 + .subheader,
-h1 + .subheader + .subheader,
-h1 + .subheader + .subheader + .subheader,
-h1 + .subheader + .subheader + .subheader + .subheader,
-h1 + .subheader + .subheader + .subheader + .subheader + .subheader {
+  h1 + .subheader + .subheader,
+  h1 + .subheader + .subheader + .subheader,
+  h1 + .subheader + .subheader + .subheader + .subheader,
+  h1 + .subheader + .subheader + .subheader + .subheader + .subheader {
     font-size: 1.375rem;
   }
 }
@@ -15815,20 +15815,20 @@ a.card.border-card .card-section:after .grid-x:after {
 }
 
 @media screen and (max-width: 639px) {
-  .title-bar > button.menu-icon {
+  .menu-icon {
     color: #171717;
     font-weight: 900;
     width: unset;
-    /*&.menu-open:before {
-        content: attr(data-content) "\f00d";
-    }*/
   }
-  .title-bar > button.menu-icon:before {
+  .menu-icon::before {
     font-family: "Font Awesome 5 Free";
     margin-right: 0.4375rem;
     content: attr(data-content) "\f0c9";
   }
-  .title-bar > button.menu-icon:after {
+  .menu-icon.menu-open::before {
+    content: attr(data-content) "\f00d";
+  }
+  .menu-icon::after {
     content: unset;
   }
   .breadcrumbs {
@@ -15940,11 +15940,11 @@ select {
 }
 @media (prefers-color-scheme: dark) {
   input[type=text]:focus,
-input[type=password]:focus,
-input[type=checkbox]:focus,
-input[type=radio]:focus,
-textarea:focus,
-select:focus {
+  input[type=password]:focus,
+  input[type=checkbox]:focus,
+  input[type=radio]:focus,
+  textarea:focus,
+  select:focus {
     background-color: #F1F5F7 !important;
     color: #171717;
   }
@@ -16153,7 +16153,7 @@ footer {
     margin-left: 18.75rem;
     content: attr(data-content) "\f067";
   }
-  footer div .title-bar .menu-icon.on-click::after {
+  footer div .title-bar .menu-icon.menu-open::after {
     content: attr(data-content) "\f068";
   }
   footer div .title-bar .menu-icon::before {
@@ -16940,7 +16940,7 @@ header img {
     margin-right: 0.4375rem;
     content: attr(data-content) "\f0c9";
   }
-  header.title-bar .menu-icon.on-click::before {
+  header.title-bar .menu-icon.menu-open::before {
     content: attr(data-content) "\f00d";
   }
   header.title-bar .menu-icon::after {
@@ -17170,7 +17170,7 @@ div.lines ol li .tags > li {
 }
 @media screen and (max-width: 355px) {
   div.lines ul li .tags > li,
-div.lines ol li .tags > li {
+  div.lines ol li .tags > li {
     padding: 0;
   }
 }
@@ -17415,7 +17415,7 @@ a .datebox:hover {
 
 @media screen and (max-width: 639px) {
   .img-fill:not(.overlay) img,
-.img-fill:not(.overlay) video {
+  .img-fill:not(.overlay) video {
     position: relative;
   }
 }

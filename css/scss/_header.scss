@@ -126,7 +126,7 @@ header {
 
             }
 
-            .menu-icon.on-click::before {
+            .menu-icon.menu-open::before {
                 content: attr(data-content) "\f00d";
             }
 

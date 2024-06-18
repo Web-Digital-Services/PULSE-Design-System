@@ -1,4 +1,23 @@
-<header class="title-bar" id="mobile-header" data-responsive-toggle="header">
+<!DOCTYPE html>
+<html lang="en" class=" >
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#D45D00">
+
+    <link rel="stylesheet" href="../../css/main.css?1718718313399" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1718718313399" media="all" />
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    
+    <!-- End Pattern Lab -->
+  </head>
+  <body class=""><header class="title-bar" id="mobile-header" data-responsive-toggle="header">
     <a href="#"><img src="../../images/UTHSA-Hospital_H.svg"></a>
     <div class="mobile-icons">
         <a href="#">
@@ -50,7 +69,7 @@
                 <i class="fas fa-user"></i>
                 <span>MyChart</span>
             </a>
-            <a href="#" id="search">
+            <a href="#" id="search" class="before-click">
                 <i class="fas fa-search"></i>
                 <span>Search</span>
             </a>
@@ -255,11 +274,11 @@
     <div class="grid-x grid-margin-x align-center-middle">
       <div class="cell medium-7 small-12 text-center">
         <div class="hero callout">
-          <h1>Research</h2>
+          <h1>Clinical Trials</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
               ea commodo consequat.</p>
-            <p><a href="#" class="button outlined">Contact Us</a></p>
+            <p><a href="#" class="button outlined">FindAStudy</a></p>
         </div>
       </div>
     </div>
@@ -274,8 +293,8 @@
           magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat.</p>
         <div class="button-group">
-          <p><a href="#" class="button">Cancer Research</a></p>
-          <p><a href="#" class="button outlined">Clinical Trials</a></p>
+          <p><a href="#" class="button">Cancer Clinical Trials</a></p>
+          <p><a href="#" class="button outlined">Other Clinical Trials</a></p>
         </div>
       </div>
       <div class="cell medium-4 large-4 small-order-2">
@@ -295,11 +314,11 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat.</p>
-        <div class="arrow-right">
-          <ul>
-            <li><a class="arrow-right" href="#">List of all Centers & Programs</a></li>
+          <div class="arrow-right">
+            <ul>
+          <li><a href="#">List of all Centers & Programs</a></li>
           </ul>
-        </div>
+          </div>
       </div>
     </div>
   </div>
@@ -475,4 +494,77 @@
             </div>
         </div>
     </section>
-</footer>
+</footer><script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"components-header","lineagePath":"../../patterns/components-header-header/components-header-header.rendered.html"},{"lineagePattern":"components-main-nav","lineagePath":"../../patterns/components-navigation-main-nav/components-navigation-main-nav.rendered.html"},{"lineagePattern":"blocks-default-footer","lineagePath":"../../patterns/blocks-footer-default-footer/blocks-footer-default-footer.rendered.html"}],"lineage":[{"lineagePattern":"components-header","lineagePath":"../../patterns/components-header-header/components-header-header.rendered.html"},{"lineagePattern":"components-main-nav","lineagePath":"../../patterns/components-navigation-main-nav/components-navigation-main-nav.rendered.html"},{"lineagePattern":"blocks-default-footer","lineagePath":"../../patterns/blocks-footer-default-footer/blocks-footer-default-footer.rendered.html"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"<p>NOTE: Many of the style class names and attributes are the same or like SHIELD. The major differences are going to be main navigation and header sections. However, overall, it doesn't stray too far from what has already been developed for SHIELD and the UT Health San Antonio website templates. For questions about the Main navigation and header sections, please reach out to Hunter (foxh@uthscsa.edu) and for questions about the design or other website components, please reach out to Chase (fordtran@uthscsa.edu).</p>\n<ul>\n<li>\n<p>Header:</p>\n</li>\n<li>\n<p>Main Navigation:</p>\n</li>\n<li>\n<p>Top banner (hero): uses the default hero, these are used for landing pages only and utilize the style classes <code>.hero .bleed .img-fill</code>. They have a space for a <code>.h1</code> heading and optional two lines of body text and optional <code>.button .outlined</code> all using <code>.text-center</code>.</p>\n</li>\n<li>\n<p>Flexible information panel: this is an example of a standard <code>.bleed</code> panel using a using a 5/4 setup <code>.align-center-middle</code> on the <code>.grid-x</code> with the image on the right-hand side. The client prefers that the text always stacks on top of images in mobile view on all panels. So, the text uses the order property as follows: small-order-1 and the image uses the uses the order property as follows: small-order-2.</p>\n</li>\n<li>\n<p>Flexible Spotlight Info Panel: this option for an informational panel uses a section <code>.bleed</code> and <code>.align-center-middle</code> on the <code>.grid-x</code>. The setup is a 6/7 because of the overlay of the image (uses <code>.img-spotlight</code>) and offset of the <code>.callout .spotlight .beige</code> text section. It allows for a <code>.h2 .h3</code> heading and a couple of sentence of body text along with an optional <code>.arrow-right</code> &lt;ul&gt; list links. The client prefers that the text always stacks on top of images in mobile view on all panels. So, the callout uses the order property as follows: <code>.small-order-1 .medium-order-2 .large-order-2</code> and the image uses the uses the order property as follows: <code>.small-order-2 .medium-order-1 .large-order-1</code>.</p>\n</li>\n<li>\n<p>Flexible information panel: this is an example of a standard <code>.bleed</code> panel using a using a 5/4 setup <code>.align-center-middle</code> on the <code>.grid-x</code> with the image on the left-hand side. The client prefers that the text always stacks on top of images in mobile view on all panels. So, the text uses the order property as follows: small-order-1 and the image uses the uses the order property as follows: small-order-2.</p>\n</li>\n<li>\n<p>Story highlight panel: this is an example of an interactive <code>.card</code> panel that can be used to link to news stories or other pertinent links. The panel uses a <code>.bleed</code> and 3/3/3/3 setup for the <code>.card .border-card</code> and <code>.card-section</code>.</p>\n</li>\n<li>\n<p>Footer: the default footer will be present on all the site's pages. It is composed of 4 columns of content using a 3/3/3/3 setup. The far left-hand column houses the <code>contact</code> &lt;div&gt; along with the <code>address</code> information. Interactive stacked icons for the phone and the addresses. The middle two columns contains the &quot;Explore&quot; links and &quot;Resources&quot; links. While the far right column contains the &quot;Connect with us&quot; links and <code>.social</code> media icon links. The mobile version of the 3 columns with linked lists will be expandable using the <code>.title-bar data-responsive-toggle</code> class functions along with the <code>.menu-icon .icon-right</code> classes. Please reference the footer.twig file for more indepth info.</p>\n</li>\n</ul>\n","patternBreadcrumb":{"patternGroup":"prototypes","patternSubgroup":""},"patternExtension":"twig","patternName":"Clinical Trials","patternPartial":"prototypes-clinical-trials","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":4}}
+</script>
+
+<script>
+  window.patternData = {"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"components-header","lineagePath":"../../patterns/components-header-header/components-header-header.rendered.html"},{"lineagePattern":"components-main-nav","lineagePath":"../../patterns/components-navigation-main-nav/components-navigation-main-nav.rendered.html"},{"lineagePattern":"blocks-default-footer","lineagePath":"../../patterns/blocks-footer-default-footer/blocks-footer-default-footer.rendered.html"}],"lineage":[{"lineagePattern":"components-header","lineagePath":"../../patterns/components-header-header/components-header-header.rendered.html"},{"lineagePattern":"components-main-nav","lineagePath":"../../patterns/components-navigation-main-nav/components-navigation-main-nav.rendered.html"},{"lineagePattern":"blocks-default-footer","lineagePath":"../../patterns/blocks-footer-default-footer/blocks-footer-default-footer.rendered.html"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"<p>NOTE: Many of the style class names and attributes are the same or like SHIELD. The major differences are going to be main navigation and header sections. However, overall, it doesn't stray too far from what has already been developed for SHIELD and the UT Health San Antonio website templates. For questions about the Main navigation and header sections, please reach out to Hunter (foxh@uthscsa.edu) and for questions about the design or other website components, please reach out to Chase (fordtran@uthscsa.edu).</p>\n<ul>\n<li>\n<p>Header:</p>\n</li>\n<li>\n<p>Main Navigation:</p>\n</li>\n<li>\n<p>Top banner (hero): uses the default hero, these are used for landing pages only and utilize the style classes <code>.hero .bleed .img-fill</code>. They have a space for a <code>.h1</code> heading and optional two lines of body text and optional <code>.button .outlined</code> all using <code>.text-center</code>.</p>\n</li>\n<li>\n<p>Flexible information panel: this is an example of a standard <code>.bleed</code> panel using a using a 5/4 setup <code>.align-center-middle</code> on the <code>.grid-x</code> with the image on the right-hand side. The client prefers that the text always stacks on top of images in mobile view on all panels. So, the text uses the order property as follows: small-order-1 and the image uses the uses the order property as follows: small-order-2.</p>\n</li>\n<li>\n<p>Flexible Spotlight Info Panel: this option for an informational panel uses a section <code>.bleed</code> and <code>.align-center-middle</code> on the <code>.grid-x</code>. The setup is a 6/7 because of the overlay of the image (uses <code>.img-spotlight</code>) and offset of the <code>.callout .spotlight .beige</code> text section. It allows for a <code>.h2 .h3</code> heading and a couple of sentence of body text along with an optional <code>.arrow-right</code> &lt;ul&gt; list links. The client prefers that the text always stacks on top of images in mobile view on all panels. So, the callout uses the order property as follows: <code>.small-order-1 .medium-order-2 .large-order-2</code> and the image uses the uses the order property as follows: <code>.small-order-2 .medium-order-1 .large-order-1</code>.</p>\n</li>\n<li>\n<p>Flexible information panel: this is an example of a standard <code>.bleed</code> panel using a using a 5/4 setup <code>.align-center-middle</code> on the <code>.grid-x</code> with the image on the left-hand side. The client prefers that the text always stacks on top of images in mobile view on all panels. So, the text uses the order property as follows: small-order-1 and the image uses the uses the order property as follows: small-order-2.</p>\n</li>\n<li>\n<p>Story highlight panel: this is an example of an interactive <code>.card</code> panel that can be used to link to news stories or other pertinent links. The panel uses a <code>.bleed</code> and 3/3/3/3 setup for the <code>.card .border-card</code> and <code>.card-section</code>.</p>\n</li>\n<li>\n<p>Footer: the default footer will be present on all the site's pages. It is composed of 4 columns of content using a 3/3/3/3 setup. The far left-hand column houses the <code>contact</code> &lt;div&gt; along with the <code>address</code> information. Interactive stacked icons for the phone and the addresses. The middle two columns contains the &quot;Explore&quot; links and &quot;Resources&quot; links. While the far right column contains the &quot;Connect with us&quot; links and <code>.social</code> media icon links. The mobile version of the 3 columns with linked lists will be expandable using the <code>.title-bar data-responsive-toggle</code> class functions along with the <code>.menu-icon .icon-right</code> classes. Please reference the footer.twig file for more indepth info.</p>\n</li>\n</ul>\n","patternBreadcrumb":{"patternGroup":"prototypes","patternSubgroup":""},"patternExtension":"twig","patternName":"Clinical Trials","patternPartial":"prototypes-clinical-trials","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":4}};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1718718313399">
+  (function() {
+    if (self != top) {
+      var cb = '1718718313399';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1718718313399" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+
+<script type="text/javascript" src="../../js/vendor/jQuery/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/foundation/foundation.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/motion-ui/motion-ui.min.js"></script>
+<script type="text/javascript" src="../../js/pulse.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/what-input/what-input.min.js"></script>
+</body>
+
+</html>
