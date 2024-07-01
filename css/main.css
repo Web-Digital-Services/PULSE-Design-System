@@ -13541,7 +13541,8 @@ readers do not read off random characters that represent icons */
     Includes: Typography, Font Weights, Colors, Icons, Shadows, Padding & Margin, Rounded Corners
 
 ============================================================ */
-ul.underline {
+ul.underline, .color .white p > a:not(.button),
+.img-fill .white p > a:not(.button), p > a:not(.button) {
   background-image: linear-gradient(#ffd1a3, #ffd1a3), linear-gradient(#7A0F00, #7A0F00);
   background-size: 100% 2px, 0 2px;
   background-position: 100% 100%, 0 100%;
@@ -13549,7 +13550,8 @@ ul.underline {
   transition: 0.5s cubic-bezier(0.37, 0.01, 0.2, 1);
 }
 
-ul.underline:hover {
+ul.underline:hover, .color .white p > a:not(.button):hover,
+.img-fill .white p > a:not(.button):hover, p > a:not(.button):hover {
   background-size: 0 2px, 100% 2px;
 }
 
@@ -13700,7 +13702,7 @@ body {
 h1,
 .h1 {
   margin-bottom: 1.125rem;
-  line-height: 1.3;
+  line-height: 1.2;
   font-family: "Lora", serif;
 }
 
@@ -13738,7 +13740,7 @@ strong {
 }
 
 .black {
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .bold {
@@ -13873,7 +13875,7 @@ p.large {
 a {
   color: #AD4200;
   transition: 0.5s ease-out;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 a:hover {
@@ -13892,7 +13894,7 @@ a:hover {
 }
 
 figcaption {
-  color: #257994;
+  color: #171717;
   font-style: italic;
   padding: 0.125rem;
   text-align: center;
@@ -13910,10 +13912,6 @@ figcaption.grey {
 
 .color figcaption {
   color: #F1F5F7 !important;
-}
-
-.coward {
-  font-weight: 600 !important;
 }
 
 /* =========================
@@ -13952,6 +13950,20 @@ Tooltip
   border-color: transparent transparent #257994;
 }
 
+ul.underline, .color .white p > a:not(.button),
+.img-fill .white p > a:not(.button), p > a:not(.button) {
+  background-image: linear-gradient(#ffd1a3, #ffd1a3), linear-gradient(#7A0F00, #7A0F00);
+  background-size: 100% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: 0.5s cubic-bezier(0.37, 0.01, 0.2, 1);
+}
+
+ul.underline:hover, .color .white p > a:not(.button):hover,
+.img-fill .white p > a:not(.button):hover, p > a:not(.button):hover {
+  background-size: 0 2px, 100% 2px;
+}
+
 a {
   color: #AD4200;
   text-decoration: none;
@@ -13968,13 +13980,13 @@ a:focus-visible {
 }
 
 p > a:not(.button) {
-  color: #AD4200;
   position: relative;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
 }
-p > a:not(.button):hover, p > a:not(.button):focus {
-  color: #7A0F00;
-  text-decoration: none;
+p a.no-underline {
+  background-image: none;
 }
 
 a.arrow-right:after {
@@ -13990,6 +14002,18 @@ a.arrow-right:after {
 a.arrow-right:hover:after {
   color: #7A0F00;
   transform: translatex(0.2rem);
+}
+
+a.external:after {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f35d";
+  margin-left: 0.3rem;
+  transition: 0.5s ease-out;
+}
+a.external:hover:after {
+  transform: translate(0.1rem, -0.1rem);
 }
 
 a.external:after {
@@ -14039,7 +14063,10 @@ a.highlight:hover {
   outline-offset: 0.625rem;
 }
 .color p > a:not(.button) {
+  background-image: linear-gradient(#A6FFFF, #A6FFFF);
   color: #A6FFFF;
+  padding-left: 0.5% !important;
+  padding-right: 0.5% !important;
   /*&.arrow,
   &.external {
       &:after {
@@ -14052,6 +14079,7 @@ a.highlight:hover {
   }*/
 }
 .color p > a:not(.button):hover {
+  background-color: #A6FFFF;
   color: #002D48;
 }
 .color p > a:not(.button).highlight {
@@ -14097,31 +14125,40 @@ a.highlight:hover {
   color: #f7f5f0;
 }
 .color.grey p > a:not(.button), .color.dark-grey p > a:not(.button) {
-  color: #FFF1DB;
-  font-weight: 900 !important;
-}
-.color.grey p > a:not(.button):hover, .color.grey p > a:not(.button):focus, .color.grey p > a:not(.button):active, .color.dark-grey p > a:not(.button):hover, .color.dark-grey p > a:not(.button):focus, .color.dark-grey p > a:not(.button):active {
+  background-image: linear-gradient(#FFF1DB, #FFF1DB);
   color: #FFF1DB;
 }
-.color.grey p > a:not(.button).arrow::after, .color.dark-grey p > a:not(.button).arrow::after {
+.color.grey p > a:not(.button):hover, .color.dark-grey p > a:not(.button):hover {
+  background-color: #FFF1DB;
+  color: #1A2429;
+}
+.color.grey p > a:not(.button).arrow:after, .color.grey p > a:not(.button).external:after, .color.dark-grey p > a:not(.button).arrow:after, .color.dark-grey p > a:not(.button).external:after {
   color: #FFF1DB;
 }
-.color.grey p > a:not(.button).arrow:hover:after, .color.dark-grey p > a:not(.button).arrow:hover:after {
+.color.grey p > a:not(.button).arrow:hover:after, .color.grey p > a:not(.button).external:hover:after, .color.dark-grey p > a:not(.button).arrow:hover:after, .color.dark-grey p > a:not(.button).external:hover:after {
+  color: #1A2429;
+}
+.color.grey p > a:not(.button).highlight, .color.dark-grey p > a:not(.button).highlight {
+  background-color: #FFF1DB;
+  color: #1A2429 !important;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#FFF1DB, #FFF1DB) !important;
+}
+.color.grey p > a:not(.button).highlight:hover, .color.dark-grey p > a:not(.button).highlight:hover {
+  color: #FFF1DB !important;
+  background-color: inherit;
+}
+.color.grey cite > a, .color.dark-grey cite > a {
   color: #FFF1DB;
 }
-.color cite > a {
-  color: #FFF1DB;
-}
-.color cite > a:hover {
+.color.grey cite > a:hover, .color.dark-grey cite > a:hover {
   color: #F1F5F7;
 }
-
-.card a:not(.button),
-.callout a:not(.button) {
+.color .card a:not(.button),
+.color .callout a:not(.button) {
   color: #AD4200;
 }
-.card a:not(.button):hover,
-.callout a:not(.button):hover {
+.color .card a:not(.button):hover,
+.color .callout a:not(.button):hover {
   color: #7A0F00;
 }
 
@@ -14147,7 +14184,7 @@ a.highlight:hover {
 .img-fill .white p > a:not(.button) {
   position: relative;
   text-decoration: none;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 18.7px;
 }
 .color .white p > a:not(.button):hover,
@@ -14397,26 +14434,6 @@ blockquote.fancy cite {
   color: #171717;
 }
 
-.accordion.blue .accordion-title {
-  color: #F1F5F7 !important;
-  border: 0.0625rem solid #257994 !important;
-  background: #257994 !important;
-}
-.accordion.blue .accordion-title:hover,
-.accordion.blue .accordion-title:focus {
-  background: #0C607B !important;
-}
-.accordion.blue .accordion-title::before {
-  color: #F1F5F7;
-}
-.accordion.blue .is-active > .accordion-title::before {
-  color: #F1F5F7;
-}
-.accordion.blue .accordion-content {
-  background-color: #E0E5E6;
-  color: #171717;
-}
-
 /* ============================================================
     BLEEDS
 ============================================================ */
@@ -14604,6 +14621,9 @@ IMG Fill BLEEDS
 .callout.beige {
   background-color: #F0ECE2;
 }
+.callout.sky-blue {
+  background-color: #A0D1E6;
+}
 .callout.dark-beige {
   background-color: #EFE1CC;
 }
@@ -14698,6 +14718,7 @@ div.arrow-right ul {
 div.arrow-right ul li {
   text-indent: -0.875rem;
   padding-left: 1em;
+  line-height: 2.5rem;
 }
 
 div.arrow-right ul li:after {
@@ -14997,7 +15018,7 @@ ul.fa-ul.jump-links li .fa-li {
   list-style-type: none;
 }
 .social ul > li a .fa-2x {
-  font-size: 1.5em;
+  font-size: 2em !important;
 }
 .social ul > li a .fa-stack-2x {
   color: #F1F5F7;
@@ -15411,6 +15432,12 @@ a.card.border-card {
 }
 a.card.border-card:hover {
   color: #171717;
+}
+a.card.border-card.orange {
+  border-top: 20px solid #AD4200;
+}
+a.card.border-card.sky-blue {
+  border-top: 20px solid #A0D1E6;
 }
 a.card.border-card .card-section h2,
 a.card.border-card .card-section h3,
@@ -17699,7 +17726,7 @@ ul.fa-ul.jump-links li .fa-li {
   list-style-type: none;
 }
 .social ul > li a .fa-2x {
-  font-size: 1.5em;
+  font-size: 2em !important;
 }
 .social ul > li a .fa-stack-2x {
   color: #F1F5F7;

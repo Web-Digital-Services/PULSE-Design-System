@@ -39,6 +39,10 @@
         background-color: $beige;
     }
 
+    &.sky-blue {
+        background-color: $sky-blue;
+    }
+
     &.dark-beige {
         background-color: $dark-beige;
     }
@@ -128,7 +132,7 @@ a.callout {
 
 a.callout:hover {
     background-color: $pure-white;
-    border: 3px solid $navy-blue;
+    border: 3px solid $ocean;
     @extend %jump-hover;
 
     &:after {

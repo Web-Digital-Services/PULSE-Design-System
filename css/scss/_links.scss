@@ -1,5 +1,19 @@
 // ======= Links
 
+%link-underline {
+    //background-image: linear-gradient($gold, $gold),linear-gradient(to right, $gold, $gold 10%, $orange 25%, $dark-orange);
+    background-image: linear-gradient($orange-underline, $orange-underline), linear-gradient($dark-orange, $dark-orange);
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: .5s cubic-bezier(0.37, 0.01, 0.2, 1);
+}
+
+%link-underline-hover {
+    background-size: 0 2px, 100% 2px;
+}
+
+// ======= Overwrite gloabl link effect
 a {
     color: $orange;
     text-decoration: none;
@@ -22,15 +36,19 @@ a {
 // ======= apply link styles to paragraph text
 p {
     >a:not(.button) {
-        color: $orange;
         position: relative;
         text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        @extend %link-underline;
 
-        &:hover,
-        &:focus {
-        color: $dark-orange;
-        text-decoration: none;
+        &:hover {
+            @extend %link-underline-hover
         }
+    }
+
+    a.no-underline {
+        background-image: none; //Class to remove default underline
     }
 }
 
@@ -53,6 +71,23 @@ a.arrow-right {
     }
 }
 
+
+//Add an icon to indicate external link
+a.external {
+    &:after {
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f35d";
+        margin-left: .3rem;
+        transition: .5s ease-out;
+        //transform: rotate(-45deg);
+    }
+
+    &:hover:after {
+        transform: translate(.1rem, -.1rem);
+    }
+}
 
 //Add an icon to indicate external link
 a.external {
@@ -122,9 +157,14 @@ a.highlight {
 
     //Link styles for paragraph text
     p>a:not(.button) {
+        background-image: linear-gradient($blue-link, $blue-link);
         color: $blue-link;
+        padding-left: .5% !important;
+        padding-right: .5% !important;
+
 
         &:hover {
+            background-color: $blue-link;
             color: $blue-90;
         }
 
@@ -199,21 +239,33 @@ a.highlight {
     &.grey,
     &.dark-grey {
         p>a:not(.button) {
-                color: $grey-link;
-                font-weight: 900 !important;
-        
-                &:hover,
-                &:focus,
-                &:active {
+            background-image: linear-gradient($grey-link, $grey-link);
+            color: $grey-link;
+
+            &:hover {
+                background-color: $grey-link;
+                color: $grey-90;
+            }
+
+            &.arrow,
+            &.external {
+                &:after {
                     color: $grey-link;
                 }
-        
-                &.arrow::after {
-                    color: $grey-link;
+
+                &:hover:after {
+                    color: $grey-90;
                 }
-        
-                &.arrow:hover:after {
-                    color: $grey-link;
+            }
+
+            &.highlight {
+                background-color: $grey-link;
+                color: $grey-90 !important;
+                background-image: linear-gradient(transparent, transparent), linear-gradient($grey-link, $grey-link) !important;
+
+                &:hover {
+                    color: $grey-link !important;
+                    background-color: inherit;
                 }
             }
         }
@@ -240,6 +292,8 @@ a.highlight {
 
         }
     }
+
+}
 
 //Links on an image background
 .img-fill {
@@ -275,8 +329,10 @@ a.highlight {
             text-decoration: none;
             font-weight: $black-font-weight;
             font-size: 18.7px;
+            @extend %link-underline;
 
             &:hover {
+                @extend %link-underline-hover;
                 background-color: unset;
             }
         }

@@ -21,10 +21,18 @@ a.card {
 
     &.border-card {
         border-radius: rem-calc(1px) !important; //Needs !important to override base element styles
-        border-top: 20px solid $navy-blue;
+        border-top: 20px solid $ocean;
 
         &:hover {
             color: $off-black;
+        }
+
+        &.orange {
+            border-top: 20px solid $orange;
+        }
+
+        &.sky-blue {
+            border-top: 20px solid $sky-blue;
         }
 
         .card-section {

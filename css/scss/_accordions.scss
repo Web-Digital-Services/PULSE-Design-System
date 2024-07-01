@@ -138,34 +138,4 @@
     background-color: $light-grey;
     color: $off-black;
   }
-
-}
-
-// ======= Blue Accordion
-.accordion.blue {
-  .accordion-title {
-    color: $off-white !important;
-    border: rem-calc(1px) solid $blue-60 !important;
-    background: $blue !important;
-  }
-
-  .accordion-title:hover,
-  .accordion-title:focus {
-    background: $blue-70 !important;
-  }
-
-  .accordion-title::before {
-    color: $off-white;
-  }
-
-  .is-active>.accordion-title::before {
-    color: $off-white;
-  }
-
-  .accordion-content {
-    background-color: $light-grey;
-    color: $off-black;
-
-
-  }
 }

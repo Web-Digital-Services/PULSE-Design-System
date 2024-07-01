@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" class=" >
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#D45D00">
+
+    <link rel="stylesheet" href="../../css/main.css?1719804876796" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1719804876796" media="all" />
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1719804876796" media="all">
+    <!-- End Pattern Lab -->
+  </head>
+  <body class=""><!-- View All Patterns in a Pattern Sub-Type -->
+<div class="pl-c-main">
+
+	<!-- Index of Patterns -->
+	<div class="pl-c-pattern-index">
+
+		<div id="viewall-components-modal" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/components-modal&#x2F;index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-components-modal">Modal</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="components-default" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/components-modal-default&#x2F;components-modal-default.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="components-default" title="Link to Pattern">
+						Modal - Default
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-components-default" data-patternpartial="components-default" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-components-default">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="grid-container">
+  <div class="grid-x">
+    <div class="cell large-12">
+      <!-- MODAL LINK-->
+      <p><a data-open="exampleModal1">Click me for a modal</a></p>
+      <!-- MODAL CONTENTS-->
+      <div class="reveal" id="exampleModal1" aria-labelledby="exampleModalHeader1" data-reveal>
+        <h1 id="exampleModalHeader1">I'm a default modal</h1>
+        <p class="lead">Tea Ipsum</p>
+        <p>Nilgiri nokcha energy matcha white loose leaf caffeine oolong focus nokcha yerba maté tea garden. Sachet blend lemongrass nilgiri masala chai hot puierh pearl milk oolong teapot infusion!</p>
+        <butt class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+    </div>
+  </div>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-components-default" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<p>A modal is just an empty container that can hold any kind of content inside it - from text to forms to video to an entire grid. Modal dialogs, or pop-up windows, should be used sparingly. Foundation includes Reveal, our jQuery modal plugin, to make this easy.</p>\n<p>Read more on this in the <a href=\"https://get.foundation/sites/docs/reveal.html\">Foundation 6 Documentation &gt; Containers &gt; Reveal</a>.</p>\n<p>There are 2 parts to a modal - what activates it and the actual modal.\n1- You can have activate a modal by adding <code>data-open=&quot;modal&quot;</code> to a button or link.\n2- The content within the bodal needs to be inside of a div with <code>class=&quot;reveal modal&quot; id=&quot;modal&quot; aria-labelledby=&quot;modal&quot; data-reveal</code>. Modals by default are accessible through the use of various ARIA attributes, but you can make it more accessible by adding &quot;aria-labelledby=&quot;exampleModalHeader1&quot; to this div and adding the corresponding id to the heading.</p>\n<p>Keep in mind that if there are multiple modals on a page you will need to have a unique id for each modal and make sure the data-opem is tied to that unique id.</p>\n","patternBreadcrumb":{"patternGroup":"components","patternSubgroup":"modal"},"patternExtension":"twig","patternName":"Modal - Default","patternPartial":"components-default","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":1}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="components-sizes" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/components-modal-sizes&#x2F;components-modal-sizes.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="components-sizes" title="Link to Pattern">
+						Modal Sizes
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-components-sizes" data-patternpartial="components-sizes" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-components-sizes">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<!-- MODAL LINK TO ACTIVATE THE MODAL-->
+<p><button class="button " data-open="modal-tiny">Click me! I'm a tiny modal</button></p>
+<!-- MODAL CONTENTS-->
+<div class="reveal tiny" id="modal-tiny" aria-labelledby="modal-tiny-header" data-reveal>
+  <h1 id="modal-tiny-header">I'm a tiny modal</h1>
+  <p class="lead">I am even more accessible than the other modals.</p>
+  <button class="close-button" data-close aria-label="Close Accessible Modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+</div>
+<!--======================
+Large Modal
+==========================-->
+<!-- MODAL LINK-->
+<p><button class="button " data-open="modal-large">Click me! I'm a large modal</button></p>
+<!-- MODAL CONTENTS-->
+<div class="reveal large" id="modal-large" aria-labelledby="modal-large-header" data-reveal>
+  <h1 id="modal-large-header">I'm a default modal</h1>
+  <p class="lead">I am even more accessible than the other modals.</p>
+  <button class="close-button" data-close aria-label="Close Accessible Modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-components-sizes" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<p>The size of a modal can be changed with these sizing classes, which are added to the modal container:<br>\n<code>.tiny: 30% wide</code><br>\n<code>.small: 50% wide</code><br>\n<code>.large: 90% wide</code><br>\n<code>.full: 100% width</code></p>\n<p>Modal resource: <a href=\"https://get.foundation/sites/docs/reveal.html\">Foundation 6 Documentation &gt; Containers &gt; Reveal</a>.</p>\n","patternBreadcrumb":{"patternGroup":"components","patternSubgroup":"modal"},"patternExtension":"twig","patternName":"Modal Sizes","patternPartial":"components-sizes","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":2}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="components-image-modal" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/components-modal-image-modal&#x2F;components-modal-image-modal.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="components-image-modal" title="Link to Pattern">
+						Image Modals
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-components-image-modal" data-patternpartial="components-image-modal" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-components-image-modal">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="grid-x">
+  <div class="cell large-12">
+    <!-- MODAL LINK-->
+  <p><button class="button" data-open="modal-image">Click me! I open for an image modal</button></p>
+  <!-- MODAL CONTENTS-->
+  <div class="reveal modal image large" id="modal-image" aria-labelledby="modal-image" data-reveal>
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-12 medium-10 small-order-2 medium-order-2 large-5 large-order-1 flex-container modal-image align-center">
+        <div class="flex-child-auto">
+          <img src="<img src="https://picsum.photos/id/0/800/450" alt="Laptop on table" alt="adorable pup">
+        </div>
+      </div>
+      <div class="cell small-12 medium-12 small-order-1 medium-order-1 large-order-2 large-7 flex-container">
+        <div class="flex-child-auto">
+          <h2>I'm an image modal</h2>
+          <p >Nilgiri nokcha energy matcha white loose leaf caffeine oolong focus nokcha yerba maté tea garden. Sachet blend lemongrass nilgiri masala chai hot puierh pearl milk oolong teapot infusion!Nilgiri nokcha energy matcha white loose leaf caffeine oolong focus nokcha yerba maté tea garden. Sachet blend lemongrass nilgiri masala chai hot puierh pearl milk oolong teapot infusion!</p> 
+          <button class="close-button" data-close aria-label="Close Accessible Modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>  
+  </div>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-components-image-modal" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<p>The size of a modal can be changed with these sizing classes, which are added to the modal container:<br>\n<code>.tiny: 30% wide</code><br>\n<code>.small: 50% wide</code><br>\n<code>.large: 90% wide</code><br>\n<code>.full: 100% width</code></p>\n<p>Modal resource: <a href=\"https://get.foundation/sites/docs/reveal.html\">Foundation 6 Documentation &gt; Containers &gt; Reveal</a>.</p>\n","patternBreadcrumb":{"patternGroup":"components","patternSubgroup":"modal"},"patternExtension":"twig","patternName":"Image Modals","patternPartial":"components-image-modal","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":3}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="components-thumbnail" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/components-modal-thumbnail&#x2F;components-modal-thumbnail.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="components-thumbnail" title="Link to Pattern">
+						Thumbnail Modals
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-components-thumbnail" data-patternpartial="components-thumbnail" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-components-thumbnail">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell small-12 medium-4 large-2">
+      <a data-open="modal-thumbnail-1">
+        <img src="https://picsum.photos/id/0/800/450" alt="Laptop on table" class="profile-thumbnail">
+      </a>
+    </div>
+    <div class="cell small-12 medium-4 large-2">
+      <a data-open="modal-thumbnail-2">
+        <img src="https://picsum.photos/id/0/800/450" alt="Laptop on table" class="profile-thumbnail">
+      </a>
+    </div>
+    <div class="cell small-12 medium-4 large-2">
+      <a data-open="modal-thumbnail-3">
+        <img src="https://picsum.photos/id/0/800/450" alt="Laptop on table" class="profile-thumbnail">
+      </a>
+    </div>
+  </div>
+
+  <div class="grid-x">
+    <div class="cell">
+      <!-- MODAL CONTENTS -1-->
+      <div class="reveal modal" id="modal-thumbnail-1" aria-labelledby="modal-thumbnail-1" data-reveal>
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12 large-12 flex-container modal-thumbnail-1">
+            <div class="flex-child-auto">
+              <img src="https://picsum.photos/id/0/800/450" alt="Laptop on table" class="img-margin">
+            </div>
+          </div>
+          <button class="close-button" data-close aria-label="Close Accessible Modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+      <!-- MODAL CONTENTS-2-->
+      <div class="reveal modal" id="modal-thumbnail-2" aria-labelledby="modal-thumbnail-2" data-reveal>
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12 large-12 flex-container modal-thumbnail-2">
+            <div class="flex-child-auto">
+              <img
+                src="https://picsum.photos/id/0/800/450" alt="Laptop on table" class="margin-top">
+            </div>
+          </div>
+          <button class="close-button" data-close aria-label="Close Accessible Modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div><!-- MODAL CONTENTS-2-->
+      <div class="reveal modal" id="modal-thumbnail-3" aria-labelledby="modal-thumbnail-3" data-reveal>
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-12 large-12 flex-container modal-thumbnail-2">
+            <div class="flex-child-auto">
+              <img
+                src="https://picsum.photos/id/0/800/450" alt="Laptop on table" class="margin-top">
+            </div>
+          </div>
+          <button class="close-button" data-close aria-label="Close Accessible Modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-components-thumbnail" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<p>Thumbnail modals are predominantly used on the profiles when there are additional images that the person wants to include as part of their profile. e.g. student &amp; provider profiles.</p>\n<p>Each image in the thumnail area will need a <code>profile-thumbnail</code> classes</p>\n<p>&lt;p&gt;each image will need a custom data-open &amp; data-reveal This is commonly seen in the profiles&lt;/p&gt;</p>\n<p>Modal resource: <a href=\"https://get.foundation/sites/docs/reveal.html\">Foundation 6 Documentation &gt; Containers &gt; Reveal</a>.</p>\n","patternBreadcrumb":{"patternGroup":"components","patternSubgroup":"modal"},"patternExtension":"twig","patternName":"Thumbnail Modals","patternPartial":"components-thumbnail","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":4}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+
+	</div>
+	<!--end pl-c-pattern-index-->
+
+</div>
+<!--end pl-c-main--><script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"patternPartial":"viewall-components-modal"}
+</script>
+
+<script>
+  window.patternData = {"patternPartial":"viewall-components-modal"};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1719804876796">
+  (function() {
+    if (self != top) {
+      var cb = '1719804876796';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1719804876796" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+
+<script type="text/javascript" src="../../js/vendor/jQuery/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/foundation/foundation.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/motion-ui/motion-ui.min.js"></script>
+<script type="text/javascript" src="../../js/pulse.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/what-input/what-input.min.js"></script>
+</body>
+
+</html>
