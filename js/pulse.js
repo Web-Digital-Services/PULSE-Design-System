@@ -8,10 +8,14 @@ const clickElms = document.querySelectorAll(".before-click");
 
 clickElms.forEach(clickElm => {
     clickElm.addEventListener('click', () => {
-        clickElm.classList.add('after-click');
+        if ($(clickElm).hasClass('after-click')) { //if menu is already open...
+
+            $(clickElm).removeClass('after-click'); //remove class that adds X icon, defaults back to menu icon
+        } else {
+            $(clickElm).addClass('after-click'); //if menu is closed, add class that replaces icon
+        }
     });
-});
-;$("ul.dropdown.menu > li").on('mouseenter', function () {
+});;$("ul.dropdown.menu > li").on('mouseenter', function () {
     $("ul.dropdown.menu > li").removeClass('active-menu-item'); //remove from other elements
     $(this).addClass('active-menu-item');
 
@@ -40,4 +44,32 @@ menuIcons.forEach(menuIcon => {
             $(menuIcon).addClass('menu-open'); //if menu is closed, add class that replaces icon
         }
     });
+});;const searchItem = document.querySelector("#searchNav");
+//const searchBar = document.querySelector(".desktop-search");
+const navItems = document.querySelectorAll("#header-nav-item");
+const closeButton = document.getElementById("search-close");
+
+searchItem.addEventListener("click", function () {
+
+
+    $(searchItem).addClass('hide');
+    navItems.forEach(navItem => {
+
+        $(navItem).addClass('hide');
+
+    })
+
+});
+
+closeButton.addEventListener("click", function () {
+
+    $(searchItem).removeClass('hide');
+    $(searchItem).removeClass('after-click');
+
+    navItems.forEach(navItem => {
+
+        $(navItem).removeClass('hide');
+
+    })
+
 });

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#D45D00">
 
-    <link rel="stylesheet" href="../../css/main.css?1719804876796" media="all" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1719804876796" media="all" />
+    <link rel="stylesheet" href="../../css/main.css?1719953425157" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1719953425157" media="all" />
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
@@ -43,39 +43,46 @@
         <a class="donate">Apply Now</a>
     </div>
     <div class="group">
-        <div class="logo pipe">
-            <a href="#"><img src="../../images/UTHSA_basic_logo.svg" alt="UT Health San Antonio"></a>
-            <p>Multispecialty & Research Hospital</p>
+        <div class="logo">
+            <a href="#"><img src="../../images/UTHSA-Hospital_Logo.svg" alt="UT Health San Antonio"></a>
         </div>
 
         <div class="right">
-            <a href="#">
+            <a href="#" id="header-nav-item">
                 <i class="fas fa-phone-alt"></i>
                 <span>210-450-9000</span>
             </a>
-            <a href="#">
+            <a href="#" id="header-nav-item">
                 <span>Location</span>
             </a>
-            <a href="#">
+            <a href="#" id="header-nav-item">
                 <span>Patient Check-in</span>
             </a>
-            <a href="#">
+            <a href="#" id="header-nav-item">
                 <span>Financial Services</span>
             </a>
-            <a href="#">
+            <a href="#" id="header-nav-item">
                 <span>Careers</span>
             </a>
-            <a href="#">
+            <a href="#" id="header-nav-item">
                 <i class="fas fa-user"></i>
                 <span>MyChart</span>
             </a>
-            <a href="#" id="search" class="before-click">
+            <a href="#" id="searchNav" class="before-click">
                 <i class="fas fa-search"></i>
                 <span>Search</span>
             </a>
+            <form class="desktop-search">
+                <input type="search" class="search-box" placeholder="Search by keyword...">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                <button type="button" id="search-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </form>
         </div>
-        <!--<div class="search-bar">
-        </div>-->
+
     </div>
     <nav class="nav-bar" id="nav-bar-mobile">
         <ul class="mobile-nav accordion" data-accordion data-allow-all-closed="true">
@@ -518,10 +525,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1719804876796">
+<script id="pl-js-polyfill-insert-1719953425157">
   (function() {
     if (self != top) {
-      var cb = '1719804876796';
+      var cb = '1719953425157';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -534,7 +541,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1719804876796" nomodule>
+<script id="pl-js-insert-1719953425157" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
