@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" class=" >
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#D45D00">
+
+    <link rel="stylesheet" href="../../css/main.css?1727281809566" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1727281809566" media="all" />
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    
+    <!-- End Pattern Lab -->
+  </head>
+  <body class=""><header class="title-bar" id="mobile-header" data-responsive-toggle="header">
+  <a href="#"><img src="../../images/UTHSA-Hospital_H.svg"></a>
+  <div class="mobile-icons">
+    <a href="#">
+      <i class="fas fa-phone"></i>
+      <span>Call Us</span>
+    </a>
+    <a href="#" id="search">
+      <i class="fas fa-user"></i>
+      <span>MyChart</span>
+    </a>
+  </div>
+  <button class="menu-icon" type="button" data-toggle="header">Menu</button>
+</header>
+<form class="mobile-search">
+  <input type="search" class="search-box" placeholder="Search by keyword...">
+  <button type="submit">
+    <i class="fa fa-search"></i>
+  </button>
+</form>
+<header id="header" class="off-canvas-content" data-off-canvas-content>
+  <div class="header-bar">
+    <p><a>UT Health San Antonio</a> | <a>Mays Cancer Center</a></p>
+    <a class="donate"><i class="fas fa-user"></i>
+      <span>MyChart</span></a>
+  </div>
+  <div class="group">
+    <div class="logo">
+      <a href="#"><img src="../../images/UTHSA-Hospital_Logo.svg" alt="UT Health San Antonio"></a>
+    </div>
+
+    <div class="right">
+      <a href="#" id="header-nav-item">
+        <i class="fas fa-phone-alt"></i>
+        <span>210-450-9000</span>
+      </a>
+      <a href="#" id="header-nav-item">
+        <span>Bill Pay</span>
+      </a>
+      <a href="#" id="header-nav-item">
+        <span>Careers</span>
+      </a>
+      <a href="#" id="header-nav-item">
+        <span>About</span>
+      </a>
+      <a href="#" id="header-nav-item">
+        <span>Contact</span>
+      </a>
+      <a href="#" id="searchNav" class="before-click">
+        <i class="fas fa-search"></i>
+        <span>Search</span>
+      </a>
+      <form class="desktop-search">
+        <input type="search" class="search-box" placeholder="Search by keyword...">
+        <button type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+        <button type="button" id="search-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </form>
+    </div>
+
+  </div>
+  <nav class="nav-bar" id="nav-bar-mobile">
+    <ul class="mobile-nav accordion" data-accordion data-allow-all-closed="true">
+      <li><a href="#">GET CARE</a></li>
+      <li class="accordion-item" data-accordion-item>
+        <a href="#">SERVICES</a>
+        <div class="accordion-content" data-tab-content>
+          <ul class="menu vertical">
+            <li><a>Services Home</a></li>
+            <li><a>Bariatric Surgery</a></li>
+            <li><a>Brain and Spine</a></li>
+            <li><a>Cancer Care</a></li>
+            <li><a>Critical Care ICU</a></li>
+            <li><a>Imaging & Radiology</a></li>
+            <li><a>Orthopedics</a></li>
+            <li><a>Service 7</a></li>
+            <li><a>Service 8</a></li>
+            <li><a>Service 9</a></li>
+            <li><a>Service 10</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a>LOCATION AND DIRECTIONS</a></li>
+      <li class="accordion-item" data-accordion-item>
+        <a href="#">PATIENTS AND VISITORS</a>
+        <div class="accordion-content" data-tab-content>
+          <ul class="menu vertical">
+            <li><a>Patients and Visitors Home</a></li>
+            <li><a>Billing and Insurance</a></li>
+            <li><a>Dining Options</a></li>
+            <li><a>Financial Counseling</a></li>
+            <li><a>Gift Shop</a></li>
+            <li><a>Medical Records</a></li>
+            <li><a>Patient Portal</a></li>
+            <li><a>Patient Check-In</a></li>
+            <li><a>Patient Rights and Responsibilities</a></li>
+            <li><a>Share Feedback</a></li>
+            <li><a>Your Hospital Stay</a></li>
+            <li><a>Financial Services & Calculators</a></li>
+            <li><a>Health Library</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="#">CLINICAL TRIALS</a></li>
+    </ul>
+
+    <ul class="links">
+      <li><a href="#">
+          <i class="fas fa-phone-alt"></i>
+          <span>210-450-9000</span>
+        </a></li>
+      <li><a href="#">
+          <span>Bill Pay</span>
+        </a></li>
+      <li><a href="#">
+          <span>Careers</span>
+        </a></li>
+      <li><a href="#">
+          <span>About</span>
+        </a></li>
+      <li><a href="#">
+          <span>Contact</span>
+        </a></li>
+    </ul>
+    <ul class="links">
+      <li>Go to: <a>UT Health San Antonio Patient Care</a> | <a>Mays Cancer Center</a></li>
+    </ul>
+
+
+  </nav>
+
+</header><div class="top-bar" id="main-nav">
+  <div class="top-bar-left">
+    <ul class="dropdown menu">
+      <li><a>GET CARE</a></li>
+      <li class="megamenu-parent"><a>SERVICES</a>
+        <div class="megamenu" id="menu1">
+          <div class="grid-x">
+            <div class="cell small-12 medium-auto large-auto">
+              <p class="bold">SERVICES LINKS</p>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="cell small-12 medium-4 large-3">
+              <ul>
+                <li><a>Services Home</a></li>
+                <li><a>Bariatric Surgery</a></li>
+                <li><a>Brain and Spine</a></li>
+                <li><a>Cancer Care</a></li>
+                <li><a>Critical Care ICU</a></li>
+                <li><a>Imaging & Radiology</a></li>
+                <li><a>Orthopedics</a></li>
+                <li><a>Service 7</a></li>
+                <li><a>Service 8</a></li>
+                <li><a>Service 9</a></li>
+                <li><a>Service 10</a></li>
+              </ul>
+            </div>
+            <div class="cell small-12 medium-4 large-3">
+            </div>
+            <div class="cell small-12 medium-4 large-6">
+              <div class="grid-x align-center-middle">
+                <div class="small-12 medium-12 large-3">
+                  <span class="fa-stack fa-3x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-map-marker-alt fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="small-12 medium-12 large-6">
+                  <h3>Our Location:</h3>
+                  <address>
+                    <p>Floyd Curl Dr & Wurzbach Rd<br>San Antonio, TX 78229-3900<br><a>Map and
+                        directions</a></p>
+                  </address>
+                  <p><a class="button white outlined">Health Library</a></p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a>LOCATION AND DIRECTIONS</a></li>
+      <li class="megamenu-parent"><a>PATIENTS AND VISITORS</a>
+        <div class="megamenu" id="menu1">
+          <div class="grid-x">
+            <div class="cell small-12 medium-auto large-auto">
+              <p class="bold">PATIENTS AND VISITORS LINKS</p>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="cell small-12 medium-4 large-3">
+              <ul>
+                <li><a>Patients and Visitors Home</a></li>
+                <li><a>Billing and Insurance</a></li>
+                <li><a>Dining Options</a></li>
+                <li><a>Financial Counseling</a></li>
+                <li><a>Gift Shop</a></li>
+                <li><a>Medical Records</a></li>
+                <li><a>Patient Portal</a></li>
+                <li><a>Patient Check-In</a></li>
+                <li><a>Patient Rights and Responsibilities</a></li>
+                <li><a>Share Feedback</a></li>
+                <li><a>Your Hospital Stay</a></li>
+              </ul>
+            </div>
+            <div class="cell small-12 medium-4 large-3">
+              <ul>
+                <li><a>Financial Services & Calculators</a></li>
+                <li><a>Health Library</a></li>
+              </ul>
+            </div>
+            <div class="cell small-12 medium-4 large-6">
+              <div class="grid-x align-center-middle">
+                <div class="small-12 medium-12 large-3">
+                  <span class="fa-stack fa-3x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-map-marker-alt fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="small-12 medium-12 large-6">
+                  <h3>Our Location:</h3>
+                  <address>
+                    <p>Floyd Curl Dr & Wurzbach Rd<br>San Antonio, TX 78229-3900<br><a>Map and
+                        directions</a></p>
+                  </address>
+                  <p><a class="button white outlined">Health Library</a></p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a>CLINICAL TRIALS</a></li>
+    </ul>
+  </div>
+</div><section class="hero bleed img-fill overlay">
+  <img src="../../images/specialties-banner.jpg" alt="Hospital">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x align-center-middle">
+      <div class="cell medium-9 small-12 text-center">
+        <div class="hero callout">
+          <h1>News</h2>
+            <p>Stay updated on emerging medical discoveries, new programs and life-saving care happening right here in San Antonio.</p>
+
+<p>Are you a member of the media? We have resources available to help you.
+</p>
+            <p><a href="#" class="button outlined">For the Media</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bleed">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell medium-12 large-12 text-center margin-bottom">
+        <h2>News and Headlines</h2>
+      </div>
+      <a class="card border-card cell small-12 medium-3 large-3">
+        <img src="../../images/Ginsburg-534x300.jpg">
+        <div class="card-section">
+          <h4>UT Health San Antonio’s Brett Ginsburg</h4>
+          <p>UT Health San Antonio’s Brett Ginsburg selected for Wellcome Leap Untangling Addiction program</p>
+        </div>
+      </a>
+      <a class="card border-card cell small-12 medium-3 large-3">
+        <img src="../../images/rural-study.jpg">
+        <div class="card-section">
+          <h4>Associated Press: Heart disease is rampant</h4>
+          <p>Associated Press: Heart disease is rampant in parts of the rural South. Researchers are hitting the road to learn why</p>
+        </div>
+      </a>
+      <a class="card border-card cell small-12 medium-3 large-3">
+        <img src="../../images/back-to-school.jpg">
+        <div class="card-section">
+          <h4>UT Health San Antonio joins community back-to-school event</h4>
+          <p>UT Health San Antonio joins community back-to-school event hosted by San Antonio Spurs and Frost Bank</p>
+        </div>
+      </a>
+      <a class="card border-card cell small-12 medium-3 large-3">
+        <img src="https://picsum.photos/534/300">
+        <div class="card-section">
+          <h4>Toolkit available</h4>
+          <p>Toolkit available for hosting events with sponsorships</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bleed">
+<div class="grid-container">
+    <div class="grid-x grid-margin-x">
+        <main class="cell small-12 medium-7 large-8 small-order-2 medium-order-1">
+            <p id="start">
+            <h2>Recent News</h2>
+            <h4 class="h6 close"><a href="#">UT Health San Antonio’s Brett Ginsburg selected for Wellcome Leap Untangling Addiction program</a>
+            </h4>
+            <p>Tuesday, August 20, 2024</p>
+            <p>Study will evaluate biomarkers and novel treatments for alcohol use disorder Brett Ginsburg, PhD, director of the Biochemical Pharmacology Analytical Laboratory at The University of Texas Health Science Center at San Antonio (UT Health San Antonio), was selected as a performer with the Wellcome Leap Untangling Addiction program. Wellcome Leap is a U.S.-based nonprofit organization […]</p>
+            <hr>
+            <h4 class="h6 close"><a href="#">Associated Press: Heart disease is rampant in parts of the rural South. Researchers are hitting the road to learn why</a>
+            </h4>
+            <p>Tuesday, August 20, 2024</p>
+            <p>Vasan Ramachandran, MD, FACC, FAHA, dean of the UT School of Public Health San Antonio, was quoted in this article.   Read More</p>
+            <hr>
+            <h4 class="h6 close"><a href="#">UT Health San Antonio joins community back-to-school event hosted by San Antonio Spurs and Frost Bank</a>
+            </h4>
+            <p>Friday, August 16, 2024</p>
+            <p>Offering free dental screenings, strategies to help children combat anxiety and numerous other health and wellness resources, multiple schools and programs of the University of Texas Health Science Center at San Antonio participated in the third annual Spurs x Frost Back to School Bash held Aug. 8 at Frost Bank Center. UT Health San Antonio […]</p>
+            <hr>
+            <h4 class="h6 close"><a href="#">Toolkit available for hosting events with sponsorships</a>
+            </h4>
+            <p>Friday, August 16, 2024</p>
+            <p>University members hosting an event with sponsorships can now access a sponsorship toolkit from the Office of Institutional Advancement (OIA) by clicking here. Chapter 6 of the Institutional Handbook of Operating Procedures (IHOP) states that all faculty, students and staff must work through the OIA to secure funds through private sector support, including foundations. The […]</p>
+            <hr>
+            <h4 class="h6 close"><a href="#">KENS 5: Student athletes encouraged to get preventative dental screenings ahead of new school year</a>
+            </h4>
+            <p>Thursday, August 15, 2024</p>
+            <p>Scott Stafford, DDS, MBA, clinical assistant professor and interim chair of the Department of Comprehensive Dentistry, was interviewed for this news segment.   Watch Now</p>
+            <hr>
+            <nav aria-label="Pagination">
+                <ul class="pagination">
+                    <li class="pagination-previous"><a href="#" aria-label="Previous page"> <span
+                                class="show-for-sr"> Previous page</span></a></li>
+                    <li><a href="#" aria-label="Page 1">1</a></li>
+                    <li class="current"><span class="show-for-sr">You're on page</span> 2</li>
+                    <li><a href="#" aria-label="Page 3">3</a></li>
+                    <li class="ellipsis" aria-hidden="true"></li>
+                    <li><a href="#" aria-label="Page 10">10</a></li>
+                    <li><a href="#" aria-label="Page 11">11</a></li>
+                    <li><a href="#" aria-label="Page 12">12</a></li>
+                    <li class="pagination-next"><a href="#" aria-label="Next page"> <span class="show-for-sr">Next
+                                page</span></a></li>
+                </ul>
+            </nav>
+            <p id="stop">
+        </main>
+    <aside class="cell small-12 medium-8 large-4 small-order-1 medium-order-3 large-order-3">
+      <div class="title-bar" data-responsive-toggle="subnav" data-hide-for="medium">
+        <button class="menu-icon" id="subnav-toggle" type="button" data-toggle="subnav"></button>
+        <div class="title-bar-title">Section Navigation</div>
+      </div>
+      <ul class="vertical menu accordion-menu" data-accordion-menu id="subnav">
+        <div class="subnav-title">News</div>
+        <li><a href="#">News Home</a></li>
+        <li><a href="#">For the Media</a></li>
+      </ul>
+    </aside>
+    </div>
+  </div>
+</section>
+
+<section class="bleed beige">
+	<div class="grid-container">
+		<div class="grid-x grid-margin-x align-spaced">
+			<div class="cell small-12 medium-12 large-8 ">
+				<h2>Upcoming events</h2>
+				<p>Looking for a health and wellness event at UT Health San Antonio? <a class="external">Browse the UT Health San Antonio event calendar</a> for the latest classes and events.</p>
+              <h4>Follow us on social media</h4>
+<div class="social">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-instagram-square fa-2x"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                    </ul>
+                </div>
+			</div>
+			<div class="cell small-12 large-2 align-self-middle">
+				<i class="fas fa-calendar-alt fa-10x"></i>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="standard">
+    <hr>
+    <section class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell large-3 medium-3 small-10">
+            <img src="../../images/UTHSA-Hospital_H.svg">
+                <div class="contact margin-top">
+                    <a href="#" class="fa-stack">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-map-marker-alt fa-stack-1x fa-inverse"></i>
+                    </a> 
+                    <address>
+                        8214 Ewing Halsell Dr<br>
+                        San Antonio, TX 78229<br>
+                        <a href="#">Map and directions</a>
+                    </address>
+                </div>
+                <div class="contact">
+                    <a href="#" class="fa-stack">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+                    </a>
+                    <a href="#">210-567-7000</a> 
+                </div>
+            </div>
+            <div class="cell large-3 medium-3 small-12">
+            <div class="title-bar" data-responsive-toggle="explore" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="explore"></button>
+        <div class="title-bar-title">Explore</div>
+      </div>
+      <ul class="vertical menu accordion-menu" data-accordion-menu id="explore">
+                <p class="subnav-title">Explore</strong></p>
+                    <li><a class="external">Patient Care at UT Health San Antonio</a></li>
+                    <li><a class="external">Find a Provider</a></li>
+                    <li><a href="#">Medical Records</a></li>
+                    <li><a href="#">Translation and Interpreter Services</a></li>
+                    <li><a class="external">Classes and Events</a></li>
+                    <li><a class="external">Giving and Donations</a></li>
+                    <li><a class="external">Volunteer</a></li>
+                </ul>
+            </div>
+            <div class="cell large-3 medium-3 small-12">
+            <div class="title-bar" data-responsive-toggle="resources" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="resources"></button>
+        <div class="title-bar-title">Resources</div>
+      </div>
+      <ul class="vertical menu accordion-menu" data-accordion-menu id="resources">
+                <p class="subnav-title">Resources</strong></p>
+                        <li><a href="#">For Providers and Staff</a></li>
+                        <li><a class="external">Employee Intranet</a></li>
+                        <li><a href="#">Refer a Patient to MSRH</a></li>
+                        <li><a href="#">Academics and Training</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a class="external">Compliance</a></li>
+                        <li><a class="external">Patient Rights and Responsibilities</a></li>
+                    </ul>
+                </div>
+            <div class="cell large-3 medium-3 small-12">
+            <div class="title-bar" data-responsive-toggle="connect" data-hide-for="medium">
+        <button class="menu-icon icon-right" type="button" data-toggle="connect"></button>
+        <div class="title-bar-title">Connect with us</div>
+      </div>
+      <ul class="vertical menu accordion-menu" data-accordion-menu id="connect">
+                <p class="subnav-title">Connect with us</strong></p>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Blog and Patient Stories</a></li>
+                        <li><a href="#">MSRH News</a></li>
+                        <li><a href="#">For the Media</a></li>
+                    </ul>
+<div class="social">
+   <ul>
+      <li>
+         <a href="#">
+            <span class="fa-stack fa-lg">
+               <i class="fas fa-square fa-stack-2x"></i>
+               <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+         </a>
+         </span>
+      </li>
+      <li>
+         <a href="#">
+            <span class="fa-stack fa-lg">
+               <i class="fas fa-square fa-stack-2x"></i>
+               <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+            </span></a>
+      </li>
+      <li><a href="#">
+            <span class="fa-stack fa-lg">
+               <i class="fas fa-square fa-stack-2x"></i>
+               <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+            </span></a>
+      </li>
+      <li><a href="#">
+            <span class="fa-stack fa-lg">
+               <i class="fas fa-square fa-stack-2x"></i>
+               <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </span></a>
+      </li>
+   </ul>
+</div>
+<ul class="vertical menu accordion-menu" data-accordion-menu id="policies">
+<li><a>Website Policies and Accessibility</a></li>
+</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bleed color dark-grey">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell">
+                    <p>© Copyright 2014 - 2024 UT Health San Antonio</p>
+                    <p><a href="#">Web Privacy</a> | Links from websites affiliated with UT Health's website (uthscsa.edu) to other websites do not constitute or imply university endorsement of those sites, their content, or products and services associated with those sites. The content on this website is intended to be used for informational purposes only. Health information on this site is not meant to be used to diagnose or treat conditions. Consult a health care provider if you are in need of treatment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer><script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"components-header","lineagePath":"../../patterns/components-header-header/components-header-header.rendered.html"},{"lineagePattern":"components-main-nav","lineagePath":"../../patterns/components-navigation-main-nav/components-navigation-main-nav.rendered.html"},{"lineagePattern":"blocks-default-footer","lineagePath":"../../patterns/blocks-footer-default-footer/blocks-footer-default-footer.rendered.html"}],"lineage":[{"lineagePattern":"components-header","lineagePath":"../../patterns/components-header-header/components-header-header.rendered.html"},{"lineagePattern":"components-main-nav","lineagePath":"../../patterns/components-navigation-main-nav/components-navigation-main-nav.rendered.html"},{"lineagePattern":"blocks-default-footer","lineagePath":"../../patterns/blocks-footer-default-footer/blocks-footer-default-footer.rendered.html"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"<p>NOTE: Many of the style class names and attributes are the same or like SHIELD. The major differences are going to be main navigation and header sections. However, overall, it doesn't stray too far from what has already been developed for SHIELD and the UT Health San Antonio website templates. For questions about the Main navigation and header sections, please reach out to Hunter (foxh@uthscsa.edu) and for questions about the design or other website components, please reach out to Chase (fordtran@uthscsa.edu).</p>\n<ul>\n<li>\n<p>Header:</p>\n</li>\n<li>\n<p>Main Navigation:</p>\n</li>\n<li>\n<p>Top banner (hero): uses the default hero, these are used for landing pages only and utilize the style classes <code>.hero .bleed .img-fill</code>. They have a space for a <code>.h1</code> heading and optional two lines of body text and optional <code>.button .outlined</code> all using <code>.text-center</code>.</p>\n</li>\n<li>\n<p>News highlight panel: this is an example of an interactive <code>.card</code> panel that can be used to link to news stories or other pertinent links. The panel uses a <code>.bleed</code> and 3/3/3/3 setup for the <code>.card .border-card</code> and <code>.card-section</code>.</p>\n</li>\n<li>\n<p>Recent News: Uses an 8/4 setup. The main content section is 8-columns and contains an <code>.h2</code> header and a selection of 5 news items and a <code>.ul</code> class <code>.pagination</code> option to view additional news stories. The <code>.aside</code> section is 4-columns and contains the subnav.</p>\n</li>\n<li>\n<p>Footer: the default footer will be present on all the site's pages. It is composed of 4 columns of content using a 3/3/3/3 setup. The far left-hand column houses the <code>contact</code> &lt;div&gt; along with the <code>address</code> information. Interactive stacked icons for the phone and the addresses. The middle two columns contains the &quot;Explore&quot; links and &quot;Resources&quot; links. While the far right column contains the &quot;Connect with us&quot; links and <code>.social</code> media icon links. The mobile version of the 3 columns with linked lists will be expandable using the <code>.title-bar data-responsive-toggle</code> class functions along with the <code>.menu-icon .icon-right</code> classes. Please reference the footer.twig file for more indepth info.</p>\n</li>\n</ul>\n","patternBreadcrumb":{"patternGroup":"prototypes","patternSubgroup":""},"patternExtension":"twig","patternName":"News","patternPartial":"prototypes-news","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":7}}
+</script>
+
+<script>
+  window.patternData = {"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"components-header","lineagePath":"../../patterns/components-header-header/components-header-header.rendered.html"},{"lineagePattern":"components-main-nav","lineagePath":"../../patterns/components-navigation-main-nav/components-navigation-main-nav.rendered.html"},{"lineagePattern":"blocks-default-footer","lineagePath":"../../patterns/blocks-footer-default-footer/blocks-footer-default-footer.rendered.html"}],"lineage":[{"lineagePattern":"components-header","lineagePath":"../../patterns/components-header-header/components-header-header.rendered.html"},{"lineagePattern":"components-main-nav","lineagePath":"../../patterns/components-navigation-main-nav/components-navigation-main-nav.rendered.html"},{"lineagePattern":"blocks-default-footer","lineagePath":"../../patterns/blocks-footer-default-footer/blocks-footer-default-footer.rendered.html"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"<p>NOTE: Many of the style class names and attributes are the same or like SHIELD. The major differences are going to be main navigation and header sections. However, overall, it doesn't stray too far from what has already been developed for SHIELD and the UT Health San Antonio website templates. For questions about the Main navigation and header sections, please reach out to Hunter (foxh@uthscsa.edu) and for questions about the design or other website components, please reach out to Chase (fordtran@uthscsa.edu).</p>\n<ul>\n<li>\n<p>Header:</p>\n</li>\n<li>\n<p>Main Navigation:</p>\n</li>\n<li>\n<p>Top banner (hero): uses the default hero, these are used for landing pages only and utilize the style classes <code>.hero .bleed .img-fill</code>. They have a space for a <code>.h1</code> heading and optional two lines of body text and optional <code>.button .outlined</code> all using <code>.text-center</code>.</p>\n</li>\n<li>\n<p>News highlight panel: this is an example of an interactive <code>.card</code> panel that can be used to link to news stories or other pertinent links. The panel uses a <code>.bleed</code> and 3/3/3/3 setup for the <code>.card .border-card</code> and <code>.card-section</code>.</p>\n</li>\n<li>\n<p>Recent News: Uses an 8/4 setup. The main content section is 8-columns and contains an <code>.h2</code> header and a selection of 5 news items and a <code>.ul</code> class <code>.pagination</code> option to view additional news stories. The <code>.aside</code> section is 4-columns and contains the subnav.</p>\n</li>\n<li>\n<p>Footer: the default footer will be present on all the site's pages. It is composed of 4 columns of content using a 3/3/3/3 setup. The far left-hand column houses the <code>contact</code> &lt;div&gt; along with the <code>address</code> information. Interactive stacked icons for the phone and the addresses. The middle two columns contains the &quot;Explore&quot; links and &quot;Resources&quot; links. While the far right column contains the &quot;Connect with us&quot; links and <code>.social</code> media icon links. The mobile version of the 3 columns with linked lists will be expandable using the <code>.title-bar data-responsive-toggle</code> class functions along with the <code>.menu-icon .icon-right</code> classes. Please reference the footer.twig file for more indepth info.</p>\n</li>\n</ul>\n","patternBreadcrumb":{"patternGroup":"prototypes","patternSubgroup":""},"patternExtension":"twig","patternName":"News","patternPartial":"prototypes-news","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":7}};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1727281809566">
+  (function() {
+    if (self != top) {
+      var cb = '1727281809566';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1727281809566" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+
+<script type="text/javascript" src="../../js/vendor/jQuery/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/foundation/foundation.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/motion-ui/motion-ui.min.js"></script>
+<script type="text/javascript" src="../../js/pulse.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/what-input/what-input.min.js"></script>
+</body>
+
+</html>

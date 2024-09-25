@@ -1,0 +1,54 @@
+{% include "@components/header/header.twig" %}
+{% include "@components/navigation/main-nav.twig" %}
+<section class="hero bleed">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-7 small-12">
+        <h1>For the Media</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-12 small-12 small-order-2 medium-order-2 large-order-1">
+      <nav aria-label="You are here:" role="navigation">
+        <ul class="breadcrumbs">
+          <li><a href="#">News</a></li>
+          <li>
+            <span class="show-for-sr">Current: </span> For the Media
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main class="cell small-12 medium-7 large-8 small-order-3 medium-order-2 large-order-2">
+      <p>Need a medical expert for trending health topics or have questions about UT Health San Antonio Multispecialty and Research Hospital? <a>Contact our media relations team.</a></p>
+      <h2>Resources for the media</h2>
+      <p>
+      <ul>
+      <li><a href="#" class="no-underline">Get story-writing resources, policies and guidelines</a></li>
+    <li><a href="#" class="no-underline">Read press releases for UT Health San Antonio Multispecialty and Research Hospital</a></li>
+    <li><a href="#" class="no-underline external">Visit the UT Health San Antonio newsroom</a></li></ul>
+      </p>
+      <h4>Follow us on social media</h4>
+<div class="social">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-instagram-square fa-2x"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                    </ul>
+                </div>
+    </main>
+    <aside class="cell small-12 medium-8 large-4 small-order-1 medium-order-3 large-order-3">
+      <div class="title-bar" data-responsive-toggle="subnav" data-hide-for="medium">
+        <button class="menu-icon" id="subnav-toggle" type="button" data-toggle="subnav"></button>
+        <div class="title-bar-title">Section Navigation</div>
+      </div>
+      <ul class="vertical menu accordion-menu" data-accordion-menu id="subnav">
+        <div class="subnav-title">News</div>
+        <li><a href="#">News Home</a></li>
+        <li><a href="#">For the Media</a></li>
+      </ul>
+    </aside>
+  </div>
+</div>
+{% include "@blocks/footer/default-footer.twig" %}
