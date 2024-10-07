@@ -4,18 +4,19 @@
 
 .hero {
     &.img-fill {
-    overflow: initial;
+        overflow: initial;
 
-    &.overlay {
-        background-color: rgba(255, 255, 255, 0.85);
-        overflow: clip;
+        &.overlay {
+            background-color: rgba(255, 255, 255, 0.85);
+            overflow: clip;
 
+        }
     }
-}
 
     & .callout {
         align-self: auto;
         background: transparent;
+        z-index: 2;
 
         &.white {
             background: rgba(241, 245, 247, 0.85);
@@ -32,19 +33,32 @@
         }
     }
 
+    &.video {
+        .callout {
+            background: rgba(0, 0, 0, 0.5);
+            color: $off-white;
+
+            @media screen and (max-width:$small-screen) {
+
+                background: transparent;
+                color: $off-black;
+            }
+        }
+    }
+
     //========== Gradient hero
 
     @media screen and (min-width:$small-screen) {
 
         &.gradient {
 
-                &.left {
-                    background: $white-gradient-left;
-                }
+            &.left {
+                background: $white-gradient-left;
+            }
 
-                &.right {
-                    background: $white-gradient-right;
-                }
+            &.right {
+                background: $white-gradient-right;
+            }
 
             .callout {
                 background: transparent;
@@ -59,7 +73,8 @@
         &:not(.overlay) {
 
             img,
-            video {
+            video,
+            .responsive-embed {
                 position: relative;
             }
         }

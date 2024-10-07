@@ -69,6 +69,7 @@
             &.orange {
                 background-color: $orange !important;
             }
+
             &.blue {
                 background-color: $blue !important;
             }
@@ -149,12 +150,29 @@ IMG Fill BLEEDS
             }
         }
 
+        &.video {
+            margin-bottom: 9rem;
+
+            .responsive-embed {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background-color: rgba(23, 2, 0, 0.5);
+            }
+
+            .grid-container {
+                padding-top: 8rem;
+                padding-bottom: 8rem;
+            }
+        }
+
         >img,
         >video {
             position: absolute;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: 1;
             background-color: rgba(23, 2, 0, 0.5);
             object-fit: cover;
         }
@@ -173,5 +191,16 @@ IMG Fill BLEEDS
 
         .top {
             object-position: top;
+        }
+    }
+
+    @media screen and (max-width: $small-screen) {
+        .img-fill.video {
+            margin-bottom: unset;
+
+            .grid-container {
+                padding-top: unset;
+                padding-bottom: unset;
+            }
         }
     }
