@@ -2,65 +2,48 @@
     ALERTS
 ============================================================ */
 
-.callout {
-    &.alert { //Closable alerts
-        background-color: $dark-orange;
-        color: $off-white;
-        font-weight: 500;
-        box-shadow: rem-calc(1px -1px 8px 0px) rgba(23, 23, 23, 0.55);
-        //bottom: 0 !important;
-        button.close-button {
-            color: $pure-white;
-        }
-
-        p>a {
-            background-image: linear-gradient($grey-link, $grey-link) !important;
-            color: $grey-link !important;
-    
-            &:hover {
-                background-color: $grey-link;
-                color: $grey-90 !important;
-            }
-    
-            &.arrow {
-                background-color: transparent !important;
-    
-                &:after {
-                    color: $grey-link;
-                }
-    
-                &:hover {
-                    color: $grey-link !important;
-    
-                    &:after {
-                        color: $grey-link;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.alert { //Regular alerts
-    padding: rem-calc(30px);
+.alert { //Closable alerts
+    padding: rem-calc(20px);
     font-weight: 900;
     font-size: rem-calc(20px);
+    text-align: center;
+
+    button.close-button {
+        color: $off-black;
+        padding: rem-calc(5px);
+    }
+
+    a {
+        font-weight: 900 !important;
+        background-image: linear-gradient($orange, $orange) !important;
+        color: $orange!important;
+    
+            &:hover {
+                background-color: $dark-orange;
+                color: $grey-link !important;
+            }
+    }
+
+    i {
+        font-size: rem-calc(24px);
+    }
 
     p {
         margin: 0;
     }
 
     &.sitewide {
-        background-color: $gold;
+        background-color: $light-gold;
+        color: $off-black;
+        }
     }
-}
 
 .grid-container {
     .alert {
-        background-color: $blue-20;
+        background-color: $sky-blue;
 
-        &.blue {
-            background-color: $blue-20;
+        &.sky-blue {
+            background-color: $sky-blue;
         }
 
         &.grey {

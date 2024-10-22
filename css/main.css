@@ -17406,53 +17406,41 @@ a .datebox:hover {
 /* ============================================================
     ALERTS
 ============================================================ */
-.callout.alert {
-  background-color: #7A0F00;
-  color: #F1F5F7;
-  font-weight: 500;
-  box-shadow: 0.0625rem -0.0625rem 0.5rem 0 rgba(23, 23, 23, 0.55);
-}
-.callout.alert button.close-button {
-  color: #FFF;
-}
-.callout.alert p > a {
-  background-image: linear-gradient(#FFF1DB, #FFF1DB) !important;
-  color: #FFF1DB !important;
-}
-.callout.alert p > a:hover {
-  background-color: #FFF1DB;
-  color: #1A2429 !important;
-}
-.callout.alert p > a.arrow {
-  background-color: transparent !important;
-}
-.callout.alert p > a.arrow:after {
-  color: #FFF1DB;
-}
-.callout.alert p > a.arrow:hover {
-  color: #FFF1DB !important;
-}
-.callout.alert p > a.arrow:hover:after {
-  color: #FFF1DB;
-}
-
 .alert {
-  padding: 1.875rem;
+  padding: 1.25rem;
   font-weight: 900;
   font-size: 1.25rem;
+  text-align: center;
+}
+.alert button.close-button {
+  color: #171717;
+  padding: 0.3125rem;
+}
+.alert a {
+  font-weight: 900 !important;
+  background-image: linear-gradient(#AD4200, #AD4200) !important;
+  color: #AD4200 !important;
+}
+.alert a:hover {
+  background-color: #7A0F00;
+  color: #FFF1DB !important;
+}
+.alert i {
+  font-size: 1.5rem;
 }
 .alert p {
   margin: 0;
 }
 .alert.sitewide {
-  background-color: #FFBC5B;
+  background-color: #f2c472;
+  color: #171717;
 }
 
 .grid-container .alert {
-  background-color: #8BDFFA;
+  background-color: #A0D1E6;
 }
-.grid-container .alert.blue {
-  background-color: #8BDFFA;
+.grid-container .alert.sky-blue {
+  background-color: #A0D1E6;
 }
 .grid-container .alert.grey {
   background-color: #CCD6DB;
