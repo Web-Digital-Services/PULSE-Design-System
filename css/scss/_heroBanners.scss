@@ -34,6 +34,23 @@
     }
 
     &.video {
+
+        .grid-container {
+            position: absolute;
+            top: 5.5rem;
+            z-index: 1;
+
+            @media screen and (max-width:$medium-screen) {
+
+                top: 0;
+            }
+
+            @media screen and (max-width:$small-screen) {
+
+                position: relative;
+            }
+        }
+
         .callout {
             background: rgba(0, 0, 0, 0.5);
             color: $off-white;
@@ -42,7 +59,10 @@
 
                 background: transparent;
                 color: $off-black;
+                margin-bottom: 4rem;
             }
+
+
         }
     }
 
