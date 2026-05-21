@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#D45D00">
 
-    <link rel="stylesheet" href="../../css/main.css?1745876708832" media="all" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1745876708832" media="all" />
+    <link rel="stylesheet" href="../../css/main.css?1779377126005" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1779377126005" media="all" />
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
@@ -17,8 +17,17 @@
     
     <!-- End Pattern Lab -->
   </head>
-  <body class=""><header class="title-bar" id="mobile-header" data-responsive-toggle="header">
-  <a href="#"><img src="../../images/UTHSA-Hospital_H.svg"></a>
+  <body class=""><div class="utsa-bar">
+  <p>
+    <a href="https://uthscsa.edu/" aria-label="UT San Antonio homepage">
+      <img src="../../images/shield-white.svg" alt="">
+      <span>UT San Antonio</span>
+    </a>
+  </p>
+</div>
+
+<header class="title-bar" id="mobile-header" data-responsive-toggle="header">
+  <a href="#"><img src="../../images/UTHSA-Hospital_H.svg" alt="UT Health San Antonio Multispecialty and Research Hospital"></a>
   <div class="mobile-icons">
     <a href="#">
       <i class="fas fa-phone"></i>
@@ -31,21 +40,24 @@
   </div>
   <a href="#top"><button class="menu-icon" type="button" data-toggle="header">Menu</button></a>
 </header>
+
 <form class="mobile-search" id="mobile-search">
   <input type="search" class="search-box" placeholder="Search by keyword...">
   <button type="submit">
     <i class="fa fa-search"></i>
   </button>
 </form>
+
 <header id="header" class="off-canvas-content" data-off-canvas-content>
   <div class="header-bar">
-    <p><a>UT Health San Antonio</a> | <a>Mays Cancer Center</a></p>
-    <a class="donate"><i class="fas fa-user"></i>
+    <p><a href="https://uthscsa.edu/">UT Health San Antonio</a> | <a href="#">Mays Cancer Center</a></p>
+    <a href="#" class="donate"><i class="fas fa-user"></i>
       <span>MyChart</span></a>
   </div>
+
   <div class="group">
     <div class="logo">
-      <a href="#"><img src="../../images/UTHSA-Hospital_Logo.svg" alt="UT Health San Antonio"></a>
+      <a href="#"><img src="../../images/UTHSA-Hospital_Logo.svg" alt="UT Health San Antonio Multispecialty and Research Hospital"></a>
     </div>
 
     <div class="right">
@@ -69,6 +81,7 @@
         <i class="fas fa-search"></i>
         <span>Search</span>
       </a>
+
       <form class="desktop-search">
         <input type="search" class="search-box" placeholder="Search by keyword...">
         <button type="submit">
@@ -79,78 +92,90 @@
         </button>
       </form>
     </div>
-
   </div>
+
   <nav class="nav-bar" id="nav-bar-mobile">
     <ul class="mobile-nav accordion" data-accordion data-allow-all-closed="true">
       <li><a href="#">GET CARE</a></li>
+
       <li class="accordion-item" data-accordion-item>
         <a href="#">SERVICES</a>
         <div class="accordion-content" data-tab-content>
           <ul class="menu vertical">
-            <li><a>Services Home</a></li>
-            <li><a>Bariatric Surgery</a></li>
-            <li><a>Brain and Spine</a></li>
-            <li><a>Cancer Care</a></li>
-            <li><a>Critical Care ICU</a></li>
-            <li><a>Imaging & Radiology</a></li>
-            <li><a>Orthopedics</a></li>
-            <li><a>Service 7</a></li>
-            <li><a>Service 8</a></li>
-            <li><a>Service 9</a></li>
-            <li><a>Service 10</a></li>
+            <li><a href="#">Services Home</a></li>
+            <li><a href="#">Bariatric Surgery</a></li>
+            <li><a href="#">Brain and Spine</a></li>
+            <li><a href="#">Cancer Care</a></li>
+            <li><a href="#">Critical Care ICU</a></li>
+            <li><a href="#">Imaging & Radiology</a></li>
+            <li><a href="#">Orthopedics</a></li>
+            <li><a href="#">Service 7</a></li>
+            <li><a href="#">Service 8</a></li>
+            <li><a href="#">Service 9</a></li>
+            <li><a href="#">Service 10</a></li>
           </ul>
         </div>
       </li>
-      <li><a>LOCATION AND DIRECTIONS</a></li>
+
+      <li><a href="#">LOCATION AND DIRECTIONS</a></li>
+
       <li class="accordion-item" data-accordion-item>
         <a href="#">PATIENTS AND VISITORS</a>
         <div class="accordion-content" data-tab-content>
           <ul class="menu vertical">
-            <li><a>Patients and Visitors Home</a></li>
-            <li><a>Billing and Insurance</a></li>
-            <li><a>Dining Options</a></li>
-            <li><a>Financial Counseling</a></li>
-            <li><a>Gift Shop</a></li>
-            <li><a>Medical Records</a></li>
-            <li><a>Patient Portal</a></li>
-            <li><a>Patient Check-In</a></li>
-            <li><a>Patient Rights and Responsibilities</a></li>
-            <li><a>Share Feedback</a></li>
-            <li><a>Your Hospital Stay</a></li>
-            <li><a>Financial Services & Calculators</a></li>
-            <li><a>Health Library</a></li>
+            <li><a href="#">Patients and Visitors Home</a></li>
+            <li><a href="#">Billing and Insurance</a></li>
+            <li><a href="#">Dining Options</a></li>
+            <li><a href="#">Financial Counseling</a></li>
+            <li><a href="#">Gift Shop</a></li>
+            <li><a href="#">Medical Records</a></li>
+            <li><a href="#">Patient Portal</a></li>
+            <li><a href="#">Patient Check-In</a></li>
+            <li><a href="#">Patient Rights and Responsibilities</a></li>
+            <li><a href="#">Share Feedback</a></li>
+            <li><a href="#">Your Hospital Stay</a></li>
+            <li><a href="#">Financial Services & Calculators</a></li>
+            <li><a href="#">Health Library</a></li>
           </ul>
         </div>
       </li>
+
       <li><a href="#">CLINICAL TRIALS</a></li>
     </ul>
 
     <ul class="links">
-      <li><a href="#">
+      <li>
+        <a href="#">
           <i class="fas fa-phone-alt"></i>
           <span>210-450-9000</span>
-        </a></li>
-      <li><a href="#">
+        </a>
+      </li>
+      <li>
+        <a href="#">
           <span>Bill Pay</span>
-        </a></li>
-      <li><a href="#">
+        </a>
+      </li>
+      <li>
+        <a href="#">
           <span>Careers</span>
-        </a></li>
-      <li><a href="#">
+        </a>
+      </li>
+      <li>
+        <a href="#">
           <span>About</span>
-        </a></li>
-      <li><a href="#">
+        </a>
+      </li>
+      <li>
+        <a href="#">
           <span>Contact</span>
-        </a></li>
+        </a>
+      </li>
     </ul>
+
     <ul class="links">
-      <li>Go to: <a>UT Health San Antonio Patient Care</a> | <a>Mays Cancer Center</a></li>
+      <li>Go to: <a href="#">UT Health San Antonio Patient Care</a> | <a href="#">Mays Cancer Center</a></li>
     </ul>
-
-
   </nav>
-
 </header><div class="top-bar" id="main-nav">
   <div class="top-bar-left">
     <ul class="dropdown menu">
@@ -523,10 +548,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1745876708832">
+<script id="pl-js-polyfill-insert-1779377126005">
   (function() {
     if (self != top) {
-      var cb = '1745876708832';
+      var cb = '1779377126005';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -539,7 +564,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1745876708832" nomodule>
+<script id="pl-js-insert-1779377126005" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
