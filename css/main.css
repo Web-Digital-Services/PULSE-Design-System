@@ -16997,6 +16997,14 @@ figcaption.camera::before {
     margin-bottom: 0 !important;
   }
 }
+@media screen and (max-width: 640px) {
+  .utsa-bar {
+    justify-content: flex-end;
+  }
+  .utsa-bar p {
+    margin-right: 34px;
+  }
+}
 .title-bar.global-bar {
   background-color: #333d42;
   padding: 0.3125rem 0.625rem;
