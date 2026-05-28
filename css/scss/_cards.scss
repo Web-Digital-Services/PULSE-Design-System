@@ -97,3 +97,251 @@ a.card {
             }
         }
     }
+
+/* ============================================================
+Postcard + Tile Cards
+============================================================ */
+
+// SHIELD-inspired image cards for PULSE.
+
+a.card {
+
+    &.postcard,
+    &.tile {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        padding: 0 !important;
+        border: 0;
+        border-radius: rem-calc(4px) !important;
+        background-color: $off-black;
+        color: $off-white !important;
+        box-shadow: 0 rem-calc(4px) rem-calc(10px) rgba($off-black, .35);
+        background-image: none;
+        text-decoration: none;
+        @extend %jump-base;
+
+        &:hover,
+        &:focus {
+            color: $off-white !important;
+            @extend %jump-hover;
+        }
+
+        &:focus-visible {
+            outline: rem-calc(3px) solid $orange;
+            outline-offset: rem-calc(3px);
+        }
+
+        >img,
+        >picture img {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: inherit;
+            margin-bottom: 0;
+            object-fit: cover;
+            transform: scale(1);
+            transition: transform .5s ease-in-out;
+        }
+
+        .card-section {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            width: 100%;
+            min-height: inherit;
+            margin-bottom: 0;
+            padding: rem-calc(30px);
+            color: $off-white !important;
+            transition: background-color .45s ease-in-out;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            p,
+            span {
+                color: inherit !important;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                margin: 0;
+                line-height: 1.15;
+            }
+
+            p {
+                margin: rem-calc(14px) 0 0 0;
+                line-height: 1.45;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            >img,
+            >picture img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &.postcard {
+        min-height: rem-calc(220px);
+        aspect-ratio: 16 / 9;
+
+        .card-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: rgba($off-black, .72);
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            p {
+                max-width: rem-calc(560px);
+                transition: opacity .35s ease-in-out;
+            }
+
+            &:after {
+                position: absolute;
+                display: block;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: rem-calc(60px);
+                line-height: 1;
+                content: "\f105";
+                right: rem-calc(12px);
+                bottom: rem-calc(8px);
+                color: $off-white;
+                transition: color .35s ease-in-out, transform .35s ease-in-out;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            .card-section {
+                background-color: rgba($off-black, 0);
+
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                p {
+                    opacity: 0;
+                }
+
+                &:after {
+                    color: $off-white;
+                    transform: translateX(rem-calc(4px));
+                }
+            }
+        }
+    }
+
+    &.tile {
+        min-height: rem-calc(360px);
+        aspect-ratio: 3 / 4;
+
+        .card-section {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background-color: rgba($off-black, .43);
+            text-align: center;
+
+            >div,
+            .tile-content {
+                width: 100%;
+                transition: transform .55s cubic-bezier(.19, 1, .22, 1);
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+
+        p,
+        .button {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition:
+                opacity .3s ease-in-out,
+                max-height .4s ease-in-out,
+                margin .4s ease-in-out;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 0;
+        }
+
+        &:hover,
+        &:focus {
+            .card-section {
+                background-color: rgba($off-black, .78);
+
+                >div,
+                .tile-content {
+                    transform: translateY(rem-calc(-6px));
+                }
+            }
+
+            p {
+                opacity: 1;
+                max-height: rem-calc(180px);
+                margin-top: rem-calc(12px);
+            }
+
+            .button {
+                opacity: 1;
+                max-height: rem-calc(60px);
+                margin-top: rem-calc(18px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $small-screen) {
+
+    a.card.postcard {
+        min-height: rem-calc(220px);
+    }
+
+    a.card.tile {
+        min-height: rem-calc(300px);
+
+        .card-section {
+            background-color: rgba($off-black, .78);
+
+            >div,
+            .tile-content {
+                transform: none !important;
+            }
+        }
+
+        p,
+        .button {
+            opacity: 1;
+            max-height: none;
+        }
+
+        p {
+            margin-top: rem-calc(12px);
+        }
+
+        .button {
+            margin-top: rem-calc(18px);
+        }
+    }
+}

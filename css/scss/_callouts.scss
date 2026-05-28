@@ -97,6 +97,7 @@
 a.callout {
     position: relative;
     display: block;
+    min-height: rem-calc(280px);
     background-color: $pure-white;
     transition: background-color 0.5s ease-in-out;
     color: $off-black;
@@ -128,6 +129,10 @@ a.callout {
         bottom: 0;
         color: $orange;
     }
+
+    @media screen and (max-width: $small-screen) {
+        min-height: rem-calc(220px);
+    }
 }
 
 a.callout:hover {
@@ -137,5 +142,245 @@ a.callout:hover {
 
     &:after {
         color: $dark-orange;
+    }
+}
+
+// New SHIELD-inspired interactive callouts
+a.callout.interactive {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem-calc(12px);
+    min-height: rem-calc(150px);
+    padding: rem-calc(35px) rem-calc(30px);
+    background-color: $orange;
+    color: $off-white;
+    border: none;
+    border-radius: rem-calc(2px) !important;
+    box-shadow: 0 rem-calc(4px) rem-calc(10px) rgba($off-black, 0.35);
+    text-align: center;
+    text-decoration: none;
+    background-image: none;
+    will-change: transform, box-shadow, background-color;
+    transition:
+        background-color 0.5s ease-in-out,
+        color 0.5s ease-in-out,
+        box-shadow 0.5s ease-in-out,
+        transform 0.5s ease-in-out;
+    @extend %jump-base;
+
+    .bleed.color & {
+        background-color: $orange !important;
+        color: $off-white !important;
+    }
+
+    &:after {
+        content: none;
+        display: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    figcaption,
+    blockquote,
+    .callout-text,
+    .supplemental {
+        color: inherit !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    p,
+    .callout-text,
+    .supplemental {
+        max-width: rem-calc(430px);
+        margin: 0;
+        padding-bottom: 0;
+        line-height: 1.45;
+    }
+
+    .ruled {
+        width: 100%;
+        padding-bottom: rem-calc(10px);
+        border-bottom: 1px solid currentColor;
+    }
+
+    .fa-stack {
+        display: inline-block;
+        position: relative;
+        width: rem-calc(54px);
+        height: rem-calc(54px);
+        margin-bottom: rem-calc(4px);
+        font-size: rem-calc(27px);
+        line-height: rem-calc(54px);
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .fa-stack-1x,
+    .fa-stack-2x {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .fa-stack-1x {
+        line-height: rem-calc(54px);
+    }
+
+    .fa-stack-2x {
+        font-size: 2em;
+        line-height: rem-calc(54px);
+    }
+
+    .fa-circle {
+        color: rgba($off-black, 0.28);
+        transition: color 0.5s ease-in-out;
+    }
+
+    .fa-inverse {
+        color: $off-white;
+    }
+
+    .callout-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        width: rem-calc(54px);
+        height: rem-calc(54px);
+        margin-bottom: rem-calc(4px);
+        border-radius: 50%;
+        background-color: rgba($off-black, 0.28);
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    .callout-icon i,
+    .callout-icon svg {
+        display: block;
+        color: $off-white;
+        font-size: rem-calc(24px);
+        line-height: 1;
+    }
+
+    &.with-icon {
+        .ruled {
+            width: auto;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $dark-orange !important;
+        color: $off-white !important;
+        border: none;
+        box-shadow: 0 rem-calc(7px) rem-calc(16px) rgba($off-black, 0.40);
+        @extend %jump-hover;
+
+        .fa-circle {
+            color: rgba($off-white, 0.30);
+        }
+
+        .callout-icon {
+            background-color: rgba($off-white, 0.22);
+        }
+    }
+
+    &:focus-visible {
+        outline: rem-calc(3px) solid $sky-blue;
+        outline-offset: rem-calc(3px);
+    }
+
+    &.orange {
+        background-color: $orange;
+
+        .bleed.color & {
+            background-color: $orange !important;
+        }
+    }
+
+    &.dark-orange {
+        background-color: $dark-orange;
+
+        .bleed.color & {
+            background-color: $dark-orange !important;
+        }
+
+        .fa-circle {
+            color: rgba($off-white, 0.26);
+        }
+
+        .callout-icon {
+            background-color: rgba($off-white, 0.20);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $orange !important;
+        }
+    }
+
+    &.grey {
+        background-color: $grey;
+
+        .bleed.color & {
+            background-color: $grey !important;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $dark-grey !important;
+        }
+    }
+
+    &.dark-grey {
+        background-color: $dark-grey;
+
+        .bleed.color & {
+            background-color: $dark-grey !important;
+        }
+
+        .fa-circle {
+            color: rgba($off-white, 0.24);
+        }
+
+        .callout-icon {
+            background-color: rgba($off-white, 0.20);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $grey !important;
+        }
+    }
+
+    @media screen and (max-width: $small-screen) {
+        min-height: auto;
+        padding: rem-calc(28px) rem-calc(22px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        .fa-circle,
+        .callout-icon {
+            transition: none;
+        }
     }
 }
