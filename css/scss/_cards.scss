@@ -102,7 +102,7 @@ a.card {
 Postcard + Tile Cards
 ============================================================ */
 
-// SHIELD-inspired image cards for PULSE.
+// SHIELD-inspired image cards for PULSE
 
 a.card {
 
@@ -113,7 +113,7 @@ a.card {
         overflow: hidden;
         padding: 0 !important;
         border: 0;
-        border-radius: rem-calc(4px) !important;
+        border-radius: rem-calc(2px) !important;
         background-color: $off-black;
         color: $off-white !important;
         box-shadow: 0 rem-calc(4px) rem-calc(10px) rgba($off-black, .35);
