@@ -16424,6 +16424,47 @@ a.card.tile:hover .button, a.card.tile:focus .button {
   color: #171717;
 }
 
+.pagination {
+  text-align: center;
+}
+
+.pagination a {
+  color: #AD4200;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.pagination a:hover,
+.pagination button:hover {
+  background-color: #f7f5f0;
+}
+
+.pagination .current {
+  background-color: #AD4200;
+  color: #F1F5F7;
+  font-weight: 900;
+  font-size: 1.125rem;
+}
+
+.pagination-previous a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f104";
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.pagination-next a::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.pagination .ellipsis::after {
+  color: #AD4200;
+  font-size: 1.125rem;
+}
+
 /* ============================================================
     FORM ELEMENTS
 ============================================================ */

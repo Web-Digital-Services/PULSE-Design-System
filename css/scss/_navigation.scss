@@ -331,3 +331,46 @@
     color: $off-black;
 
 }
+
+// ======= Pagination
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    color: $orange;
+    font-size: rem-calc(18px);
+    font-weight: 400;
+}
+
+.pagination a:hover,
+.pagination button:hover {
+    background-color: $light-beige;
+}
+
+.pagination .current {
+    background-color: $orange;
+    color: $off-white;
+    font-weight: 900;
+    font-size: rem-calc(18px);
+}
+
+.pagination-previous a::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f104";
+    font-weight: 900;
+    font-size: rem-calc(24px);
+}
+
+.pagination-next a::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f105";
+    font-weight: 900;
+    font-size: rem-calc(24px);
+}
+
+.pagination .ellipsis::after {
+    color: $orange;
+    font-size: rem-calc(18px);
+}
