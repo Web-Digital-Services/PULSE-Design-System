@@ -37,6 +37,8 @@ a.card {
 
         .card-section {
 
+            padding-bottom: rem-calc(60px);
+
             h2,
             h3,
             h4 {
@@ -44,7 +46,11 @@ a.card {
             }
 
             p {
-                margin-bottom: 4rem;
+                margin-bottom: rem-calc(16px);
+            }
+
+            p:last-of-type {
+                margin-bottom: 0;
             }
 
             &:after {
@@ -80,23 +86,23 @@ a.card {
     }
 }
 
-    .hero {
-        &.card {
-            background-color: $blue;
-            color: $off-white;
-            margin-bottom: rem-calc(-60px);
+.hero {
+    &.card {
+        background-color: $blue;
+        color: $off-white;
+        margin-bottom: rem-calc(-60px);
 
-            img {
-                margin-bottom: 0;
-                width: 100%;
-                height: auto;
-            }
+        img {
+            margin-bottom: 0;
+            width: 100%;
+            height: auto;
+        }
 
-            .card-section {
-                padding: rem-calc(20px);
-            }
+        .card-section {
+            padding: rem-calc(20px);
         }
     }
+}
 
 /* ============================================================
 Postcard + Tile Cards
@@ -184,6 +190,7 @@ a.card {
 
         &:hover,
         &:focus {
+
             >img,
             >picture img {
                 transform: scale(1.05);

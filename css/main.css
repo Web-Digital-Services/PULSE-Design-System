@@ -15706,13 +15706,19 @@ a.card.border-card.orange {
 a.card.border-card.sky-blue {
   border-top: 20px solid #A0D1E6;
 }
+a.card.border-card .card-section {
+  padding-bottom: 3.75rem;
+}
 a.card.border-card .card-section h2,
 a.card.border-card .card-section h3,
 a.card.border-card .card-section h4 {
   margin-right: 1.5rem;
 }
 a.card.border-card .card-section p {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
+}
+a.card.border-card .card-section p:last-of-type {
+  margin-bottom: 0;
 }
 a.card.border-card .card-section:after {
   position: absolute;
@@ -16486,7 +16492,7 @@ input[type=radio],
 textarea,
 select {
   border: 0.0625rem solid #171717;
-  border-radius: 0.3125rem;
+  border-radius: 0.125rem;
   background-color: #F1F5F7;
   font-size: 1.125rem;
 }
@@ -16592,7 +16598,7 @@ form.search {
   position: relative;
   display: flex;
   border: 0.0625rem solid #171717;
-  border-radius: 0.3125rem;
+  border-radius: 0.125rem;
   background-color: #F1F5F7;
   font-size: 1.125rem;
   align-items: center;
@@ -16807,6 +16813,65 @@ footer.standard .social li a {
 }
 footer.standard .social li a:hover {
   color: #7A0F00;
+}
+footer.standard.cc-footer .cell {
+  text-align: left;
+}
+footer.standard.cc-footer .vertical.menu,
+footer.standard.cc-footer .accordion-menu {
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+}
+footer.standard.cc-footer .subnav-title {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+  text-indent: 0;
+}
+footer.standard.cc-footer .vertical.menu > li,
+footer.standard.cc-footer .accordion-menu > li {
+  margin-left: 0;
+  padding-left: 0;
+  text-align: left;
+}
+footer.standard.cc-footer .vertical.menu > li > a,
+footer.standard.cc-footer .accordion-menu > li > a {
+  padding-left: 0;
+}
+footer.standard.cc-footer .social {
+  margin-top: 1.125rem;
+  margin-bottom: 1.75rem;
+}
+footer.standard.cc-footer .social ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.375rem;
+  margin: 0;
+  padding: 0;
+}
+footer.standard.cc-footer .social li {
+  flex: 0 0 auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+footer.standard.cc-footer .social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+footer.standard.cc-footer .social .fa-stack {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1rem;
 }
 @media screen and (max-width: 639px) {
   footer h2 {

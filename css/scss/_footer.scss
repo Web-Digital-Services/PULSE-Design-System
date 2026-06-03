@@ -168,6 +168,77 @@ footer {
                 }
             }
         }
+
+        &.cc-footer {
+            .cell {
+                text-align: left;
+            }
+
+            .vertical.menu,
+            .accordion-menu {
+                align-items: flex-start;
+                text-align: left;
+                margin-left: 0;
+                padding-left: 0;
+            }
+
+            .subnav-title {
+                display: block;
+                width: 100%;
+                text-align: left;
+                margin-left: 0;
+                padding-left: 0;
+                text-indent: 0;
+            }
+
+            .vertical.menu > li,
+            .accordion-menu > li {
+                margin-left: 0;
+                padding-left: 0;
+                text-align: left;
+            }
+
+            .vertical.menu > li > a,
+            .accordion-menu > li > a {
+                padding-left: 0;
+            }
+
+            .social {
+                margin-top: rem-calc(18px);
+                margin-bottom: rem-calc(28px);
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    gap: rem-calc(6px);
+                    margin: 0;
+                    padding: 0;
+                }
+
+                li {
+                    flex: 0 0 auto;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1;
+                }
+
+                a {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .fa-stack {
+                    width: rem-calc(32px);
+                    height: rem-calc(32px);
+                    line-height: rem-calc(32px);
+                    font-size: rem-calc(16px);
+                }
+            }
+        }
     }
 
     @media screen and (max-width:$small-screen) {

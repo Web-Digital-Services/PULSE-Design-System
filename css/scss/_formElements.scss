@@ -23,7 +23,7 @@ input[type=radio],
 textarea,
 select {
     border: rem-calc(1px) solid $off-black;
-    border-radius: rem-calc(5px);
+    border-radius: rem-calc(2px);
     background-color: $off-white;
     font-size: rem-calc(18px);
 
@@ -127,7 +127,7 @@ form.search {
     position: relative;
     display: flex;
     border: rem-calc(1px) solid $off-black;
-    border-radius: rem-calc(5px);
+    border-radius: rem-calc(2px);
     background-color: $off-white;
     font-size: rem-calc(18px);
     align-items: center;
