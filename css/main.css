@@ -14694,6 +14694,40 @@ IMG Fill BLEEDS
 .callout.dark-beige {
   background-color: #EFE1CC;
 }
+.callout.grey {
+  background-color: #1A2429;
+  color: #F1F5F7;
+}
+.callout.grey h1,
+.callout.grey h2,
+.callout.grey h3,
+.callout.grey h4,
+.callout.grey h5,
+.callout.grey h6,
+.callout.grey p,
+.callout.grey .subheader {
+  color: #F1F5F7;
+}
+.callout.grey a:not(.button) {
+  color: #FFDEBD;
+}
+.callout.orange {
+  background-color: #942900;
+  color: #F1F5F7;
+}
+.callout.orange h1,
+.callout.orange h2,
+.callout.orange h3,
+.callout.orange h4,
+.callout.orange h5,
+.callout.orange h6,
+.callout.orange p,
+.callout.orange .subheader {
+  color: #F1F5F7;
+}
+.callout.orange a:not(.button) {
+  color: #FFDEBD;
+}
 .callout.light-grey {
   background-color: #E0E5E6;
 }
@@ -18079,71 +18113,235 @@ a .datebox:hover {
 ============================================================ */
 .hero.img-fill {
   overflow: initial;
+  z-index: 0;
+  isolation: isolate;
+  background-color: transparent;
+}
+.hero.img-fill > img {
+  z-index: 0;
+}
+.hero.img-fill > .grid-container {
+  position: relative;
+  z-index: 2;
+}
+.hero.img-fill.overlay, .hero.img-fill.blur, .hero.img-fill.gradient {
+  overflow: clip;
 }
 .hero.img-fill.overlay {
-  background-color: rgba(255, 255, 255, 0.85);
-  overflow: clip;
+  color: #171717;
+}
+.hero.img-fill.overlay:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.77);
+}
+.hero.img-fill.blur {
+  color: #F1F5F7;
+}
+.hero.img-fill.blur:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: rgba(23, 23, 23, 0.7);
+}
+.hero.img-fill.blur > img {
+  filter: blur(6px);
+  transform: scale(1.03);
+}
+.hero.left > .grid-container > .grid-x {
+  justify-content: flex-start;
+}
+.hero.right > .grid-container > .grid-x {
+  justify-content: flex-end;
 }
 .hero .callout {
   align-self: auto;
   background: transparent;
   z-index: 2;
 }
+.hero .callout.grey {
+  background: rgba(26, 36, 41, 0.85);
+  color: #F1F5F7 !important;
+}
 .hero .callout.white {
   background: rgba(241, 245, 247, 0.85);
   color: #171717 !important;
 }
+.hero .callout.orange {
+  background: rgba(148, 41, 0, 0.85);
+  color: #F1F5F7 !important;
+}
 .hero .callout.transparent {
   background: transparent;
   color: #F1F5F7 !important;
+}
+.hero .callout.grey h1,
+.hero .callout.grey h2,
+.hero .callout.grey h3,
+.hero .callout.grey h4,
+.hero .callout.grey h5,
+.hero .callout.grey h6,
+.hero .callout.grey p,
+.hero .callout.grey .subheader, .hero .callout.orange h1,
+.hero .callout.orange h2,
+.hero .callout.orange h3,
+.hero .callout.orange h4,
+.hero .callout.orange h5,
+.hero .callout.orange h6,
+.hero .callout.orange p,
+.hero .callout.orange .subheader, .hero .callout.transparent h1,
+.hero .callout.transparent h2,
+.hero .callout.transparent h3,
+.hero .callout.transparent h4,
+.hero .callout.transparent h5,
+.hero .callout.transparent h6,
+.hero .callout.transparent p,
+.hero .callout.transparent .subheader {
+  color: #F1F5F7 !important;
+}
+.hero .callout.grey a:not(.button), .hero .callout.orange a:not(.button), .hero .callout.transparent a:not(.button) {
+  color: #FFDEBD;
+}
+.hero .callout.white h1,
+.hero .callout.white h2,
+.hero .callout.white h3,
+.hero .callout.white h4,
+.hero .callout.white h5,
+.hero .callout.white h6,
+.hero .callout.white p,
+.hero .callout.white .subheader {
+  color: #171717 !important;
 }
 @media screen and (max-width: 639px) {
   .hero .callout {
     padding-top: 0.625rem;
   }
 }
-.hero.video .grid-container {
+.hero.overlay .callout.white {
+  background: rgba(255, 255, 255, 0.9);
+  color: #171717 !important;
+}
+.hero.overlay .callout.white h1,
+.hero.overlay .callout.white h2,
+.hero.overlay .callout.white h3,
+.hero.overlay .callout.white h4,
+.hero.overlay .callout.white h5,
+.hero.overlay .callout.white h6,
+.hero.overlay .callout.white p,
+.hero.overlay .callout.white .subheader {
+  color: #171717 !important;
+}
+.hero.video {
+  background-color: rgba(23, 23, 23, 0.72);
+}
+.hero.video .responsive-embed {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+}
+.hero.video > .grid-container {
   position: absolute;
   top: 5.5rem;
-  z-index: 1;
-}
-@media screen and (max-width: 1024px) {
-  .hero.video .grid-container {
-    top: 0;
-  }
-}
-@media screen and (max-width: 639px) {
-  .hero.video .grid-container {
-    position: relative;
-  }
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 .hero.video .callout {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(23, 23, 23, 0.5);
   color: #F1F5F7;
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 1440px) {
+  .hero.video > .grid-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    padding-top: 1.875rem;
+    padding-right: 1rem;
+    padding-bottom: 1.875rem;
+    padding-left: 1rem;
+  }
+  .hero.video > .grid-container > .grid-x {
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
   .hero.video .callout {
+    width: 100%;
+    max-width: 47.5rem;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 639px) {
+  .hero.video > .grid-container {
+    padding-top: 1.25rem;
+    padding-right: 0;
+    padding-bottom: 1.25rem;
+    padding-left: 0;
+  }
+  .hero.video > .grid-container > .grid-x {
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .hero.video .callout {
+    flex: 0 0 auto;
+    width: calc(100% - 1rem);
+    max-width: 22.5rem;
+    margin-right: auto;
+    margin-left: auto;
     background: transparent;
-    color: #171717;
-    margin-bottom: 4rem;
+    color: #F1F5F7;
   }
 }
 @media screen and (min-width: 639px) {
-  .hero.gradient.left {
+  .hero.gradient {
+    overflow: clip;
+  }
+  .hero.gradient:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero.gradient.grey.left:before {
+    background: linear-gradient(-75deg, rgba(26, 36, 41, 0) 20%, rgba(26, 36, 41, 0.75), rgb(26, 36, 41));
+  }
+  .hero.gradient.grey.right:before {
+    background: linear-gradient(75deg, rgba(26, 36, 41, 0) 20%, rgba(26, 36, 41, 0.75), rgb(26, 36, 41));
+  }
+  .hero.gradient.orange.left:before {
+    background: linear-gradient(-75deg, rgba(148, 41, 0, 0) 20%, rgba(148, 41, 0, 0.75), rgb(148, 41, 0));
+  }
+  .hero.gradient.orange.right:before {
+    background: linear-gradient(75deg, rgba(148, 41, 0, 0) 20%, rgba(148, 41, 0, 0.75), rgb(148, 41, 0));
+  }
+  .hero.gradient.white.left:before {
     background: linear-gradient(-75deg, rgba(241, 245, 247, 0) 20%, rgba(241, 245, 247, 0.85), rgb(241, 245, 247));
   }
-  .hero.gradient.right {
+  .hero.gradient.white.right:before {
     background: linear-gradient(75deg, rgba(241, 245, 247, 0) 20%, rgba(241, 245, 247, 0.85), rgb(241, 245, 247));
   }
-  .hero.gradient .callout {
-    background: transparent;
+  .hero.gradient .callout,
+  .hero.gradient .callout.grey,
+  .hero.gradient .callout.white,
+  .hero.gradient .callout.orange {
+    background: transparent !important;
   }
 }
 
 @media screen and (max-width: 639px) {
-  .img-fill:not(.overlay) img,
-  .img-fill:not(.overlay) video,
-  .img-fill:not(.overlay) .responsive-embed {
+  .img-fill:not(.overlay):not(.blur) img,
+  .img-fill:not(.overlay):not(.blur) video,
+  .img-fill:not(.overlay):not(.blur) .responsive-embed {
     position: relative;
   }
 }

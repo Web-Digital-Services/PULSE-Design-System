@@ -5,11 +5,66 @@
 .hero {
     &.img-fill {
         overflow: initial;
+        z-index: 0;
+        isolation: isolate;
+        background-color: transparent;
+
+        >img {
+            z-index: 0;
+        }
+
+        >.grid-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        &.overlay,
+        &.blur,
+        &.gradient {
+            overflow: clip;
+        }
 
         &.overlay {
-            background-color: rgba(255, 255, 255, 0.85);
-            overflow: clip;
+            color: $off-black;
 
+            &:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: 1;
+                pointer-events: none;
+                background: rgba($pure-white, 0.77);
+            }
+        }
+
+        &.blur {
+            color: $off-white;
+
+            &:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: 1;
+                pointer-events: none;
+                background: rgba($off-black, 0.7);
+            }
+
+            >img {
+                filter: blur(6px);
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    &.left {
+        >.grid-container>.grid-x {
+            justify-content: flex-start;
+        }
+    }
+
+    &.right {
+        >.grid-container>.grid-x {
+            justify-content: flex-end;
         }
     }
 
@@ -18,9 +73,19 @@
         background: transparent;
         z-index: 2;
 
+        &.grey {
+            background: rgba($grey-90, 0.85);
+            color: $off-white !important;
+        }
+
         &.white {
-            background: rgba(241, 245, 247, 0.85);
+            background: rgba($off-white, 0.85);
             color: $off-black !important;
+        }
+
+        &.orange {
+            background: rgba($orange-70, 0.85);
+            color: $off-white !important;
         }
 
         &.transparent {
@@ -28,41 +93,135 @@
             color: $off-white !important;
         }
 
+        &.grey,
+        &.orange,
+        &.transparent {
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            .subheader {
+                color: $off-white !important;
+            }
+
+            a:not(.button) {
+                color: $orange-link;
+            }
+        }
+
+        &.white {
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            .subheader {
+                color: $off-black !important;
+            }
+        }
+
         @media screen and (max-width: $small-screen) {
             padding-top: rem-calc(10px);
         }
     }
 
-    &.video {
+    &.overlay {
+        .callout.white {
+            background: rgba($pure-white, 0.9);
+            color: $off-black !important;
 
-        .grid-container {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            .subheader {
+                color: $off-black !important;
+            }
+        }
+    }
+
+    &.video {
+        background-color: rgba($off-black, 0.72);
+
+        .responsive-embed {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0;
+        }
+
+        >.grid-container {
             position: absolute;
             top: 5.5rem;
-            z-index: 1;
-
-            @media screen and (max-width:$medium-screen) {
-
-                top: 0;
-            }
-
-            @media screen and (max-width:$small-screen) {
-
-                position: relative;
-            }
+            left: 0;
+            right: 0;
+            z-index: 2;
         }
 
         .callout {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba($off-black, 0.5);
             color: $off-white;
+        }
 
-            @media screen and (max-width:$small-screen) {
-
-                background: transparent;
-                color: $off-black;
-                margin-bottom: 4rem;
+        @media screen and (max-width: 1440px) {
+            >.grid-container {
+                position: relative;
+                top: auto;
+                left: auto;
+                right: auto;
+                padding-top: rem-calc(30px);
+                padding-right: rem-calc(16px);
+                padding-bottom: rem-calc(30px);
+                padding-left: rem-calc(16px);
             }
 
+            >.grid-container>.grid-x {
+                justify-content: center;
+                margin-right: 0;
+                margin-left: 0;
+            }
 
+            .callout {
+                width: 100%;
+                max-width: rem-calc(760px);
+                margin-right: auto;
+                margin-bottom: 0;
+                margin-left: auto;
+            }
+        }
+
+        @media screen and (max-width:$small-screen) {
+            >.grid-container {
+                padding-top: rem-calc(20px);
+                padding-right: 0;
+                padding-bottom: rem-calc(20px);
+                padding-left: 0;
+            }
+
+            >.grid-container>.grid-x {
+                justify-content: center;
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            .callout {
+                flex: 0 0 auto;
+                width: calc(100% - 1rem);
+                max-width: rem-calc(360px);
+                margin-right: auto;
+                margin-left: auto;
+                background: transparent;
+                color: $off-white;
+            }
         }
     }
 
@@ -71,17 +230,54 @@
     @media screen and (min-width:$small-screen) {
 
         &.gradient {
+            overflow: clip;
 
-            &.left {
-                background: $white-gradient-left;
+            &:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: 1;
+                pointer-events: none;
             }
 
-            &.right {
-                background: $white-gradient-right;
+            &.grey {
+
+                &.left:before {
+                    background: $grey-gradient-left;
+                }
+
+                &.right:before {
+                    background: $grey-gradient-right;
+                }
             }
 
-            .callout {
-                background: transparent;
+            &.orange {
+
+                &.left:before {
+                    background: $orange-gradient-left;
+                }
+
+                &.right:before {
+                    background: $orange-gradient-right;
+                }
+            }
+
+            &.white {
+
+                &.left:before {
+                    background: $white-gradient-left;
+                }
+
+                &.right:before {
+                    background: $white-gradient-right;
+                }
+            }
+
+            .callout,
+            .callout.grey,
+            .callout.white,
+            .callout.orange {
+                background: transparent !important;
             }
         }
     }
@@ -90,7 +286,7 @@
 @media screen and (max-width:$small-screen) {
     .img-fill {
 
-        &:not(.overlay) {
+        &:not(.overlay):not(.blur) {
 
             img,
             video,
