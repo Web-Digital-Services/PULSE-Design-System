@@ -193,3 +193,27 @@
         }
     }
 }
+.callout.spotlight.orange {
+    .button {
+        background-color: $off-white;
+        color: $orange;
+
+        &:hover,
+        &:focus {
+            background-color: $dark-orange;
+            color: $off-white;
+        }
+
+        &.outlined {
+            border: rem-calc(1px) solid $off-white;
+            background-color: transparent;
+            color: $off-white;
+
+            &:hover,
+            &:focus {
+                background-color: rgba(23, 23, 23, 0.5);
+                color: $off-white;
+            }
+        }
+    }
+}

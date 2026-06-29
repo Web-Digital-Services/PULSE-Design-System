@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en" class=" >
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#D45D00">
+
+    <link rel="stylesheet" href="../../css/main.css?1782740533417" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1782740533417" media="all" />
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    
+    <!-- End Pattern Lab -->
+  </head>
+  <body class=""><div class="utsa-bar">
+  <p>
+    <a href="https://utsa.edu/" aria-label="UT San Antonio homepage">
+      <img src="../../images/ut-san-antonio-logo-white.svg" alt="UTSA Logo">
+    </a>
+  </p>
+</div>
+
+<header class="title-bar" id="mobile-header" data-responsive-toggle="header">
+  <a href="#"><img src="../../images/mays-cancer-logo.svg" alt="UT Health San Antonio MD Anderson Mays Cancer Center"></a>
+  <div class="mobile-icons">
+    <a href="#">
+      <i class="fas fa-phone"></i>
+      <span>Call Us</span>
+    </a>
+    <a href="#" id="search">
+      <i class="fas fa-user"></i>
+      <span>MyChart</span>
+    </a>
+  </div>
+  <a href="#top"><button class="menu-icon" type="button" data-toggle="header">Menu</button></a>
+</header>
+
+<form class="mobile-search" id="mobile-search">
+  <input type="search" class="search-box" placeholder="Search by keyword...">
+  <button type="submit">
+    <i class="fa fa-search"></i>
+  </button>
+</form>
+
+<header id="header" class="off-canvas-content" data-off-canvas-content>
+  <div class="header-bar">
+    <p><a href="https://uthscsa.edu/">UT Health San Antonio</a></p>
+    <a href="#" class="donate"><i class="fas fa-user"></i>
+      <span>Make an Appointment</span></a>
+  </div>
+
+  <div class="group">
+    <div class="logo">
+      <a href="#"><img src="../../images/mays-cancer-logo.svg" alt="UT Health San Antonio MD Anderson Mays Cancer Center"></a>
+    </div>
+
+    <div class="right">
+      <a href="#" id="header-nav-item">
+        <i class="fas fa-phone-alt"></i>
+        <span>(210) 450-1000</span>
+      </a>
+      <a href="#" id="header-nav-item">
+        <span>MyChart</span>
+      </a>
+      <a href="#" id="header-nav-item">
+        <span>Donate</span>
+      </a>
+      <a href="#" id="header-nav-item">
+        <span>Contact</span>
+      </a>
+      <a href="#" id="searchNav" class="before-click">
+        <i class="fas fa-search"></i>
+        <span>Search</span>
+      </a>
+
+      <form class="desktop-search">
+        <input type="search" class="search-box" placeholder="Search by keyword...">
+        <button type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+        <button type="button" id="search-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <nav class="nav-bar" id="nav-bar-mobile">
+    <ul class="mobile-nav accordion" data-accordion data-allow-all-closed="true">
+      <li class="accordion-item" data-accordion-item>
+        <a href="#">DOCTORS &amp; LOCATIONS</a>
+        <div class="accordion-content" data-tab-content>
+          <ul class="menu vertical">
+            <li><a href="#">Find a Doctor</a></li>
+            <li><a href="#">Make an Appointment</a></li>
+            <li><a href="#">Refer a Patient</a></li>
+            <li><a href="#">Find a Location</a></li>
+            <li><a href="#">Parking and Transportation</a></li>
+            <li><a href="#">Hotels and Accommodations</a></li>
+            <li><a href="#">Map and Directions</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="accordion-item" data-accordion-item>
+        <a href="#">CANCER CARE</a>
+        <div class="accordion-content" data-tab-content>
+          <ul class="menu vertical">
+            <li><a href="#">Our Cancer Programs</a></li>
+            <li><a href="#">Conditions We Treat</a></li>
+            <li><a href="#">Cancer Treatments</a></li>
+            <li><a href="#">Screening and Diagnosis</a></li>
+            <li><a href="#">Cancer Survivorship Program</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="accordion-item" data-accordion-item>
+        <a href="#">PATIENTS</a>
+        <div class="accordion-content" data-tab-content>
+          <ul class="menu vertical">
+            <li><a href="#">Prepare for Your Visit</a></li>
+            <li><a href="#">Insurance We Accept</a></li>
+            <li><a href="#">Medical Records Request</a></li>
+            <li><a href="#">Caregiver Support</a></li>
+            <li><a href="#">Cancer Health Library</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="accordion-item" data-accordion-item>
+        <a href="#">CLINICAL TRIALS &amp; RESEARCH</a>
+        <div class="accordion-content" data-tab-content>
+          <ul class="menu vertical">
+            <li><a href="#">Find a Cancer Clinical Trial</a></li>
+            <li><a href="#">Cancer Research Programs</a></li>
+            <li><a href="#">Institute for Drug Development</a></li>
+            <li><a href="#">Greehey Children&rsquo;s Cancer Research Institute</a></li>
+            <li><a href="#">Mays Cancer Center Membership</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="accordion-item" data-accordion-item>
+        <a href="#">COMMUNITY &amp; EDUCATION</a>
+        <div class="accordion-content" data-tab-content>
+          <ul class="menu vertical">
+            <li><a href="#">Education and Training</a></li>
+            <li><a href="#">Cancer Research Training and Career Enhancement Core</a></li>
+            <li><a href="#">Breast Oncology Preceptorship</a></li>
+            <li><a href="#">Institute for Drug Development Fellowship</a></li>
+            <li><a href="#">Cancer Research Internship</a></li>
+            <li><a href="#">Postbaccalaureate Fellows Program in Cancer Research</a></li>
+            <li><a href="#">Community Outreach and Engagement</a></li>
+            <li><a href="#">Message from COE Leadership</a></li>
+            <li><a href="#">Our COE Impact</a></li>
+            <li><a href="#">COE Community Advisory Board</a></li>
+            <li><a href="#">South Texas Cancer Burden and COE Areas of Work</a></li>
+            <li><a href="#">COE Publications</a></li>
+            <li><a href="#">Avanzando Caminos (Leading Pathways): Hispanic/Latino Cancer Survivorship Study</a></li>
+            <li><a href="#">El Estudio de la Supervivencia del C&aacute;ncer en los Hispanos/Latinos (Espa&ntilde;ol)</a></li>
+            <li><a href="#">STAR Immunotherapy Study</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="links">
+      <li>
+        <a href="#">
+          <i class="fas fa-phone-alt"></i>
+          <span>(210) 450-1000</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>MyChart</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>Donate</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="links">
+      <li>Go to: <a href="https://uthscsa.edu/">UT Health San Antonio</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="top-bar" id="main-nav">
+  <div class="top-bar-left">
+    <ul class="dropdown menu">
+      <li class="megamenu-parent"><a href="#">DOCTORS &amp; LOCATIONS</a>
+        <div class="megamenu" id="menu-doctors-locations">
+          <div class="grid-x">
+            <div class="cell small-12 medium-auto large-auto">
+              <p class="bold">DOCTORS &amp; LOCATIONS LINKS</p>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="cell small-12 medium-4 large-3">
+              <ul>
+                <li><a href="#">Find a Doctor</a></li>
+                <li><a href="#">Make an Appointment</a></li>
+                <li><a href="#">Refer a Patient</a></li>
+                <li><a href="#">Find a Location</a></li>
+                <li><a href="#">Parking and Transportation</a></li>
+                <li><a href="#">Hotels and Accommodations</a></li>
+                <li><a href="#">Map and Directions</a></li>
+              </ul>
+            </div>
+            <div class="cell small-12 medium-4 large-3">
+            </div>
+            <div class="cell small-12 medium-4 large-6">
+              <div class="grid-x align-center-middle">
+                <div class="small-12 medium-12 large-3">
+                  <span class="fa-stack fa-3x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-map-marker-alt fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="small-12 medium-12 large-6">
+                  <h3>Find Care:</h3>
+                  <p>Find a cancer specialist, request an appointment, refer a patient or get directions to Mays Cancer Center.</p>
+                  <p><a href="#" class="button white outlined">Find a Doctor</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="megamenu-parent"><a href="#">CANCER CARE</a>
+        <div class="megamenu" id="menu-cancer-care">
+          <div class="grid-x">
+            <div class="cell small-12 medium-auto large-auto">
+              <p class="bold">CANCER CARE LINKS</p>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="cell small-12 medium-4 large-3">
+              <ul>
+                <li><a href="#">Our Cancer Programs</a></li>
+                <li><a href="#">Conditions We Treat</a></li>
+                <li><a href="#">Cancer Treatments</a></li>
+                <li><a href="#">Screening and Diagnosis</a></li>
+                <li><a href="#">Cancer Survivorship Program</a></li>
+              </ul>
+            </div>
+            <div class="cell small-12 medium-4 large-3">
+            </div>
+            <div class="cell small-12 medium-4 large-6">
+              <div class="grid-x align-center-middle">
+                <div class="small-12 medium-12 large-3">
+                  <span class="fa-stack fa-3x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-stethoscope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="small-12 medium-12 large-6">
+                  <h3>Cancer Care:</h3>
+                  <p>Explore cancer programs, conditions, treatments, screenings and survivorship resources.</p>
+                  <p><a href="#" class="button white outlined">View Cancer Care</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="megamenu-parent"><a href="#">PATIENTS</a>
+        <div class="megamenu" id="menu-patients">
+          <div class="grid-x">
+            <div class="cell small-12 medium-auto large-auto">
+              <p class="bold">PATIENTS LINKS</p>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="cell small-12 medium-4 large-3">
+              <ul>
+                <li><a href="#">Prepare for Your Visit</a></li>
+                <li><a href="#">Insurance We Accept</a></li>
+                <li><a href="#">Medical Records Request</a></li>
+                <li><a href="#">Caregiver Support</a></li>
+                <li><a href="#">Cancer Health Library</a></li>
+              </ul>
+            </div>
+            <div class="cell small-12 medium-4 large-3">
+            </div>
+            <div class="cell small-12 medium-4 large-6">
+              <div class="grid-x align-center-middle">
+                <div class="small-12 medium-12 large-3">
+                  <span class="fa-stack fa-3x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-info-circle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="small-12 medium-12 large-6">
+                  <h3>Plan Your Visit:</h3>
+                  <p>Find information for patients, families, caregivers and visitors.</p>
+                  <p><a href="#" class="button white outlined">Patient Resources</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="megamenu-parent"><a href="#">CLINICAL TRIALS &amp; RESEARCH</a>
+        <div class="megamenu" id="menu-clinical-trials-research">
+          <div class="grid-x">
+            <div class="cell small-12 medium-auto large-auto">
+              <p class="bold">CLINICAL TRIALS &amp; RESEARCH LINKS</p>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="cell small-12 medium-4 large-3">
+              <ul>
+                <li><a href="#">Find a Cancer Clinical Trial</a></li>
+                <li><a href="#">Cancer Research Programs</a></li>
+                <li><a href="#">Institute for Drug Development</a></li>
+                <li><a href="#">Greehey Children&rsquo;s Cancer Research Institute</a></li>
+                <li><a href="#">Mays Cancer Center Membership</a></li>
+              </ul>
+            </div>
+            <div class="cell small-12 medium-4 large-3">
+            </div>
+            <div class="cell small-12 medium-4 large-6">
+              <div class="grid-x align-center-middle">
+                <div class="small-12 medium-12 large-3">
+                  <span class="fa-stack fa-3x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-microscope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="small-12 medium-12 large-6">
+                  <h3>Clinical Trials:</h3>
+                  <p>Search cancer clinical trials and learn about research programs at Mays Cancer Center.</p>
+                  <p><a href="#" class="button white outlined">Find a Trial</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="megamenu-parent"><a href="#">COMMUNITY &amp; EDUCATION</a>
+        <div class="megamenu" id="menu-community-education">
+          <div class="grid-x">
+            <div class="cell small-12 medium-auto large-auto">
+              <p class="bold">COMMUNITY &amp; EDUCATION LINKS</p>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="cell small-12 medium-4 large-3">
+              <ul>
+                <li><a href="#">Education and Training</a></li>
+                <li><a href="#">Cancer Research Training and Career Enhancement Core</a></li>
+                <li><a href="#">Breast Oncology Preceptorship</a></li>
+                <li><a href="#">Institute for Drug Development Fellowship</a></li>
+                <li><a href="#">Cancer Research Internship</a></li>
+                <li><a href="#">Postbaccalaureate Fellows Program in Cancer Research</a></li>
+              </ul>
+            </div>
+            <div class="cell small-12 medium-4 large-3">
+              <ul>
+                <li><a href="#">Community Outreach and Engagement</a></li>
+                <li><a href="#">Message from COE Leadership</a></li>
+                <li><a href="#">Our COE Impact</a></li>
+                <li><a href="#">COE Community Advisory Board</a></li>
+                <li><a href="#">South Texas Cancer Burden and COE Areas of Work</a></li>
+                <li><a href="#">COE Publications</a></li>
+                <li><a href="#">Avanzando Caminos (Leading Pathways): Hispanic/Latino Cancer Survivorship Study</a></li>
+                <li><a href="#">El Estudio de la Supervivencia del C&aacute;ncer en los Hispanos/Latinos (Espa&ntilde;ol)</a></li>
+                <li><a href="#">STAR Immunotherapy Study</a></li>
+              </ul>
+            </div>
+            <div class="cell small-12 medium-4 large-6">
+              <div class="grid-x align-center-middle">
+                <div class="small-12 medium-12 large-3">
+                  <span class="fa-stack fa-3x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-users fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="small-12 medium-12 large-6">
+                  <h3>Community &amp; Education:</h3>
+                  <p>Explore cancer research training opportunities and community outreach programs serving South Texas.</p>
+                  <p><a href="#" class="button white outlined">Learn More</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<section class="hero left bleed img-fill full">
+    <img src="../../images/UT-Health-De-Zavala-Hero.jpg" alt="Dezavala clinic building">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x align-right">
+            <div class="cell large-5 small-12">
+                <div class="callout white">
+                    <h1>UT Health De Zavala</h1>
+                    <address>
+                    4306 De Zavala Rd.<br>
+                    Building 1<br>
+                    San Antonio, TX 78230
+                    </address>
+                  <p><a href="#" class="button">Call: (210) 450-6720</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bleed">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <main class="small-12 medium-8 cell">
+    
+    <nav aria-label="You are here:" role="navigation">
+  <ul class="breadcrumbs">
+    <li><a href="#">Parent</a></li>
+    <li><a href="#">Child</a></li>
+    <li>
+      <span class="show-for-sr">Current: </span> Child
+    </li>
+  </ul>
+</nav>
+
+
+        <h2>Services Offered</h2>
+<ul>
+  <li><a href="#">Dermatology</a></li>
+  <li><a href="#">Gastroenterology</a></li>
+  <li><a href="#">Imaging Center (Radiology)</a></li>
+  <li><a href="#">Nephrology</a></li>
+  <li><a href="#">Plastic Surgery</a></li>
+  <li><a href="#">Primary Care</a></li>
+</ul>
+<hr>
+<h2>Getting Here</h2>
+
+<h3>Directions</h3>
+<p>UT Health De Zavala is located on De Zavala Road near the Lockhill Selma intersection.</p>
+
+<h3>Parking</h3>
+<p>Patients and visitors may enjoy free parking on-site.</p>
+
+<p>VIA Metropolitan Transit:</p>
+<p>For service to De Zavala, use route 97.</p>
+
+
+      </main>
+      <aside class="small-12 medium-4 large-4 cell">
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="bleed">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x align-middle align-center">
+      <div class="cell callout spotlight spotlight-left medium-6 large-7 small-12 small-order-1 medium-order-1 large-order-1">
+      <p><a><strong>UT Health De Zavala</strong></a></h1>
+                    <address>
+                    4306 De Zavala Rd.<br>
+                    Building 1<br>
+                    San Antonio, TX 78230
+                    </address>
+                  <p><a href="#" class="button">Call: (210) 450-6720</a></p></p>
+      </div>
+
+      <div class="cell medium-6 large-6 small-12 small-order-2 medium-order-2 large-order-2 img-spotlight">
+        <img src="../../images/map-location.jpg" alt="clinic google map location">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x align-center" data-equalizer data-equalize-on="medium">
+
+    <div class="cell small-12 medium-4 large-4">
+        <a class="callout interactive orange with-icon" href="#">
+        <span class="fa-stack" aria-hidden="true">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-car fa-stack-1x fa-inverse"></i>
+        </span>
+        <h4>Transportation</h4>
+      </a>
+      </div>
+
+      <div class="cell small-12 medium-4 large-4">
+        <a class="callout interactive orange with-icon" href="#">
+        <span class="fa-stack" aria-hidden="true">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-parking fa-stack-1x fa-inverse"></i>
+        </span>
+        <h4>Parking</h4>
+      </a>
+      </div>
+
+      <div class="cell small-12 medium-4 large-4">
+        <a class="callout interactive orange with-icon" href="#">
+        <span class="fa-stack" aria-hidden="true">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-bed fa-stack-1x fa-inverse"></i>
+        </span>
+        <h4>Places to Stay</h4>
+      </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bleed light-beige scrolling-card-panel">
+    <div class="grid-container">
+        <h2>Helpful Links...</h2>
+
+        <div class="orbit scrolling-card-orbit"
+            role="region"
+            aria-label="Helpful links carousel"
+            data-orbit
+            data-auto-play="false"
+            data-infinite-wrap="false"
+            data-use-m-u-i="false"
+            data-bullets="false">
+
+            <div class="orbit-wrapper">
+                <ul class="orbit-container">
+
+                    <li class="is-active orbit-slide">
+                        <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3 scrolling-card-row">
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-1.jpg" alt="Doctor with patient">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Doctors and Locations</h5>
+                                    </a>
+                                    <p>Find a Cancer Care Provider or Clinic location here</p>
+                                </div>
+                            </div>
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-2.jpg" alt="Family at home">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Patients and Families</h5>
+                                    </a>
+                                    <p>Find everything you need to know about our patient care</p>
+                                </div>
+                            </div>
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-3.jpg" alt="Parent and child">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Cancer Care</h5>
+                                    </a>
+                                    <p>Explore all cancer types, treatments, and programs right here</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="orbit-slide">
+                        <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3 scrolling-card-row">
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-2.jpg" alt="Family at home">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Patients and Families</h5>
+                                    </a>
+                                    <p>Find everything you need to know about our patient care</p>
+                                </div>
+                            </div>
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-3.jpg" alt="Parent and child">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Cancer Care</h5>
+                                    </a>
+                                    <p>Explore all cancer types, treatments, and programs right here</p>
+                                </div>
+                            </div>
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-4.jpg" alt="Researchers in a lab">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Clinical Trials and Research</h5>
+                                    </a>
+                                    <p>Browse over 200 clinical trials available here in San Antonio</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="orbit-slide">
+                        <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3 scrolling-card-row">
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-3.jpg" alt="Parent and child">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Cancer Care</h5>
+                                    </a>
+                                    <p>Explore all cancer types, treatments, and programs right here</p>
+                                </div>
+                            </div>
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-4.jpg" alt="Researchers in a lab">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Clinical Trials and Research</h5>
+                                    </a>
+                                    <p>Browse over 200 clinical trials available here in San Antonio</p>
+                                </div>
+                            </div>
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-1.jpg" alt="Doctor with patient">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Community and Education</h5>
+                                    </a>
+                                    <p>Find cancer prevention, education, and outreach resources</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="orbit-slide">
+                        <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3 scrolling-card-row">
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-4.jpg" alt="Researchers in a lab">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Clinical Trials and Research</h5>
+                                    </a>
+                                    <p>Browse over 200 clinical trials available here in San Antonio</p>
+                                </div>
+                            </div>
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-1.jpg" alt="Doctor with patient">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Community and Education</h5>
+                                    </a>
+                                    <p>Find cancer prevention, education, and outreach resources</p>
+                                </div>
+                            </div>
+
+                            <div class="card cell scrolling-card">
+                                <img src="../../images/stories-2.jpg" alt="Family at home">
+                                <div class="card-section">
+                                    <a href="#">
+                                        <h5 class="patient-title">Support Services</h5>
+                                    </a>
+                                    <p>Connect with resources for patients, caregivers, and families</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="scrolling-card-progress" aria-hidden="true">
+                <span class="scrolling-card-progress-fill"></span>
+            </div>
+
+            <div class="scrolling-card-controls">
+                <button class="orbit-previous scrolling-card-arrow" type="button">
+                    <span class="show-for-sr">Previous slide</span>
+                    <span class="scrolling-card-arrow-icon" aria-hidden="true"></span>
+                </button>
+
+                <button class="orbit-next scrolling-card-arrow" type="button">
+                    <span class="show-for-sr">Next slide</span>
+                    <span class="scrolling-card-arrow-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section><footer class="standard cc-footer">
+    <hr>
+    <section class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell large-2 medium-4 small-10">
+                <a href="#" aria-label="Mays Cancer Center homepage">
+                    <img src="../../images/mays-cancer-logo.svg" alt="UT Health San Antonio MD Anderson Mays Cancer Center">
+                </a>
+                <div class="contact margin-top">
+                    <a href="#" class="fa-stack" aria-label="Map and directions">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-map-marker-alt fa-stack-1x fa-inverse"></i>
+                    </a>
+                    <address>
+                        Mays Cancer Center<br>
+                        7979 Wurzbach Road<br>
+                        San Antonio, TX 78229<br>
+                        <a href="#">Map and Directions</a>
+                    </address>
+                </div>
+                <div class="contact">
+                    <a href="#" class="fa-stack" aria-label="Call Mays Cancer Center">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+                    </a>
+                    <a href="tel:2104501000">(210) 450-1000</a>
+                </div>
+            </div>
+
+            <div class="cell large-2 medium-4 small-12">
+                <div class="title-bar" data-responsive-toggle="footer-doctors-locations" data-hide-for="medium">
+                    <button class="menu-icon" type="button" data-toggle="footer-doctors-locations"></button>
+                    <div class="title-bar-title">Doctors &amp; Locations</div>
+                </div>
+                <ul class="vertical menu accordion-menu" data-accordion-menu id="footer-doctors-locations">
+                    <p class="subnav-title">Doctors &amp; Locations</p>
+                    <li><a href="#">Find a Doctor</a></li>
+                    <li><a href="#">Find a Location</a></li>
+                    <li><a href="#">Make an Appointment</a></li>
+                    <li><a href="#">Refer a Patient</a></li>
+                    <li><a href="#">Map and Directions</a></li>
+                </ul>
+            </div>
+
+            <div class="cell large-2 medium-4 small-12">
+                <div class="title-bar" data-responsive-toggle="footer-cancer-care" data-hide-for="medium">
+                    <button class="menu-icon" type="button" data-toggle="footer-cancer-care"></button>
+                    <div class="title-bar-title">Cancer Care</div>
+                </div>
+                <ul class="vertical menu accordion-menu" data-accordion-menu id="footer-cancer-care">
+                    <p class="subnav-title">Cancer Care</p>
+                    <li><a href="#">Cancer Programs</a></li>
+                    <li><a href="#">Conditions We Treat</a></li>
+                    <li><a href="#">Treatments</a></li>
+                    <li><a href="#">Screening and Diagnosis</a></li>
+                    <li><a href="#">Survivorship</a></li>
+                </ul>
+            </div>
+
+            <div class="cell large-2 medium-4 small-12">
+                <div class="title-bar" data-responsive-toggle="footer-patients" data-hide-for="medium">
+                    <button class="menu-icon" type="button" data-toggle="footer-patients"></button>
+                    <div class="title-bar-title">Patients</div>
+                </div>
+                <ul class="vertical menu accordion-menu" data-accordion-menu id="footer-patients">
+                    <p class="subnav-title">Patients</p>
+                    <li><a href="#">Prepare for Your Visit</a></li>
+                    <li><a href="#">Insurance We Accept</a></li>
+                    <li><a href="#">Medical Records</a></li>
+                    <li><a href="#">Caregiver Support</a></li>
+                    <li><a href="#">Cancer Health Library</a></li>
+                </ul>
+            </div>
+
+            <div class="cell large-2 medium-4 small-12">
+                <div class="title-bar" data-responsive-toggle="footer-clinical-trials-research" data-hide-for="medium">
+                    <button class="menu-icon" type="button" data-toggle="footer-clinical-trials-research"></button>
+                    <div class="title-bar-title">Research</div>
+                </div>
+                <ul class="vertical menu accordion-menu" data-accordion-menu id="footer-clinical-trials-research">
+                    <p class="subnav-title">Research</p>
+                    <li><a href="#">Clinical Trials</a></li>
+                    <li><a href="#">Cancer Research Programs</a></li>
+                    <li><a href="#">Institute for Drug Development</a></li>
+                    <li><a href="#">Greehey Children&rsquo;s Cancer Research Institute</a></li>
+                    <li><a href="#">Mays Cancer Center Membership</a></li>
+                </ul>
+            </div>
+
+            <div class="cell large-2 medium-4 small-12">
+                <div class="title-bar" data-responsive-toggle="footer-community-education" data-hide-for="medium">
+                    <button class="menu-icon icon-right" type="button" data-toggle="footer-community-education"></button>
+                    <div class="title-bar-title">Community &amp; Education</div>
+                </div>
+                <ul class="vertical menu accordion-menu" data-accordion-menu id="footer-community-education">
+                    <p class="subnav-title">Community &amp; Education</p>
+                    <li><a href="#">Education and Training</a></li>
+                    <li><a href="#">Community Outreach</a></li>
+                    <li><a href="#">COE Publications</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Donate</a></li>
+                </ul>
+
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a href="#" aria-label="Facebook">
+                                <span class="fa-stack">
+                                    <i class="fas fa-square fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Instagram">
+                                <span class="fa-stack">
+                                    <i class="fas fa-square fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="X / Twitter">
+                                <span class="fa-stack">
+                                    <i class="fas fa-square fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="YouTube">
+                                <span class="fa-stack">
+                                    <i class="fas fa-square fa-stack-2x"></i>
+                                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="vertical menu accordion-menu" data-accordion-menu id="policies">
+                    <li><a href="#">Website Policies and Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="bleed color dark-grey">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell">
+                    <p>© Copyright 2014 - 2026 UT Health San Antonio</p>
+                    <p><a href="#">Web Privacy</a> | Links from websites affiliated with UT Health San Antonio's website to other websites do not constitute or imply university endorsement of those sites, their content, or products and services associated with those sites. The content on this website is intended to be used for informational purposes only. Health information on this site is not meant to be used to diagnose or treat conditions. Consult a health care provider if you are in need of treatment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer><script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"components-header-cancer-center","lineagePath":"../../patterns/components-header-header-cancer-center/components-header-header-cancer-center.rendered.html"},{"lineagePattern":"components-main-nav-cancer-center","lineagePath":"../../patterns/components-navigation-main-nav-cancer-center/components-navigation-main-nav-cancer-center.rendered.html"},{"lineagePattern":"components-breadcrumbs","lineagePath":"../../patterns/components-navigation-breadcrumbs/components-navigation-breadcrumbs.rendered.html"},{"lineagePattern":"blocks-scrolling-card-panel","lineagePath":"../../patterns/blocks-cards-scrolling-card-panel/blocks-cards-scrolling-card-panel.rendered.html"},{"lineagePattern":"blocks-default-footer-cancer-center","lineagePath":"../../patterns/blocks-footer-default-footer-cancer-center/blocks-footer-default-footer-cancer-center.rendered.html"}],"lineage":[{"lineagePattern":"components-header-cancer-center","lineagePath":"../../patterns/components-header-header-cancer-center/components-header-header-cancer-center.rendered.html"},{"lineagePattern":"components-main-nav-cancer-center","lineagePath":"../../patterns/components-navigation-main-nav-cancer-center/components-navigation-main-nav-cancer-center.rendered.html"},{"lineagePattern":"components-breadcrumbs","lineagePath":"../../patterns/components-navigation-breadcrumbs/components-navigation-breadcrumbs.rendered.html"},{"lineagePattern":"blocks-scrolling-card-panel","lineagePath":"../../patterns/blocks-cards-scrolling-card-panel/blocks-cards-scrolling-card-panel.rendered.html"},{"lineagePattern":"blocks-default-footer-cancer-center","lineagePath":"../../patterns/blocks-footer-default-footer-cancer-center/blocks-footer-default-footer-cancer-center.rendered.html"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"prototypes","patternSubgroup":"Cancer Center"},"patternExtension":"twig","patternName":"CC Location","patternPartial":"prototypes-location","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":7}}
+</script>
+
+<script>
+  window.patternData = {"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"components-header-cancer-center","lineagePath":"../../patterns/components-header-header-cancer-center/components-header-header-cancer-center.rendered.html"},{"lineagePattern":"components-main-nav-cancer-center","lineagePath":"../../patterns/components-navigation-main-nav-cancer-center/components-navigation-main-nav-cancer-center.rendered.html"},{"lineagePattern":"components-breadcrumbs","lineagePath":"../../patterns/components-navigation-breadcrumbs/components-navigation-breadcrumbs.rendered.html"},{"lineagePattern":"blocks-scrolling-card-panel","lineagePath":"../../patterns/blocks-cards-scrolling-card-panel/blocks-cards-scrolling-card-panel.rendered.html"},{"lineagePattern":"blocks-default-footer-cancer-center","lineagePath":"../../patterns/blocks-footer-default-footer-cancer-center/blocks-footer-default-footer-cancer-center.rendered.html"}],"lineage":[{"lineagePattern":"components-header-cancer-center","lineagePath":"../../patterns/components-header-header-cancer-center/components-header-header-cancer-center.rendered.html"},{"lineagePattern":"components-main-nav-cancer-center","lineagePath":"../../patterns/components-navigation-main-nav-cancer-center/components-navigation-main-nav-cancer-center.rendered.html"},{"lineagePattern":"components-breadcrumbs","lineagePath":"../../patterns/components-navigation-breadcrumbs/components-navigation-breadcrumbs.rendered.html"},{"lineagePattern":"blocks-scrolling-card-panel","lineagePath":"../../patterns/blocks-cards-scrolling-card-panel/blocks-cards-scrolling-card-panel.rendered.html"},{"lineagePattern":"blocks-default-footer-cancer-center","lineagePath":"../../patterns/blocks-footer-default-footer-cancer-center/blocks-footer-default-footer-cancer-center.rendered.html"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"prototypes","patternSubgroup":"Cancer Center"},"patternExtension":"twig","patternName":"CC Location","patternPartial":"prototypes-location","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":7}};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1782740533417">
+  (function() {
+    if (self != top) {
+      var cb = '1782740533417';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1782740533417" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+
+<script type="text/javascript" src="../../js/vendor/jQuery/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/foundation/foundation.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/motion-ui/motion-ui.min.js"></script>
+<script type="text/javascript" src="../../js/pulse.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/what-input/what-input.min.js"></script>
+</body>
+
+</html>

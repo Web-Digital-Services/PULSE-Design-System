@@ -21,17 +21,61 @@
         position: relative;
         z-index: 1;
 
+        &.spotlight-left {
+            padding: 120px 160px 120px 120px;
+            margin: -120px -132px -120px 0px;
+        }
+
+        ul,
+        ol {
+            margin: 1.5rem 0 0 0;
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: .85rem;
+            line-height: 1.5;
+        }
+
+
+        &.orange {
+            background-color: $orange;
+            color: $off-white;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            .subheader {
+                color: $off-white;
+            }
+        }
+
         @media screen and (max-width: $medium-screen) {
-            padding: 30px 30px 30px 30px;
+            padding: 30px;
             margin: 0px;
             z-index: 0;
+
+            &.spotlight-left {
+                padding: 30px;
+                margin: 0px;
+            }
         }
 
         @media screen and (max-width: $small-screen) {
-            padding: 30px 30px 30px 30px;
+            padding: 30px;
             margin: 0px;
             margin-left: 0;
             z-index: 0;
+
+            &.spotlight-left {
+                padding: 30px;
+                margin: 0px;
+            }
         }
     }
 

@@ -104,3 +104,219 @@ nav.orbit-bullets {
         }
     }
 }
+
+/* ============================================================
+    SCROLLING CARD PANEL
+============================================================ */
+
+.scrolling-card-panel {
+    .grid-container {
+        padding-top: rem-calc(90px);
+        padding-bottom: rem-calc(90px);
+    }
+
+    h2 {
+        margin-bottom: rem-calc(36px);
+    }
+
+    .scrolling-card-orbit {
+        margin-top: rem-calc(24px);
+    }
+
+    .orbit-wrapper,
+    .orbit-container {
+        min-height: rem-calc(500px);
+    }
+
+    .orbit-container {
+        margin-left: 0;
+        overflow: hidden;
+    }
+
+    .orbit-slide {
+        width: 100%;
+        padding: 0;
+    }
+
+    .orbit-slide.is-active {
+        position: relative !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .scrolling-card-row {
+        align-items: stretch;
+    }
+
+    .card.scrolling-card,
+    a.card.scrolling-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 0;
+        background-color: $pure-white;
+        border: 1px solid $light-grey;
+        border-radius: 0;
+        box-shadow: none;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 0;
+            object-fit: initial;
+        }
+
+        .card-section {
+            flex: 1 1 auto;
+            margin-bottom: 0;
+            padding: rem-calc(24px);
+
+            a {
+                background-image: none;
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    h5 {
+                        color: $dark-orange;
+                    }
+                }
+            }
+
+            h5 {
+                margin-bottom: rem-calc(18px);
+                color: $orange;
+                font-weight: $bold-font-weight;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .scrolling-card-progress {
+        width: 100%;
+        height: rem-calc(4px);
+        margin-top: rem-calc(34px);
+        background-color: $pure-white;
+        overflow: hidden;
+    }
+
+    .scrolling-card-progress-fill {
+        display: block;
+        width: 25%;
+        height: 100%;
+        background-color: $orange;
+        transition: width .3s ease-in-out;
+    }
+
+    .scrolling-card-controls {
+        display: flex;
+        align-items: center;
+        gap: rem-calc(30px);
+        margin-top: rem-calc(18px);
+    }
+
+    .scrolling-card-arrow {
+        position: static;
+        transform: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        border: 0;
+        color: $orange;
+        cursor: pointer;
+        line-height: 1;
+        transition: color .25s ease-in-out, transform .25s ease-in-out;
+
+        .scrolling-card-arrow-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: rem-calc(34px);
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        &.orbit-previous {
+            .scrolling-card-arrow-icon:before {
+                content: "\2190";
+            }
+        }
+
+        &.orbit-next {
+            .scrolling-card-arrow-icon:before {
+                content: "\2192";
+            }
+        }
+
+        &:hover,
+        &:focus {
+            background: transparent;
+            color: $dark-orange;
+            transform: translateX(rem-calc(2px));
+        }
+
+        &.orbit-previous:hover,
+        &.orbit-previous:focus {
+            transform: translateX(rem-calc(-2px));
+        }
+
+        &:focus-visible {
+            outline: rem-calc(2px) solid $orange;
+            outline-offset: rem-calc(4px);
+        }
+
+        &.disabled,
+        &[disabled] {
+            color: $pure-white;
+            cursor: default;
+            opacity: 1;
+            pointer-events: none;
+            transform: none;
+        }
+    }
+}
+
+@media screen and (max-width: $medium-screen) {
+    .scrolling-card-panel {
+
+        .orbit-wrapper,
+        .orbit-container {
+            min-height: rem-calc(470px);
+        }
+
+    }
+}
+
+@media screen and (max-width: $small-screen) {
+    .scrolling-card-panel {
+        .grid-container {
+            padding-top: rem-calc(50px);
+            padding-bottom: rem-calc(50px);
+        }
+
+        .orbit-wrapper,
+        .orbit-container {
+            min-height: rem-calc(1080px);
+        }
+
+        .card.scrolling-card,
+        a.card.scrolling-card {
+            margin-bottom: rem-calc(24px);
+        }
+
+        .scrolling-card-progress {
+            margin-top: rem-calc(12px);
+        }
+    }
+}

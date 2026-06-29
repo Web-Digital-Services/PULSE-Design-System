@@ -295,6 +295,47 @@ a.highlight {
 
 }
 
+
+//Orange spotlight callout links mirror the orange color bleed link treatment.
+.callout.spotlight.orange {
+    p>a:not(.button) {
+        background-image: linear-gradient($orange-link, $orange-link);
+        color: $orange-link;
+        padding-left: .5% !important;
+        padding-right: .5% !important;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $light-beige;
+            color: $orange-90;
+        }
+
+        &.highlight {
+            background-color: $light-beige;
+            color: $dark-orange !important;
+            background-image: linear-gradient(transparent, transparent), linear-gradient($orange-link, $orange-link) !important;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $orange-link !important;
+                background-color: inherit;
+            }
+        }
+    }
+
+    cite>a {
+        color: $orange-link;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $light-beige;
+        }
+    }
+}
+
 //Links on an image background
 .img-fill {
     p>a:not(.button) {
