@@ -137,7 +137,7 @@ a.highlight {
 // ======= apply links to paragraph text on colored backgrounds
 .color {
 
-    //Default link styles on colored backgrounds.Left basic to not interfere with interactive element styles
+    //Default link styles on colored backgrounds. Left basic to not interfere with interactive element styles
     a {
         color: $off-white;
 
@@ -337,12 +337,32 @@ a.highlight {
 }
 
 //Links on an image background
-.img-fill {
+.bleed.img-fill {
+    a:not(.button) {
+        color: $off-white;
+
+        &:hover,
+        &:focus {
+            color: $light-grey;
+            text-decoration: none;
+        }
+
+        &:focus-visible {
+            outline-color: $off-white;
+            outline-width: rem-calc(8px);
+            outline-offset: rem-calc(10px);
+        }
+    }
+
     p>a:not(.button) {
         background-image: linear-gradient($grey-link, $grey-link);
         color: $grey-link;
+        padding-left: .5% !important;
+        padding-right: .5% !important;
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
             background-color: $grey-link;
             color: $grey-90;
         }
@@ -352,16 +372,96 @@ a.highlight {
             color: $grey-90 !important;
             background-image: linear-gradient(transparent, transparent), linear-gradient($grey-link, $grey-link) !important;
 
-            &:hover {
+            &:hover,
+            &:focus,
+            &:active {
                 color: $grey-link !important;
                 background-color: transparent !important;
+            }
+        }
+    }
+
+    &.orange {
+        p>a:not(.button) {
+            background-image: linear-gradient($orange-link, $orange-link);
+            color: $orange-link;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $light-beige;
+                color: $orange-90;
+            }
+
+            &.highlight {
+                background-color: $light-beige;
+                color: $dark-orange !important;
+                background-image: linear-gradient(transparent, transparent), linear-gradient($orange-link, $orange-link) !important;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $orange-link !important;
+                    background-color: transparent !important;
+                }
+            }
+        }
+
+        cite>a {
+            color: $orange-link;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $light-beige;
+            }
+        }
+    }
+
+    &.blue {
+        p>a:not(.button) {
+            background-image: linear-gradient($blue-link, $blue-link);
+            color: $blue-link;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $blue-link;
+                color: $blue-90;
+            }
+
+            &.highlight {
+                background-color: $blue-10;
+                color: $blue-90;
+                background-image: linear-gradient(transparent, transparent), linear-gradient($blue-link, $blue-link);
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $blue-link;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    //If link is in a white card/callout, use default link style
+    .card,
+    .callout {
+        a:not(.button) {
+            color: $orange;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $dark-orange;
             }
         }
     }
 }
 
 .color .white,
-.img-fill .white {
+.bleed.img-fill .white {
 
     //Use default link styles on white backgrounds like callouts or cards
     p {

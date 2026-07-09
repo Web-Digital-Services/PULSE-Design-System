@@ -74,6 +74,18 @@
                 background-color: $blue !important;
             }
         }
+
+        &.noise {
+            background: url(../images/noise-texture.png);
+        }
+
+        .shield {
+            background-image: url(../images/shield-transparent.svg);
+            background-repeat: no-repeat;
+            background-position: left;
+            position: relative;
+            padding: rem-calc(25px) 0; //This adds an absurd amount of padding to the top and bottom. Was this intended?
+        }
     }
 
     /* ============================================================
@@ -135,13 +147,78 @@ IMG Fill BLEEDS
 ============================================================ */
 
     .img-fill {
-        display: inline-block;
+        display: block;
         overflow: hidden;
         position: relative;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.77);
-        color: $off-black;
         padding-top: 0;
+
+        >img,
+        >video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        >video {
+            margin-bottom: rem-calc(-9px);
+        }
+
+        >.top {
+            object-position: top;
+        }
+
+        >.bottom {
+            object-position: bottom;
+        }
+    }
+
+    .bleed.img-fill:not(.hero) {
+        background-color: rgba($off-black, 0.77);
+        color: $off-white;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background-color: rgba($off-black, 0.77);
+            pointer-events: none;
+        }
+
+        &.orange {
+            background-color: rgba($orange, 0.86);
+
+            &::before {
+                background-color: rgba($orange, 0.86);
+            }
+        }
+
+        &.blue {
+            background-color: rgba($blue, 0.86);
+
+            &::before {
+                background-color: rgba($blue, 0.86);
+            }
+        }
+
+        >.grid-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: inherit;
+        }
 
         &.full {
             .cell {
@@ -149,53 +226,18 @@ IMG Fill BLEEDS
                 padding-right: rem-calc(15px);
             }
         }
-
-        /*&.video {
-            margin-bottom: 9rem;
-
-            .responsive-embed {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-                background-color: rgba(23, 2, 0, 0.5);
-            }
-
-            .grid-container {
-                padding-top: 8rem;
-                padding-bottom: 8rem;
-            }
-        }*/
-
-        >img,
-        >video {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-color: rgba(23, 2, 0, 0.5);
-            object-fit: cover;
-        }
-
-        >video {
-            margin-bottom: rem-calc(-9px);
-        }
-
-        >.grid-x {
-            padding-top: rem-calc(60px);
-        }
-
-        .bottom {
-            object-position: bottom;
-        }
-
-        .top {
-            object-position: top;
-        }
     }
 
     @media screen and (max-width: $small-screen) {
-        .img-fill.video {
+        .bleed.img-fill:not(.hero):not(.overlay):not(.blur) {
+
+            >img,
+            >video {
+                position: absolute;
+            }
+        }
+
+        .bleed.img-fill:not(.hero).video {
             margin-bottom: unset;
 
             .grid-container {

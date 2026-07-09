@@ -13566,7 +13566,7 @@ ul.underline, .color.orange ul li a,
 .color.darken ol li a,
 .callout.spotlight.orange ul li a,
 .callout.spotlight.orange ol li a, .color .white p > a:not(.button),
-.img-fill .white p > a:not(.button), p > a:not(.button) {
+.bleed.img-fill .white p > a:not(.button), p > a:not(.button) {
   background-image: linear-gradient(#ffd1a3, #ffd1a3), linear-gradient(#7A0F00, #7A0F00);
   background-size: 100% 2px, 0 2px;
   background-position: 100% 100%, 0 100%;
@@ -13590,7 +13590,7 @@ ul.underline:hover, .color.orange ul li a:hover, .color.orange ul li a:focus, .c
 .callout.spotlight.orange ol li a:hover,
 .callout.spotlight.orange ol li a:focus,
 .callout.spotlight.orange ol li a:active, .color .white p > a:not(.button):hover,
-.img-fill .white p > a:not(.button):hover, p > a:not(.button):hover {
+.bleed.img-fill .white p > a:not(.button):hover, p > a:not(.button):hover {
   background-size: 0 2px, 100% 2px;
 }
 
@@ -13753,6 +13753,24 @@ h6 {
 body {
   font-family: "Nunito Sans", sans-serif;
   line-height: 1.5;
+}
+
+p.eyebrow {
+  font-size: 18px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+}
+p.eyebrow + h1,
+p.eyebrow + h2,
+p.eyebrow + h3,
+p.eyebrow + h4,
+p.eyebrow + h5 {
+  margin-top: -1.125rem;
+}
+@media screen and (max-width: 639px) {
+  p.eyebrow {
+    font-size: 16px;
+  }
 }
 
 h1,
@@ -14012,7 +14030,7 @@ ul.underline, .color.orange ul li a,
 .color.darken ol li a,
 .callout.spotlight.orange ul li a,
 .callout.spotlight.orange ol li a, .color .white p > a:not(.button),
-.img-fill .white p > a:not(.button), p > a:not(.button) {
+.bleed.img-fill .white p > a:not(.button), p > a:not(.button) {
   background-image: linear-gradient(#ffd1a3, #ffd1a3), linear-gradient(#7A0F00, #7A0F00);
   background-size: 100% 2px, 0 2px;
   background-position: 100% 100%, 0 100%;
@@ -14036,7 +14054,7 @@ ul.underline:hover, .color.orange ul li a:hover, .color.orange ul li a:focus, .c
 .callout.spotlight.orange ol li a:hover,
 .callout.spotlight.orange ol li a:focus,
 .callout.spotlight.orange ol li a:active, .color .white p > a:not(.button):hover,
-.img-fill .white p > a:not(.button):hover, p > a:not(.button):hover {
+.bleed.img-fill .white p > a:not(.button):hover, p > a:not(.button):hover {
   background-size: 0 2px, 100% 2px;
 }
 
@@ -14268,47 +14286,111 @@ a.highlight:hover {
   color: #f7f5f0;
 }
 
-.img-fill p > a:not(.button) {
+.bleed.img-fill a:not(.button) {
+  color: #F1F5F7;
+}
+.bleed.img-fill a:not(.button):hover, .bleed.img-fill a:not(.button):focus {
+  color: #E0E5E6;
+  text-decoration: none;
+}
+.bleed.img-fill a:not(.button):focus-visible {
+  outline-color: #F1F5F7;
+  outline-width: 0.5rem;
+  outline-offset: 0.625rem;
+}
+.bleed.img-fill p > a:not(.button) {
   background-image: linear-gradient(#FFF1DB, #FFF1DB);
   color: #FFF1DB;
+  padding-left: 0.5% !important;
+  padding-right: 0.5% !important;
 }
-.img-fill p > a:not(.button):hover {
+.bleed.img-fill p > a:not(.button):hover, .bleed.img-fill p > a:not(.button):focus, .bleed.img-fill p > a:not(.button):active {
   background-color: #FFF1DB;
   color: #1A2429;
 }
-.img-fill p > a:not(.button).highlight {
+.bleed.img-fill p > a:not(.button).highlight {
   background-color: #FFF1DB;
   color: #1A2429 !important;
   background-image: linear-gradient(transparent, transparent), linear-gradient(#FFF1DB, #FFF1DB) !important;
 }
-.img-fill p > a:not(.button).highlight:hover {
+.bleed.img-fill p > a:not(.button).highlight:hover, .bleed.img-fill p > a:not(.button).highlight:focus, .bleed.img-fill p > a:not(.button).highlight:active {
   color: #FFF1DB !important;
   background-color: transparent !important;
 }
+.bleed.img-fill.orange p > a:not(.button) {
+  background-image: linear-gradient(#FFDEBD, #FFDEBD);
+  color: #FFDEBD;
+}
+.bleed.img-fill.orange p > a:not(.button):hover, .bleed.img-fill.orange p > a:not(.button):focus, .bleed.img-fill.orange p > a:not(.button):active {
+  background-color: #f7f5f0;
+  color: #470000;
+}
+.bleed.img-fill.orange p > a:not(.button).highlight {
+  background-color: #f7f5f0;
+  color: #7A0F00 !important;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#FFDEBD, #FFDEBD) !important;
+}
+.bleed.img-fill.orange p > a:not(.button).highlight:hover, .bleed.img-fill.orange p > a:not(.button).highlight:focus, .bleed.img-fill.orange p > a:not(.button).highlight:active {
+  color: #FFDEBD !important;
+  background-color: transparent !important;
+}
+.bleed.img-fill.orange cite > a {
+  color: #FFDEBD;
+}
+.bleed.img-fill.orange cite > a:hover, .bleed.img-fill.orange cite > a:focus, .bleed.img-fill.orange cite > a:active {
+  color: #f7f5f0;
+}
+.bleed.img-fill.blue p > a:not(.button) {
+  background-image: linear-gradient(#A6FFFF, #A6FFFF);
+  color: #A6FFFF;
+}
+.bleed.img-fill.blue p > a:not(.button):hover, .bleed.img-fill.blue p > a:not(.button):focus, .bleed.img-fill.blue p > a:not(.button):active {
+  background-color: #A6FFFF;
+  color: #002D48;
+}
+.bleed.img-fill.blue p > a:not(.button).highlight {
+  background-color: #A4F8FF;
+  color: #002D48;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#A6FFFF, #A6FFFF);
+}
+.bleed.img-fill.blue p > a:not(.button).highlight:hover, .bleed.img-fill.blue p > a:not(.button).highlight:focus, .bleed.img-fill.blue p > a:not(.button).highlight:active {
+  color: #A6FFFF;
+  background-color: transparent;
+}
+.bleed.img-fill .card a:not(.button),
+.bleed.img-fill .callout a:not(.button) {
+  color: #AD4200;
+}
+.bleed.img-fill .card a:not(.button):hover, .bleed.img-fill .card a:not(.button):focus, .bleed.img-fill .card a:not(.button):active,
+.bleed.img-fill .callout a:not(.button):hover,
+.bleed.img-fill .callout a:not(.button):focus,
+.bleed.img-fill .callout a:not(.button):active {
+  color: #7A0F00;
+}
 
 .color .white p > a:not(.button),
-.img-fill .white p > a:not(.button) {
+.bleed.img-fill .white p > a:not(.button) {
   position: relative;
   text-decoration: none;
   font-weight: 800;
   font-size: 18.7px;
 }
 .color .white p > a:not(.button):hover,
-.img-fill .white p > a:not(.button):hover {
+.bleed.img-fill .white p > a:not(.button):hover {
   background-color: unset;
 }
 .color .white p a.no-underline,
-.img-fill .white p a.no-underline {
+.bleed.img-fill .white p a.no-underline {
   background-image: none;
 }
 .color .white p.highlight,
-.img-fill .white p.highlight {
+.bleed.img-fill .white p.highlight {
   background-color: #AD4200;
   color: #F1F5F7;
   background-image: linear-gradient(transparent, transparent), linear-gradient(#7A0F00, #7A0F00) !important;
 }
 .color .white p.highlight:hover,
-.img-fill .white p.highlight:hover {
+.bleed.img-fill .white p.highlight:hover {
   color: #7A0F00;
   background-color: inherit;
 }
@@ -14609,6 +14691,16 @@ blockquote.fancy cite {
 .bleed.color.blue {
   background-color: #257994 !important;
 }
+.bleed.noise {
+  background: url(../images/noise-texture.png);
+}
+.bleed .shield {
+  background-image: url(../images/shield-transparent.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  position: relative;
+  padding: 1.5625rem 0;
+}
 
 /* ============================================================
  BLEEDING IMAGES
@@ -14655,63 +14747,82 @@ blockquote.fancy cite {
 IMG Fill BLEEDS
 ============================================================ */
 .img-fill {
-  display: inline-block;
+  display: block;
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.77);
-  color: #171717;
   padding-top: 0;
-}
-.img-fill.full .cell {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-}
-.img-fill {
-  /*&.video {
-      margin-bottom: 9rem;
-
-      .responsive-embed {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-          background-color: rgba(23, 2, 0, 0.5);
-      }
-
-      .grid-container {
-          padding-top: 8rem;
-          padding-bottom: 8rem;
-      }
-  }*/
 }
 .img-fill > img,
 .img-fill > video {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  background-color: rgba(23, 2, 0, 0.5);
+  z-index: 0;
   object-fit: cover;
+  object-position: center;
 }
 .img-fill > video {
   margin-bottom: -0.5625rem;
 }
-.img-fill > .grid-x {
-  padding-top: 3.75rem;
+.img-fill > .top {
+  object-position: top;
 }
-.img-fill .bottom {
+.img-fill > .bottom {
   object-position: bottom;
 }
-.img-fill .top {
-  object-position: top;
+
+.bleed.img-fill:not(.hero) {
+  background-color: rgba(23, 23, 23, 0.77);
+  color: #F1F5F7;
+}
+.bleed.img-fill:not(.hero)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(23, 23, 23, 0.77);
+  pointer-events: none;
+}
+.bleed.img-fill:not(.hero).orange {
+  background-color: rgba(173, 66, 0, 0.86);
+}
+.bleed.img-fill:not(.hero).orange::before {
+  background-color: rgba(173, 66, 0, 0.86);
+}
+.bleed.img-fill:not(.hero).blue {
+  background-color: rgba(37, 121, 148, 0.86);
+}
+.bleed.img-fill:not(.hero).blue::before {
+  background-color: rgba(37, 121, 148, 0.86);
+}
+.bleed.img-fill:not(.hero) > .grid-container {
+  position: relative;
+  z-index: 2;
+}
+.bleed.img-fill:not(.hero) h1,
+.bleed.img-fill:not(.hero) h2,
+.bleed.img-fill:not(.hero) h3,
+.bleed.img-fill:not(.hero) h4,
+.bleed.img-fill:not(.hero) h5,
+.bleed.img-fill:not(.hero) h6 {
+  color: inherit;
+}
+.bleed.img-fill:not(.hero).full .cell {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 
 @media screen and (max-width: 639px) {
-  .img-fill.video {
+  .bleed.img-fill:not(.hero):not(.overlay):not(.blur) > img,
+  .bleed.img-fill:not(.hero):not(.overlay):not(.blur) > video {
+    position: absolute;
+  }
+  .bleed.img-fill:not(.hero).video {
     margin-bottom: unset;
   }
-  .img-fill.video .grid-container {
+  .bleed.img-fill:not(.hero).video .grid-container {
     padding-top: unset;
     padding-bottom: unset;
   }
@@ -17859,19 +17970,24 @@ header#header .group:last-child {
 header#header .group .logo {
   margin-top: 0.9375rem;
   display: flex;
-  align-items: start;
-  max-width: 40%;
+  align-items: center;
+  max-width: none;
 }
 header#header .group .logo.pipe img {
+  width: 15.625rem;
+  height: auto;
+  display: block;
   padding-right: 1.25rem;
   border-right: 0.125rem solid #AD4200;
-  max-width: 250px;
 }
 header#header .group .logo.pipe p {
+  margin-bottom: 0;
   padding-left: 1.25rem;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Lora", serif;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 header#header .group .logo.small img {
   width: 12rem;
@@ -18025,6 +18141,123 @@ header#header #nav-bar-mobile ul.links li a.donate {
   }
   header#header .group .right {
     display: none;
+  }
+}
+
+/* ============================================================
+    PATIENT CARE HEADER OVERRIDES
+    Patient Care prototype only
+============================================================ */
+#header.patient-care-header .group {
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 1.125rem;
+  padding-right: 0.9375rem;
+}
+#header.patient-care-header .group .logo.pipe {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  min-width: 0;
+  margin-top: 0.9375rem;
+}
+#header.patient-care-header .group .logo.pipe a {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  background-image: none;
+}
+#header.patient-care-header .group .logo.pipe img {
+  width: clamp(7.25rem, 15vw, 13.75rem);
+  max-width: none;
+  height: auto;
+  display: block;
+  flex: 0 0 auto;
+  padding-right: 0.875rem;
+  border-right: 0.125rem solid #AD4200;
+}
+#header.patient-care-header .group .logo.pipe p {
+  margin: 0;
+  padding-left: 0.875rem;
+  font-family: "Lora", serif;
+  font-weight: normal;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.15;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+#header.patient-care-header .group .right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 1 auto;
+  min-width: 0;
+  gap: 1.25rem;
+  margin-top: 0.9375rem;
+}
+#header.patient-care-header .group .right a {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0;
+  white-space: nowrap;
+}
+#header.patient-care-header .group .right #searchNav {
+  margin-right: 0;
+}
+@media screen and (min-width: 769px) and (max-width: 900px) {
+  #header.patient-care-header .group {
+    gap: 0.75rem;
+  }
+  #header.patient-care-header .group .logo.pipe img {
+    width: 6.875rem;
+    padding-right: 0.625rem;
+  }
+  #header.patient-care-header .group .logo.pipe p {
+    padding-left: 0.625rem;
+    font-size: 1.375rem;
+  }
+  #header.patient-care-header .group .right {
+    gap: 0.875rem;
+  }
+  #header.patient-care-header .group .right a {
+    font-size: 0.9375rem;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  #header.patient-care-header .group {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 0.75rem;
+    column-gap: 0;
+    padding-top: 0.75rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+  #header.patient-care-header .group .logo.pipe {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-top: 0;
+  }
+  #header.patient-care-header .group .logo.pipe img {
+    width: 7.1875rem;
+    padding-right: 0.625rem;
+  }
+  #header.patient-care-header .group .logo.pipe p {
+    padding-left: 0.625rem;
+    font-size: 1.375rem;
+  }
+  #header.patient-care-header .group .right {
+    flex: 0 0 100%;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.125rem;
+    margin-top: 0;
+  }
+  #header.patient-care-header .group .right a {
+    font-size: 0.9375rem;
   }
 }
 

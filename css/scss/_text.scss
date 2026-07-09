@@ -128,6 +128,25 @@ body {
     line-height: 1.5;
 }
 
+//eyebrow style
+p.eyebrow {
+    font-size: 18px;
+    font-family: $sans-serif-font;
+    font-weight: 600;
+
+    +h1,
+    +h2,
+    +h3,
+    +h4,
+    +h5 {
+        margin-top: rem-calc(-18px);
+    }
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 16px;
+    }
+}
+
 h1,
 .h1 {
     margin-bottom: rem-calc(18px);

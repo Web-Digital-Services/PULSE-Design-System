@@ -24,7 +24,7 @@
     line-height: 1;
 }
 
-.utsa-bar p > a {
+.utsa-bar p>a {
     color: $off-white;
     text-decoration: none;
     background-image: none;
@@ -241,222 +241,371 @@ header {
             .logo {
                 margin-top: rem-calc(15px);
                 display: flex;
-                align-items: start;
-                max-width: 40%;
+                align-items: center;
+                max-width: none;
 
                 &.pipe {
                     img {
+                        width: rem-calc(250px);
+                        height: auto;
+                        display: block;
                         padding-right: rem-calc(20px);
                         border-right: rem-calc(2px) solid $orange;
-                        max-width: 250px;
                     }
 
                     p {
+                        margin-bottom: 0;
                         padding-left: rem-calc(20px);
                         font-weight: 700;
-                        font-size: 24px;
+                        font-size: rem-calc(24px);
                         font-family: $serif-font;
+                        line-height: 1.2;
+                        white-space: nowrap;
                     }
                 }
 
-                &.small {
+            &.small {
 
-                    img {
-                        width: 12rem;
-                    }
-                }
-            }
-
-            .nav {
-                margin-top: rem-calc(15px);
-                display: flex;
-                align-items: center;
-
-                a {
-                    font-weight: 800;
-                }
-            }
-
-            .right {
-                display: flex;
-                margin-top: 1.5rem;
-                align-items: center;
-
-                a {
-                    margin-right: 1.5rem;
-                    display: flex;
-                    font-size: 16px;
-                    align-items: center;
-
-                    //display:none;
-                }
-
-                a span {
-                    color: $off-black;
-                    transition: $text-transition;
-                }
-
-                a span:hover {
-                    color: $dark-orange;
-                }
-
-                a i {
-                    color: $orange;
-                    margin-right: 5px;
-                }
-
-                #searchNav {
-                    margin-right: 15px;
-                }
-
-                form.desktop-search {
-                    //width: 100%;
-                    position: relative;
-                    display: flex;
-                    font-size: 1.125rem;
-                    margin-right: 15px;
-                }
-
-                form.desktop-search button:first-of-type {
-                    width: 40px;
-                    height: 39px;
-                    border: 1px solid $beige;
-                    background: $light-beige;
-                    text-align: center;
-                    cursor: pointer;
-                    margin-right: 10px;
-
-                    i {
-                        color: $orange;
-                    }
-                }
-
-                form.desktop-search button:last-of-type {
-                    height: 39px;
-                    text-align: center;
-                    cursor: pointer;
-
-                    i {
-                        color: $orange;
-                    }
-                }
-
-                form.desktop-search input {
-                    border: unset;
-                    background-color: #F1F5F7;
-                    width: 450px;
-                }
-
-                form.desktop-search input::placeholder {
-                    color: $off-black;
-                }
-
-                #searchNav.before-click + form.desktop-search {
-                    display: none;
-                    transition: opacity 2s ease;
-                }
-
-                #searchNav.before-click.after-click + form.desktop-search {
-                    display: flex;
-                    transition: opacity 2s ease;
+                img {
+                    width: 12rem;
                 }
             }
         }
 
-        #nav-bar-mobile {
-            display: none;
+        .nav {
+            margin-top: rem-calc(15px);
+            display: flex;
+            align-items: center;
 
-            .mobile-nav.accordion {
+            a {
+                font-weight: 800;
+            }
+        }
 
-                margin-left: 1.25rem; //Overwrites foundation accordion margin
+        .right {
+            display: flex;
+            margin-top: 1.5rem;
+            align-items: center;
 
-                li.accordion-item > a:after {
-                    content: "\f0d7";
-                    font-family: "Font Awesome 5 Free";
-                    font-size: 1rem;
-                    font-weight: 900;
-                    color: $orange;
-                    margin-left: .5rem;
-                }
+            a {
+                margin-right: 1.5rem;
+                display: flex;
+                font-size: 16px;
+                align-items: center;
 
-                li.accordion-item.is-active > a:after {
-                    content: "\f0d8";
-                }
-
-                .accordion-content {
-                    border: none;
-                    padding: 1rem;
-
-                    .menu.vertical li {
-                        margin-bottom: .5rem;
-                    }
-
-                    .menu.vertical li a {
-                        color: $off-black;
-                    }
-                }
-
-                li {
-                    margin-bottom: 1rem;
-                }
+                //display:none;
             }
 
-            ul.links {
-                list-style-type: none;
-
-                li {
-                    margin-bottom: 1rem;
-                }
+            a span {
+                color: $off-black;
+                transition: $text-transition;
             }
 
-            ul.links:last-of-type {
-                margin-top: 30px;
+            a span:hover {
+                color: $dark-orange;
             }
 
-            ul.links li a {
+            a i {
+                color: $orange;
+                margin-right: 5px;
+            }
+
+            #searchNav {
+                margin-right: 15px;
+            }
+
+            form.desktop-search {
+                //width: 100%;
+                position: relative;
+                display: flex;
+                font-size: 1.125rem;
+                margin-right: 15px;
+            }
+
+            form.desktop-search button:first-of-type {
+                width: 40px;
+                height: 39px;
+                border: 1px solid $beige;
+                background: $light-beige;
+                text-align: center;
+                cursor: pointer;
+                margin-right: 10px;
 
                 i {
                     color: $orange;
                 }
+            }
 
-                color: $off-black;
-                font-weight: 500;
+            form.desktop-search button:last-of-type {
+                height: 39px;
+                text-align: center;
+                cursor: pointer;
 
-                &.donate {
-                    background-color: $orange;
-                    padding: 8px 30px 8px 30px;
-                    color: $off-white;
+                i {
+                    color: $orange;
                 }
+            }
+
+            form.desktop-search input {
+                border: unset;
+                background-color: #F1F5F7;
+                width: 450px;
+            }
+
+            form.desktop-search input::placeholder {
+                color: $off-black;
+            }
+
+            #searchNav.before-click+form.desktop-search {
+                display: none;
+                transition: opacity 2s ease;
+            }
+
+            #searchNav.before-click.after-click+form.desktop-search {
+                display: flex;
+                transition: opacity 2s ease;
             }
         }
 
-        @media screen and (max-width:$small-screen) {
-            display: none;
-            border-top: none;
-            margin-bottom: 0;
-            background: $pure-white;
-            top: 70px;
-            z-index: 4;
+        }
 
-            #nav-bar-mobile {
-                display: block;
+    #nav-bar-mobile {
+        display: none;
+
+        .mobile-nav.accordion {
+
+            margin-left: 1.25rem; //Overwrites foundation accordion margin
+
+            li.accordion-item>a:after {
+                content: "\f0d7";
+                font-family: "Font Awesome 5 Free";
+                font-size: 1rem;
+                font-weight: 900;
+                color: $orange;
+                margin-left: .5rem;
             }
 
-            .group {
-                justify-content: center;
+            li.accordion-item.is-active>a:after {
+                content: "\f0d8";
+            }
 
-                .logo {
-                    display: none;
+            .accordion-content {
+                border: none;
+                padding: 1rem;
+
+                .menu.vertical li {
+                    margin-bottom: .5rem;
                 }
 
-                .nav {
-                    display: none;
-                }
-
-                .right {
-                    display: none;
+                .menu.vertical li a {
+                    color: $off-black;
                 }
             }
+
+            li {
+                margin-bottom: 1rem;
+            }
+        }
+
+        ul.links {
+            list-style-type: none;
+
+            li {
+                margin-bottom: 1rem;
+            }
+        }
+
+        ul.links:last-of-type {
+            margin-top: 30px;
+        }
+
+        ul.links li a {
+
+            i {
+                color: $orange;
+            }
+
+            color: $off-black;
+            font-weight: 500;
+
+            &.donate {
+                background-color: $orange;
+                padding: 8px 30px 8px 30px;
+                color: $off-white;
+            }
+        }
+    }
+
+    @media screen and (max-width:$small-screen) {
+        display: none;
+        border-top: none;
+        margin-bottom: 0;
+        background: $pure-white;
+        top: 70px;
+        z-index: 4;
+
+        #nav-bar-mobile {
+            display: block;
+        }
+
+        .group {
+            justify-content: center;
+
+            .logo {
+                display: none;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .right {
+                display: none;
+            }
+        }
+    }
+}
+}
+
+/* ============================================================
+    PATIENT CARE HEADER OVERRIDES
+    Patient Care prototype only
+============================================================ */
+
+#header.patient-care-header {
+    .group {
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: rem-calc(18px);
+        padding-right: rem-calc(15px);
+    }
+
+    .group .logo.pipe {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        min-width: 0;
+        margin-top: rem-calc(15px);
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            flex: 0 0 auto;
+            background-image: none;
+        }
+
+        img {
+            width: clamp(7.25rem, 15vw, 13.75rem);
+            max-width: none;
+            height: auto;
+            display: block;
+            flex: 0 0 auto;
+            padding-right: rem-calc(14px);
+            border-right: rem-calc(2px) solid $orange;
+        }
+
+        p {
+            margin: 0;
+            padding-left: rem-calc(14px);
+            font-family: $serif-font;
+            font-weight: normal;
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            line-height: 1.15;
+            white-space: nowrap;
+            flex: 0 0 auto;
+        }
+    }
+
+    .group .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1 1 auto;
+        min-width: 0;
+        gap: rem-calc(20px);
+        margin-top: rem-calc(15px);
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 0;
+            white-space: nowrap;
+        }
+
+        #searchNav {
+            margin-right: 0;
+        }
+    }
+
+    // Medium tablet: keep everything on one row, but reduce only the pieces that need it.
+    @media screen and (min-width: 769px) and (max-width: 900px) {
+        .group {
+            gap: rem-calc(12px);
+        }
+
+        .group .logo.pipe {
+            img {
+                width: rem-calc(110px);
+                padding-right: rem-calc(10px);
+            }
+
+            p {
+                padding-left: rem-calc(10px);
+                font-size: rem-calc(22px);
+            }
+        }
+
+        .group .right {
+            gap: rem-calc(14px);
+
+            a {
+                font-size: rem-calc(15px);
+            }
+        }
+    }
+
+    // Narrow tablet: one row cannot hold the logo/title plus every header link.
+    // Keep the logo and Patient Care together, then move the header links below.
+    @media screen and (min-width: 641px) and (max-width: 768px) {
+        .group {
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            row-gap: rem-calc(12px);
+            column-gap: 0;
+            padding-top: rem-calc(12px);
+            padding-left: rem-calc(15px);
+            padding-right: rem-calc(15px);
+        }
+
+        .group .logo.pipe {
+            flex: 0 0 100%;
+            width: 100%;
+            margin-top: 0;
+
+            img {
+                width: rem-calc(115px);
+                padding-right: rem-calc(10px);
+            }
+
+            p {
+                padding-left: rem-calc(10px);
+                font-size: rem-calc(22px);
+            }
+        }
+
+        .group .right {
+            flex: 0 0 100%;
+            width: 100%;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: rem-calc(12px 18px);
+            margin-top: 0;
+        }
+
+        .group .right a {
+            font-size: rem-calc(15px);
         }
     }
 }
