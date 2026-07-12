@@ -79,12 +79,15 @@
             background: url(../images/noise-texture.png);
         }
 
+        &.rocky {
+            background: url(../images/rockywall-texture.png);
+        }
+
         .shield {
             background-image: url(../images/shield-transparent.svg);
             background-repeat: no-repeat;
-            background-position: left;
-            position: relative;
-            padding: rem-calc(25px) 0; //This adds an absurd amount of padding to the top and bottom. Was this intended?
+            background-position: left center;
+            background-size: auto 145%;
         }
     }
 

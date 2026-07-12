@@ -14694,12 +14694,14 @@ blockquote.fancy cite {
 .bleed.noise {
   background: url(../images/noise-texture.png);
 }
+.bleed.rocky {
+  background: url(../images/rockywall-texture.png);
+}
 .bleed .shield {
   background-image: url(../images/shield-transparent.svg);
   background-repeat: no-repeat;
-  background-position: left;
-  position: relative;
-  padding: 1.5625rem 0;
+  background-position: left center;
+  background-size: auto 145%;
 }
 
 /* ============================================================
