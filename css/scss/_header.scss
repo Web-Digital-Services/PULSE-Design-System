@@ -472,6 +472,23 @@ header {
     Patient Care prototype only
 ============================================================ */
 
+#mobile-header {
+    .patient-care-logo {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        background-image: none;
+    }
+
+    .patient-care-logo img {
+        display: block;
+        width: rem-calc(145px);
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}
+
 #header.patient-care-header {
     .group {
         align-items: center;
@@ -481,38 +498,28 @@ header {
         padding-right: rem-calc(15px);
     }
 
-    .group .logo.pipe {
+    .group .logo {
         display: flex;
         align-items: center;
         flex: 0 0 auto;
         min-width: 0;
         margin-top: rem-calc(15px);
 
-        a {
-            display: inline-flex;
+        a.patient-care-logo {
+            display: flex;
             align-items: center;
             flex: 0 0 auto;
             background-image: none;
         }
 
         img {
-            width: clamp(7.25rem, 15vw, 13.75rem);
-            max-width: none;
-            height: auto;
             display: block;
-            flex: 0 0 auto;
-            padding-right: rem-calc(14px);
-            border-right: rem-calc(2px) solid $orange;
-        }
-
-        p {
+            width: rem-calc(220px);
+            max-width: 100%;
+            height: auto;
             margin: 0;
-            padding-left: rem-calc(14px);
-            font-family: $serif-font;
-            font-weight: normal;
-            font-size: clamp(1.25rem, 2vw, 1.5rem);
-            line-height: 1.15;
-            white-space: nowrap;
+            padding: 0;
+            border: 0;
             flex: 0 0 auto;
         }
     }
@@ -538,22 +545,13 @@ header {
         }
     }
 
-    // Medium tablet: keep everything on one row, but reduce only the pieces that need it.
     @media screen and (min-width: 769px) and (max-width: 900px) {
         .group {
             gap: rem-calc(12px);
         }
 
-        .group .logo.pipe {
-            img {
-                width: rem-calc(110px);
-                padding-right: rem-calc(10px);
-            }
-
-            p {
-                padding-left: rem-calc(10px);
-                font-size: rem-calc(22px);
-            }
+        .group .logo img {
+            width: rem-calc(175px);
         }
 
         .group .right {
@@ -565,8 +563,6 @@ header {
         }
     }
 
-    // Narrow tablet: one row cannot hold the logo/title plus every header link.
-    // Keep the logo and Patient Care together, then move the header links below.
     @media screen and (min-width: 641px) and (max-width: 768px) {
         .group {
             flex-wrap: wrap;
@@ -579,20 +575,14 @@ header {
             padding-right: rem-calc(15px);
         }
 
-        .group .logo.pipe {
+        .group .logo {
             flex: 0 0 100%;
             width: 100%;
             margin-top: 0;
+        }
 
-            img {
-                width: rem-calc(115px);
-                padding-right: rem-calc(10px);
-            }
-
-            p {
-                padding-left: rem-calc(10px);
-                font-size: rem-calc(22px);
-            }
+        .group .logo img {
+            width: rem-calc(180px);
         }
 
         .group .right {

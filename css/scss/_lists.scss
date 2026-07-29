@@ -219,6 +219,30 @@ div.decoration {
 
 }
 
+// Keep list links inside white cards and callouts from inheriting
+// colored-bleed underline and highlight styles.
+.color .white,
+.bleed.img-fill .white {
+    ul li > a:not(.button),
+    ol li > a:not(.button) {
+        color: $orange;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        background-color: transparent;
+        background-image: none;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $dark-orange;
+            background-color: transparent;
+            background-image: none;
+            text-decoration: none;
+        }
+    }
+}
+
 
 ul.underline {
     @extend %link-underline;

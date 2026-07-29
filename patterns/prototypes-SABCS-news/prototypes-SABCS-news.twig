@@ -1,0 +1,152 @@
+{% include "@components/header-prototypes/header-cc-sabcs.twig" %}
+{% include "@components/navigation-prototypes/main-nav-cc-sabcs.twig" %}
+
+<section class="hero bleed">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x align-middle">
+            <div class="cell small-12 large-7">
+                <h1>News</h1>
+            </div>
+            <div class="cell small-12 large-5"></div>
+        </div>
+    </div>
+</section>
+
+<main class="grid-container">
+    <div class="grid-x grid-margin-x grid-margin-y">
+        <section class="cell small-12 medium-8 large-8">
+            <p>
+                <a href="#"><strong>Preview: Special Session on Lobular Breast Cancer</strong></a>
+            </p>
+
+            <ul class="byline">
+                <li>December 9, 2025</li>
+            </ul>
+
+            <p>Steffi Oesterreich, PhD, and others preview this December 9 session in SABCS Meeting News.</p>
+
+            <ul class="tags">
+                <li><a href="#">SABCS Meeting News</a></li>
+            </ul>
+
+            <hr>
+
+            <p>
+                <a href="#"><strong>Abstract Titles Published</strong></a>
+            </p>
+
+            <ul class="byline">
+                <li>October 30, 2025</li>
+            </ul>
+
+            <p>Abstract titles are now available in the online program</p>
+
+            <ul class="tags">
+            <li><a href="#">Announcement</a></li>
+            <li><a href="#">SABCS News</a></li>
+            </ul>
+
+            <hr>
+
+            <p>
+                <a href="#"><strong>SABCS Snippets: HER2CLIMB-05 Clinical Trial Updates</strong></a>
+            </p>
+
+            <ul class="byline">
+                <li>October 17, 2025</li>
+            </ul>
+
+            <p>Kate Lathrop, MD and SABCS Program Director, discusses the results with Erika Hamilton, MD, FASCO.</p>
+
+            <ul class="tags">
+                <li><a href="#">Announcement</a></li>
+                <li><a href="#">SABCS Meeting News</a></li>
+            </ul>
+
+            <hr>
+            <p>
+                <a href="#"><strong>Preview: Special Session on Lobular Breast Cancer</strong></a>
+            </p>
+
+            <ul class="byline">
+                <li>December 9, 2025</li>
+            </ul>
+
+            <p>Steffi Oesterreich, PhD, and others preview this December 9 session in SABCS Meeting News.</p>
+
+            <ul class="tags">
+                <li><a href="#">SABCS Meeting News</a></li>
+            </ul>
+
+            <hr>
+
+            <p>
+                <a href="#"><strong>Abstract Titles Published</strong></a>
+            </p>
+
+            <ul class="byline">
+                <li>October 30, 2025</li>
+            </ul>
+
+            <p>Abstract titles are now available in the online program</p>
+
+            <ul class="tags">
+            <li><a href="#">Announcement</a></li>
+            <li><a href="#">SABCS News</a></li>
+            </ul>
+
+            <hr>
+
+            <p>
+                <a href="#"><strong>SABCS Snippets: HER2CLIMB-05 Clinical Trial Updates</strong></a>
+            </p>
+
+            <ul class="byline">
+                <li>October 17, 2025</li>
+            </ul>
+
+            <p>Kate Lathrop, MD and SABCS Program Director, discusses the results with Erika Hamilton, MD, FASCO.</p>
+
+            <ul class="tags">
+                <li><a href="#">Announcement</a></li>
+                <li><a href="#">SABCS Meeting News</a></li>
+            </ul>
+
+            <hr>
+
+            {% include "@components/navigation/pagination.twig" %}
+
+        </section>
+
+        <aside class="cell small-12 medium-4 large-4">
+            <label for="news-search">Search</label>
+            <form class="search" action="#" method="get">
+                <input
+                    id="news-search"
+                    name="search"
+                    type="search"
+                    class="search-box"
+                    placeholder="Search..."
+                >
+                <button type="submit" aria-label="Search news">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </form>
+
+            <form action="#" method="get">
+                <label for="news-type">News Type</label>
+                <select id="news-type" name="news-type">
+                    <option value="" selected>Select</option>
+                    <option value="sabcs-snippets">SABCS Snippets (4)</option>
+                    <option value="sabcs-news">SABCS News (11)</option>
+                    <option value="external-source">External Source (6)</option>
+                    <option value="announcements">Announcements</option>
+                </select>
+
+                <button type="submit" class="button">Filter News</button>
+            </form>
+        </aside>
+    </div>
+</main>
+
+{% include "@blocks/footer-prototypes/cc-sabcs-footer.twig" %}

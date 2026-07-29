@@ -14658,6 +14658,17 @@ blockquote.fancy cite {
   }
 }
 
+.chonky {
+  padding-top: 11.25rem;
+  padding-bottom: 11.25rem;
+}
+@media screen and (max-width: 639px) {
+  .chonky {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+}
+
 .bleed {
   color: #171717;
 }
@@ -14834,7 +14845,7 @@ IMG Fill BLEEDS
 ============================================================ */
 .callout {
   color: #171717;
-  background-color: #f7f5f0;
+  background-color: #F0ECE2;
   padding: 1.875rem;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -15414,6 +15425,33 @@ div.decoration li > a:hover {
 .callout.spotlight.orange ol li a.highlight:active {
   color: #FFDEBD !important;
   background-color: inherit;
+}
+
+.color .white ul li > a:not(.button),
+.color .white ol li > a:not(.button),
+.bleed.img-fill .white ul li > a:not(.button),
+.bleed.img-fill .white ol li > a:not(.button) {
+  color: #AD4200;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background-color: transparent;
+  background-image: none;
+  text-decoration: none;
+}
+.color .white ul li > a:not(.button):hover, .color .white ul li > a:not(.button):focus, .color .white ul li > a:not(.button):active,
+.color .white ol li > a:not(.button):hover,
+.color .white ol li > a:not(.button):focus,
+.color .white ol li > a:not(.button):active,
+.bleed.img-fill .white ul li > a:not(.button):hover,
+.bleed.img-fill .white ul li > a:not(.button):focus,
+.bleed.img-fill .white ul li > a:not(.button):active,
+.bleed.img-fill .white ol li > a:not(.button):hover,
+.bleed.img-fill .white ol li > a:not(.button):focus,
+.bleed.img-fill .white ol li > a:not(.button):active {
+  color: #7A0F00;
+  background-color: transparent;
+  background-image: none;
+  text-decoration: none;
 }
 
 ul.byline {
@@ -16335,7 +16373,7 @@ a.card.tile:hover .button, a.card.tile:focus .button {
 }
 .button.outlined {
   border: 0.09375rem solid #AD4200;
-  background-color: rgba(255, 255, 255, 0.77);
+  background-color: rgba(255, 255, 255, 0.9);
   color: #AD4200;
 }
 
@@ -18150,6 +18188,20 @@ header#header #nav-bar-mobile ul.links li a.donate {
     PATIENT CARE HEADER OVERRIDES
     Patient Care prototype only
 ============================================================ */
+#mobile-header .patient-care-logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  background-image: none;
+}
+#mobile-header .patient-care-logo img {
+  display: block;
+  width: 9.0625rem;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
 #header.patient-care-header .group {
   align-items: center;
   justify-content: space-between;
@@ -18157,36 +18209,27 @@ header#header #nav-bar-mobile ul.links li a.donate {
   gap: 1.125rem;
   padding-right: 0.9375rem;
 }
-#header.patient-care-header .group .logo.pipe {
+#header.patient-care-header .group .logo {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
   min-width: 0;
   margin-top: 0.9375rem;
 }
-#header.patient-care-header .group .logo.pipe a {
-  display: inline-flex;
+#header.patient-care-header .group .logo a.patient-care-logo {
+  display: flex;
   align-items: center;
   flex: 0 0 auto;
   background-image: none;
 }
-#header.patient-care-header .group .logo.pipe img {
-  width: clamp(7.25rem, 15vw, 13.75rem);
-  max-width: none;
-  height: auto;
+#header.patient-care-header .group .logo img {
   display: block;
-  flex: 0 0 auto;
-  padding-right: 0.875rem;
-  border-right: 0.125rem solid #AD4200;
-}
-#header.patient-care-header .group .logo.pipe p {
+  width: 13.75rem;
+  max-width: 100%;
+  height: auto;
   margin: 0;
-  padding-left: 0.875rem;
-  font-family: "Lora", serif;
-  font-weight: normal;
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
-  line-height: 1.15;
-  white-space: nowrap;
+  padding: 0;
+  border: 0;
   flex: 0 0 auto;
 }
 #header.patient-care-header .group .right {
@@ -18211,13 +18254,8 @@ header#header #nav-bar-mobile ul.links li a.donate {
   #header.patient-care-header .group {
     gap: 0.75rem;
   }
-  #header.patient-care-header .group .logo.pipe img {
-    width: 6.875rem;
-    padding-right: 0.625rem;
-  }
-  #header.patient-care-header .group .logo.pipe p {
-    padding-left: 0.625rem;
-    font-size: 1.375rem;
+  #header.patient-care-header .group .logo img {
+    width: 10.9375rem;
   }
   #header.patient-care-header .group .right {
     gap: 0.875rem;
@@ -18237,18 +18275,13 @@ header#header #nav-bar-mobile ul.links li a.donate {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
   }
-  #header.patient-care-header .group .logo.pipe {
+  #header.patient-care-header .group .logo {
     flex: 0 0 100%;
     width: 100%;
     margin-top: 0;
   }
-  #header.patient-care-header .group .logo.pipe img {
-    width: 7.1875rem;
-    padding-right: 0.625rem;
-  }
-  #header.patient-care-header .group .logo.pipe p {
-    padding-left: 0.625rem;
-    font-size: 1.375rem;
+  #header.patient-care-header .group .logo img {
+    width: 11.25rem;
   }
   #header.patient-care-header .group .right {
     flex: 0 0 100%;
@@ -19612,7 +19645,7 @@ footer.mission .contact .fa-inverse {
 }
 .button.outlined {
   border: 0.09375rem solid #AD4200;
-  background-color: rgba(255, 255, 255, 0.77);
+  background-color: rgba(255, 255, 255, 0.9);
   color: #AD4200;
 }
 
