@@ -16640,12 +16640,12 @@ a.card.tile:hover .button, a.card.tile:focus .button {
   opacity: 1;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 639px) {
   #main-nav {
     display: none;
   }
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 639px) {
   #nav-bar-mobile .menu.drilldown .is-drilldown-submenu-parent > a:after {
     border-color: #AD4200 transparent transparent;
     border-width: unset;
@@ -18188,13 +18188,13 @@ header#header #nav-bar-mobile ul.links li a.donate {
     PATIENT CARE HEADER OVERRIDES
     Patient Care prototype only
 ============================================================ */
-#mobile-header .patient-care-logo {
+#mobile-header > a:first-child {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
   background-image: none;
 }
-#mobile-header .patient-care-logo img {
+#mobile-header > a:first-child img {
   display: block;
   width: 9.0625rem;
   max-width: 100%;
@@ -18216,7 +18216,7 @@ header#header #nav-bar-mobile ul.links li a.donate {
   min-width: 0;
   margin-top: 0.9375rem;
 }
-#header.patient-care-header .group .logo a.patient-care-logo {
+#header.patient-care-header .group .logo > a {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
@@ -18224,13 +18224,24 @@ header#header #nav-bar-mobile ul.links li a.donate {
 }
 #header.patient-care-header .group .logo img {
   display: block;
-  width: 13.75rem;
   max-width: 100%;
   height: auto;
   margin: 0;
-  padding: 0;
-  border: 0;
   flex: 0 0 auto;
+}
+#header.patient-care-header .group .logo.pipe img {
+  width: 15.625rem;
+  padding-right: 1.25rem;
+  border-right: 0.125rem solid #AD4200;
+}
+#header.patient-care-header .group .logo.pipe p {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Lora", serif;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 #header.patient-care-header .group .right {
   display: flex;
@@ -18254,8 +18265,11 @@ header#header #nav-bar-mobile ul.links li a.donate {
   #header.patient-care-header .group {
     gap: 0.75rem;
   }
-  #header.patient-care-header .group .logo img {
-    width: 10.9375rem;
+  #header.patient-care-header .group .logo.pipe img {
+    width: 12.5rem;
+  }
+  #header.patient-care-header .group .logo.pipe p {
+    font-size: 1.3125rem;
   }
   #header.patient-care-header .group .right {
     gap: 0.875rem;
@@ -18280,8 +18294,11 @@ header#header #nav-bar-mobile ul.links li a.donate {
     width: 100%;
     margin-top: 0;
   }
-  #header.patient-care-header .group .logo img {
+  #header.patient-care-header .group .logo.pipe img {
     width: 11.25rem;
+  }
+  #header.patient-care-header .group .logo.pipe p {
+    font-size: 1.25rem;
   }
   #header.patient-care-header .group .right {
     flex: 0 0 100%;
@@ -18293,6 +18310,14 @@ header#header #nav-bar-mobile ul.links li a.donate {
   }
   #header.patient-care-header .group .right a {
     font-size: 0.9375rem;
+  }
+}
+@media screen and (max-width: 639px) {
+  #header.patient-care-header .group {
+    display: none;
+  }
+  #header.patient-care-header #nav-bar-mobile {
+    display: block;
   }
 }
 
