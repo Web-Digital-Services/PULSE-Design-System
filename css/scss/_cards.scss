@@ -261,15 +261,15 @@ a.card {
 
         .card-section {
             display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            background-color: rgba($off-black, .43);
+            background-color: rgba($off-black, .72);
             text-align: center;
 
             >div,
             .tile-content {
                 width: 100%;
-                transition: transform .55s cubic-bezier(.19, 1, .22, 1);
+                align-self: flex-end;
+                transform: translateY(calc(100% - 4.5rem));
+                transition: transform .7s cubic-bezier(.19, 1, .22, 1);
             }
 
             &:after {
@@ -277,20 +277,30 @@ a.card {
             }
         }
 
+        // Keep title-only tiles above the bottom edge. The :has() selector
+        // also covers prototype cards that do not include .title-only yet.
+        &.title-only,
+        &:not(:has(.card-section p, .card-section .button)) {
+            .card-section {
+                box-sizing: border-box;
+                padding-bottom: rem-calc(72px);
+
+                >div,
+                .tile-content {
+                    transform: none;
+                }
+            }
+        }
+
         p,
         .button {
             opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition:
-                opacity .3s ease-in-out,
-                max-height .4s ease-in-out,
-                margin .4s ease-in-out;
+            transition: opacity .3s cubic-bezier(.65, .05, .36, 1);
         }
 
         .button {
             display: inline-block;
-            margin-top: 0;
+            margin-top: rem-calc(18px);
         }
 
         &:hover,
@@ -300,20 +310,13 @@ a.card {
 
                 >div,
                 .tile-content {
-                    transform: translateY(rem-calc(-6px));
+                    transform: translateY(0);
                 }
             }
 
-            p {
-                opacity: 1;
-                max-height: rem-calc(180px);
-                margin-top: rem-calc(12px);
-            }
-
+            p,
             .button {
                 opacity: 1;
-                max-height: rem-calc(60px);
-                margin-top: rem-calc(18px);
             }
         }
     }
@@ -340,7 +343,6 @@ a.card {
         p,
         .button {
             opacity: 1;
-            max-height: none;
         }
 
         p {
