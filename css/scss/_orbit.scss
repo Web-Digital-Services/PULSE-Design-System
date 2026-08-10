@@ -320,3 +320,25 @@ nav.orbit-bullets {
         }
     }
 }
+
+/* ============================================================
+    BLOCKQUOTE ORBIT
+============================================================ */
+
+.blockquote-orbit {
+    .orbit-bullets {
+        margin-top: rem-calc(24px);
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: rem-calc(10px);
+            margin: 0;
+        }
+
+        li,
+        button {
+            margin: 0;
+        }
+    }
+}

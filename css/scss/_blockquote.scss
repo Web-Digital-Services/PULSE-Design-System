@@ -5,27 +5,31 @@
 blockquote {
     color: $dark-grey;
     border-left: none;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     position: relative;
+
     p {
         color: $dark-grey;
         line-height: inherit;
-        + cite {
-            margin-top:-0.5rem;
+
+        +cite {
+            margin-top: -0.5rem;
         }
     }
 }
+
 cite {
     color: $dark-grey;
-    font-style:italic;
+    font-style: italic;
     font-weight: 600;
-    font-size:inherit;
+    font-size: inherit;
 
     a {
         font-weight: 700;
     }
-    }
+}
+
 cite:before {
     content: "\2014";
     margin-right: .25rem;
@@ -36,21 +40,24 @@ cite:before {
 .bleed.color blockquote {
     color: $off-white;
     border-left: none;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
+
     p {
         color: $off-white;
         line-height: inherit;
-        + cite {
-            margin-top:-0.5rem;
+
+        +cite {
+            margin-top: -0.5rem;
         }
     }
 
     cite {
         color: $off-white;
-        font-style:italic;
+        font-style: italic;
         font-weight: 600;
-        font-size:inherit;
+        font-size: inherit;
+
         &:before {
             content: "\2014";
             margin-right: .25rem;
@@ -66,20 +73,81 @@ cite:before {
         left: rem-calc(-50px);
         font-size: 8.33rem;
         color: $off-white;
+
         @media screen and (max-width: $small-screen) {
             left: rem-calc(-5px);
         }
     }
+
     blockquote p:last-of-type::after {
         content: "\201D";
     }
 }
 
+// Keep the quote icon visible inside Orbit's overflow container.
+.bleed.color.pullquote .orbit {
+    blockquote {
+        padding-top: rem-calc(64px);
+    }
+
+    blockquote p:first-of-type::before {
+        top: 0;
+        left: 0;
+        font-size: rem-calc(96px);
+        line-height: 1;
+    }
+}
+
+// Larger, emphasized quote option.
+blockquote.large-quote {
+    p {
+        font-size: rem-calc(24px);
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    p+cite.cite {
+        margin-top: 0;
+    }
+
+    cite.cite {
+        display: block;
+        font-style: normal;
+        padding-left: rem-calc(20px);
+        text-indent: rem-calc(-22px);
+    }
+}
+
+.bleed.color.pullquote blockquote.large-quote {
+    p+cite.cite {
+        padding-top: rem-calc(32px);
+    }
+}
+
+@media screen and (max-width: $small-screen) {
+    .bleed.color.pullquote .orbit {
+        blockquote {
+            padding-top: rem-calc(52px);
+        }
+
+        blockquote p:first-of-type::before {
+            left: 0;
+            font-size: rem-calc(72px);
+        }
+    }
+
+    blockquote.large-quote p {
+        font-size: rem-calc(21px);
+    }
+}
+
 blockquote.fancy {
     background-color: $light-grey;
+
     p {
         padding: 2rem 1.667rem 1.667rem 2.75rem;
         color: $off-black;
+
         &:first-of-type::before {
             content: "\201C";
             position: absolute;
@@ -88,6 +156,7 @@ blockquote.fancy {
             font-size: 8.33rem;
             color: $blue-60;
         }
+
         &:last-of-type::after {
             content: "\201D";
         }
@@ -99,4 +168,14 @@ blockquote.fancy cite {
     color: $off-white;
     padding: 1.667rem;
     font-weight: 900;
+}
+
+blockquote.fancy.orange {
+    p:first-of-type::before {
+        color: $orange;
+    }
+
+    cite {
+        background-color: $orange;
+    }
 }

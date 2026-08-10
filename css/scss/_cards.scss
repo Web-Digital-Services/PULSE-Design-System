@@ -261,61 +261,52 @@ a.card {
 
         .card-section {
             display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: rem-calc(60px);
             background-color: rgba($off-black, .72);
             text-align: center;
-
-            >div,
-            .tile-content {
-                width: 100%;
-                align-self: flex-end;
-                transform: translateY(calc(100% - 4.5rem));
-                transition: transform .7s cubic-bezier(.19, 1, .22, 1);
-            }
 
             &:after {
                 display: none;
             }
         }
 
-        // Keep title-only tiles above the bottom edge. The :has() selector
-        // also covers prototype cards that do not include .title-only yet.
-        &.title-only,
-        &:not(:has(.card-section p, .card-section .button)) {
-            .card-section {
-                box-sizing: border-box;
-                padding-bottom: rem-calc(72px);
-
-                >div,
-                .tile-content {
-                    transform: none;
-                }
-            }
+        .tile-content {
+            width: 100%;
         }
 
-        p,
-        .button {
+        .tile-reveal {
+            display: grid;
+            grid-template-rows: 0fr;
             opacity: 0;
-            transition: opacity .3s cubic-bezier(.65, .05, .36, 1);
-        }
+            transition:
+                grid-template-rows .7s cubic-bezier(.19, 1, .22, 1),
+                opacity .3s cubic-bezier(.65, .05, .36, 1);
 
-        .button {
-            display: inline-block;
-            margin-top: rem-calc(18px);
+            >div {
+                min-height: 0;
+                overflow: hidden;
+            }
+
+            p {
+                margin-top: rem-calc(14px);
+            }
+
+            .button {
+                display: inline-block;
+                margin-top: rem-calc(18px);
+            }
         }
 
         &:hover,
         &:focus {
             .card-section {
                 background-color: rgba($off-black, .78);
-
-                >div,
-                .tile-content {
-                    transform: translateY(0);
-                }
             }
 
-            p,
-            .button {
+            .tile-reveal {
+                grid-template-rows: 1fr;
                 opacity: 1;
             }
         }
@@ -333,24 +324,11 @@ a.card {
 
         .card-section {
             background-color: rgba($off-black, .78);
-
-            >div,
-            .tile-content {
-                transform: none !important;
-            }
         }
 
-        p,
-        .button {
+        .tile-reveal {
+            grid-template-rows: 1fr;
             opacity: 1;
-        }
-
-        p {
-            margin-top: rem-calc(12px);
-        }
-
-        .button {
-            margin-top: rem-calc(18px);
         }
     }
 }

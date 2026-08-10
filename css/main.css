@@ -14472,6 +14472,47 @@ cite:before {
   content: "”";
 }
 
+.bleed.color.pullquote .orbit blockquote {
+  padding-top: 4rem;
+}
+.bleed.color.pullquote .orbit blockquote p:first-of-type::before {
+  top: 0;
+  left: 0;
+  font-size: 6rem;
+  line-height: 1;
+}
+
+blockquote.large-quote p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+blockquote.large-quote p + cite.cite {
+  margin-top: 0;
+}
+blockquote.large-quote cite.cite {
+  display: block;
+  font-style: normal;
+  padding-left: 1.25rem;
+  text-indent: -1.375rem;
+}
+
+.bleed.color.pullquote blockquote.large-quote p + cite.cite {
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 639px) {
+  .bleed.color.pullquote .orbit blockquote {
+    padding-top: 3.25rem;
+  }
+  .bleed.color.pullquote .orbit blockquote p:first-of-type::before {
+    left: 0;
+    font-size: 4.5rem;
+  }
+  blockquote.large-quote p {
+    font-size: 1.3125rem;
+  }
+}
 blockquote.fancy {
   background-color: #E0E5E6;
 }
@@ -14496,6 +14537,13 @@ blockquote.fancy cite {
   color: #F1F5F7;
   padding: 1.667rem;
   font-weight: 900;
+}
+
+blockquote.fancy.orange p:first-of-type::before {
+  color: #AD4200;
+}
+blockquote.fancy.orange cite {
+  background-color: #AD4200;
 }
 
 /* ============================================================
@@ -14703,10 +14751,10 @@ blockquote.fancy cite {
   background-color: #257994 !important;
 }
 .bleed.noise {
-  background: url(../images/noise-texture.png);
+  background-image: url(../images/noise-texture.png);
 }
 .bleed.rocky {
-  background: url(../images/rockywall-texture.png);
+  background-image: url(../images/rockywall-texture.png);
 }
 .bleed .shield {
   background-image: url(../images/shield-transparent.svg);
@@ -14716,7 +14764,7 @@ blockquote.fancy cite {
 }
 
 /* ============================================================
- BLEEDING IMAGES
+    BLEEDING IMAGES
 ============================================================ */
 .img-bleed-right {
   padding: 0;
@@ -16235,48 +16283,40 @@ a.card.tile {
 }
 a.card.tile .card-section {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 3.75rem;
   background-color: rgba(23, 23, 23, 0.72);
   text-align: center;
-}
-a.card.tile .card-section > div,
-a.card.tile .card-section .tile-content {
-  width: 100%;
-  align-self: flex-end;
-  transform: translateY(calc(100% - 4.5rem));
-  transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
 a.card.tile .card-section:after {
   display: none;
 }
-a.card.tile.title-only .card-section, a.card.tile:not(:has(.card-section p, .card-section .button)) .card-section {
-  box-sizing: border-box;
-  padding-bottom: 4.5rem;
+a.card.tile .tile-content {
+  width: 100%;
 }
-a.card.tile.title-only .card-section > div,
-a.card.tile.title-only .card-section .tile-content, a.card.tile:not(:has(.card-section p, .card-section .button)) .card-section > div,
-a.card.tile:not(:has(.card-section p, .card-section .button)) .card-section .tile-content {
-  transform: none;
-}
-a.card.tile p,
-a.card.tile .button {
+a.card.tile .tile-reveal {
+  display: grid;
+  grid-template-rows: 0fr;
   opacity: 0;
-  transition: opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: grid-template-rows 0.7s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
-a.card.tile .button {
+a.card.tile .tile-reveal > div {
+  min-height: 0;
+  overflow: hidden;
+}
+a.card.tile .tile-reveal p {
+  margin-top: 0.875rem;
+}
+a.card.tile .tile-reveal .button {
   display: inline-block;
   margin-top: 1.125rem;
 }
 a.card.tile:hover .card-section, a.card.tile:focus .card-section {
   background-color: rgba(23, 23, 23, 0.78);
 }
-a.card.tile:hover .card-section > div,
-a.card.tile:hover .card-section .tile-content, a.card.tile:focus .card-section > div,
-a.card.tile:focus .card-section .tile-content {
-  transform: translateY(0);
-}
-a.card.tile:hover p,
-a.card.tile:hover .button, a.card.tile:focus p,
-a.card.tile:focus .button {
+a.card.tile:hover .tile-reveal, a.card.tile:focus .tile-reveal {
+  grid-template-rows: 1fr;
   opacity: 1;
 }
 
@@ -16290,19 +16330,9 @@ a.card.tile:focus .button {
   a.card.tile .card-section {
     background-color: rgba(23, 23, 23, 0.78);
   }
-  a.card.tile .card-section > div,
-  a.card.tile .card-section .tile-content {
-    transform: none !important;
-  }
-  a.card.tile p,
-  a.card.tile .button {
+  a.card.tile .tile-reveal {
+    grid-template-rows: 1fr;
     opacity: 1;
-  }
-  a.card.tile p {
-    margin-top: 0.75rem;
-  }
-  a.card.tile .button {
-    margin-top: 1.125rem;
   }
 }
 /* ============================================================
@@ -19045,6 +19075,23 @@ nav.orbit-bullets ul button.is-active {
     margin-top: 0.75rem;
   }
 }
+/* ============================================================
+    BLOCKQUOTE ORBIT
+============================================================ */
+.blockquote-orbit .orbit-bullets {
+  margin-top: 1.5rem;
+}
+.blockquote-orbit .orbit-bullets ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  margin: 0;
+}
+.blockquote-orbit .orbit-bullets li,
+.blockquote-orbit .orbit-bullets button {
+  margin: 0;
+}
+
 .blue .charts-css {
   --color-1: #004661 !important; /*$blue-80*/
   --color-2: #0C607B !important; /*$blue-70*/
