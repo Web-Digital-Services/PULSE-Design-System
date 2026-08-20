@@ -473,6 +473,17 @@ header {
 ============================================================ */
 
 #mobile-header {
+    background-color: $pure-white;
+
+    .menu-icon {
+        color: $orange;
+
+        &::after {
+            background: $orange;
+            box-shadow: 0 7px 0 $orange, 0 14px 0 $orange;
+        }
+    }
+    
     > a:first-child {
         display: flex;
         align-items: center;
@@ -623,14 +634,15 @@ header {
     }
 
     @media screen and (max-width:$small-screen) {
-        // The responsive toggle reveals #header for the mobile menu
-        // Keep the desktop logo hidden and links hidden inside it
+        background-color: $pure-white;
+
         .group {
             display: none;
         }
 
         #nav-bar-mobile {
             display: block;
+            background-color: $pure-white;
         }
     }
 }

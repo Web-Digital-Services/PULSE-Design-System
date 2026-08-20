@@ -18219,6 +18219,16 @@ header#header #nav-bar-mobile ul.links li a.donate {
     PATIENT CARE HEADER OVERRIDES
     Patient Care prototype only
 ============================================================ */
+#mobile-header {
+  background-color: #FFF;
+}
+#mobile-header .menu-icon {
+  color: #AD4200;
+}
+#mobile-header .menu-icon::after {
+  background: #AD4200;
+  box-shadow: 0 7px 0 #AD4200, 0 14px 0 #AD4200;
+}
 #mobile-header > a:first-child {
   display: flex;
   align-items: center;
@@ -18344,11 +18354,15 @@ header#header #nav-bar-mobile ul.links li a.donate {
   }
 }
 @media screen and (max-width: 639px) {
+  #header.patient-care-header {
+    background-color: #FFF;
+  }
   #header.patient-care-header .group {
     display: none;
   }
   #header.patient-care-header #nav-bar-mobile {
     display: block;
+    background-color: #FFF;
   }
 }
 
