@@ -14903,14 +14903,14 @@ IMG Fill BLEEDS
   padding: 3.75rem;
 }
 .callout.spotlight {
-  padding: 120px 120px 120px 160px;
-  margin: -120px 0px -120px -132px;
+  padding: 60px 120px 60px 160px;
+  margin: 0px 0px 0px -132px;
   position: relative;
   z-index: 1;
 }
 .callout.spotlight.spotlight-left {
-  padding: 120px 160px 120px 120px;
-  margin: -120px -132px -120px 0px;
+  padding: 60px 160px 60px 120px;
+  margin: 0px -132px 0px 0px;
 }
 .callout.spotlight ul,
 .callout.spotlight ol {
