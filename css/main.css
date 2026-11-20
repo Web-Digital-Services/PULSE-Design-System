@@ -13755,21 +13755,39 @@ body {
   line-height: 1.5;
 }
 
-p.eyebrow {
+.eyebrow {
   font-size: 18px;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
 }
-p.eyebrow + h1,
-p.eyebrow + h2,
-p.eyebrow + h3,
-p.eyebrow + h4,
-p.eyebrow + h5 {
+.eyebrow + h1,
+.eyebrow + h2,
+.eyebrow + h3,
+.eyebrow + h4,
+.eyebrow + h5 {
   margin-top: -1.125rem;
 }
 @media screen and (max-width: 639px) {
-  p.eyebrow {
+  .eyebrow {
     font-size: 16px;
+  }
+}
+
+h1.eyebrow {
+  font-size: 24px;
+}
+@media screen and (max-width: 639px) {
+  h1.eyebrow {
+    font-size: 20px;
+  }
+}
+
+h2.eyebrow {
+  font-size: 22px;
+}
+@media screen and (max-width: 639px) {
+  h2.eyebrow {
+    font-size: 18px;
   }
 }
 
