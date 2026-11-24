@@ -13759,6 +13759,8 @@ body {
   font-size: 18px;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
 }
 .eyebrow + h1,
 .eyebrow + h2,

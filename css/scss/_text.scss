@@ -128,11 +128,14 @@ body {
     line-height: 1.5;
 }
 
+
 //eyebrow style
 .eyebrow {
     font-size: 18px;
     font-family: $sans-serif-font;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
 
     +h1,
     +h2,
